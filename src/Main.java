@@ -18,7 +18,7 @@ public class Main {
 		
 		do {
 			command = readCommand(in);
-			executeCommand(command, in, manager);
+			executeCommand(command, in, covidContactsManager);
 		} while (command != Command.EXIT);
 		
 		in.close();
