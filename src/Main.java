@@ -1,3 +1,5 @@
+import covidContactsManager.CovidContactsManager;
+import covidContactsManager.CovidContactsManagerClass;
 import enums.Command;
 import enums.Output;
 
@@ -12,13 +14,13 @@ import java.util.Scanner;
 public class Main {
 	
 	public static void main(String[] args) {
-		//Manager class
+		CovidContactsManager ccm = new CovidContactsManagerClass();
 		Scanner in = new Scanner(System.in);
 		Command command;
 		
 		do {
 			command = readCommand(in);
-			executeCommand(command, in, covidContactsManager);
+			executeCommand(command, in, ccm);
 		} while (command != Command.EXIT);
 		
 		in.close();
@@ -42,9 +44,9 @@ public class Main {
 	 * Executes a given command.
 	 * @param command Command to execute.
 	 * @param in Input scanner.
-	 * @param manager Covid thing manager.
+	 * @param ccm Covid Contacts Manager.
 	 */
-	private static void executeCommand(Command command, Scanner in, Manager manager) {
+	private static void executeCommand(Command command, Scanner in, CovidContactsManager ccm) {
 		switch (command) {
 			case EXIT:
 				exit();
