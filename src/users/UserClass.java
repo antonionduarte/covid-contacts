@@ -14,15 +14,23 @@ public class UserClass implements User {
 	private Group[] joinedGroups;
 	private User[] contacts;
 	
-	public UserClass(String login, String username, String location, String profession, int age) {
+	/**
+	 * Constructor.
+	 * @param login Users' login.
+	 * @param username Users' username
+	 * @param age Users' age.
+	 * @param location Users' location.
+	 * @param profession Users' profession.
+	 */
+	public UserClass(String login, String username, int age, String location, String profession) {
 		this.login = login;
 		this.username = username;
+		this.age = age;
 		this.location = location;
 		this.profession = profession;
-		this.age = age;
 		joinedGroups = new Group[MAX_GROUPS];
 		numJoinedGroups = 0;
-		contacts = new User[]
+		contacts = new //Probably a linked list.
 	}
 	
 	@Override

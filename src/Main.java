@@ -2,6 +2,10 @@ import covidContactsManager.CovidContactsManager;
 import covidContactsManager.CovidContactsManagerClass;
 import enums.Command;
 import enums.Output;
+import exceptions.ContactAlreadyExistsException;
+import exceptions.UserAlreadyExistsException;
+import exceptions.UserDoesNotExistException;
+import users.User;
 
 import java.util.Scanner;
 
@@ -21,7 +25,7 @@ public class Main {
 		do {
 			command = readCommand(in);
 			executeCommand(command, in, ccm);
-		} while (command != Command.EXIT);
+		} while (command != Command.FIM);
 		
 		in.close();
 	}
@@ -47,22 +51,99 @@ public class Main {
 	 * @param ccm Covid Contacts Manager.
 	 */
 	private static void executeCommand(Command command, Scanner in, CovidContactsManager ccm) {
+		System.out.println();
 		switch (command) {
-			case EXIT:
+			case IU:
+				registerUser(in, ccm);
+				break;
+			case DU:
+				userInfo(in, ccm);
+				break;
+			case IC:
+				addContact(in, ccm);
+				break;
+			case RC:
+				break;
+			case LC:
+				break;
+			case IG:
+				break;
+			case DG:
+				break;
+			case RG:
+				break;
+			case IP:
+				break;
+			case RP:
+				break;
+			case LP:
+				break;
+			case IM:
+				break;
+			case LMC:
+				break;
+			case LMG:
+				break;
+			case FIM:
 				exit();
 				break;
 			default:
-				unknownCommand(in);
 				break;
 		}
 	}
 	
 	/**
-	 * Prints out the unknown command message.
+	 * Registers a new user.
+	 * @param in Input scanner.
+	 * @param ccm Covid Contacts Manager.
 	 */
-	private static void unknownCommand(Scanner in) {
-		System.out.println(Output.UNKNOWN_COMMAND.getMessage());
-		in.nextLine();
+	private static void registerUser(Scanner in, CovidContactsManager ccm) {
+		String login = in.next(), username = in.next();
+		int age = in.nextInt();
+		String location = in.next(), profession = in.next();
+		
+		try {
+			ccm.registerUser(login, username, age, location, profession);
+			System.out.println(Output.USER_REGISTERED.getMessage());
+		}
+		catch (UserAlreadyExistsException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	/**
+	 * Prints out a users' information.
+	 * @param in Input scanner.
+	 * @param ccm Covid Contacts Manager.
+	 */
+	private static void userInfo(Scanner in, CovidContactsManager ccm) {
+		String login = in.next();
+		
+		try {
+			User user = ccm.getUser(login);
+			System.out.printf("%s %s %d\n%s %s", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
+		}
+		catch (UserDoesNotExistException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	/**
+	 * Creates a new contact relation between 2 users.
+	 * @param in Input scanner.
+	 * @param ccm Covid Contacts Manager.
+	 */
+	private static void addContact(Scanner in, CovidContactsManager ccm) {
+		String login1 = in.next(), login2 = in.next();
+		
+		try {
+			ccm.addContact(login1, login2);
+			System.out.println(Output.USER_REGISTERED.getMessage());
+		}
+		catch (UserDoesNotExistException | ContactAlreadyExistsException e) {
+			System.out.println(e.getMessage());
+		}
+		
 	}
 	
 	/**

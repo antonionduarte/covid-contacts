@@ -10,7 +10,8 @@ package enums;
 public enum Output {
 	
 	/* Outputs */
-	UNKNOWN_COMMAND("Unknown command. Type help to see available commands."),
+	USER_REGISTERED("Registo de utilizador executado."),
+	CONTACT_MADE("Registo de contacto executado."),
 	EXIT("Obrigado. Ate a proxima.");
 	
 	/* Variables */
