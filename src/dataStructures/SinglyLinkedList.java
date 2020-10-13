@@ -20,13 +20,22 @@ public class SinglyLinkedList<E> implements List<E> {
 		private E element;
 		private SListNode<E> next;
 		
-		public SListNode(E elem, SListNode<E> theNext) {
-			element = elem;
+		/**
+		 * Constructor.
+		 * @param element Element stored in the node.
+		 * @param theNext Next node.
+		 */
+		public SListNode(E element, SListNode<E> theNext) {
+			this.element = element;
 			next = theNext;
 		}
 		
-		public SListNode(E theElement) {
-			this(theElement, null);
+		/**
+		 * Constructor.
+		 * @param element Element stored in the node.
+		 */
+		public SListNode(E element) {
+			this(element, null);
 		}
 		
 		public E getElement() {

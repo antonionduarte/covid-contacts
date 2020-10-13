@@ -25,34 +25,42 @@ public class UserClass implements User {
 		contacts = new User[]
 	}
 	
+	@Override
 	public String getLogin() {
 		return login;
 	}
 	
+	@Override
 	public String getUsername() {
 		return username;
 	}
 	
+	@Override
 	public String getLocation() {
 		return location;
 	}
 	
+	@Override
 	public String getProfession() {
 		return profession;
 	}
 	
+	@Override
 	public int getAge() {
 		return age;
 	}
 	
+	@Override
 	public void addContact(User contact) {
 		//TODO insert sort by name or something.
 	}
 	
+	@Override
 	public void removeContact(User contact) {
 		//TODO
 	}
 	
+	@Override
 	public Iterator<User> listContacts() {
 		return //TODO
 	}
