@@ -3,7 +3,7 @@ package exceptions;
 public class InvalidPositionException extends RuntimeException {
 	
 	/* Constants */
-	static final long serialVersionUID = 0L;
+	private static final long serialVersionUID = 0L;
 	private static final String DEFAULT_MSG = "Invalid position.";
 	
 	/* Constructor */
