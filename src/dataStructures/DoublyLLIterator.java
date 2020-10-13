@@ -1,12 +1,13 @@
-package dataStructures; /**
+package dataStructures; 
+
+import dataStructures.DoublyLinkedList.DListNode;
+
+/**
  * Implementation of Two Way Iterator for DLList
  * @author AED  Team
  * @version 1.0
  * @param <E> Generic Element
  */
-
-import dataStructures.DoublyLinkedList.DListNode;
-
 class DoublyLLIterator<E> implements TwoWayIterator<E> {
 	
 	/* Constants */

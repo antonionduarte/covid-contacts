@@ -30,7 +30,7 @@ public class UserClass implements User {
 		this.profession = profession;
 		joinedGroups = new Group[MAX_GROUPS];
 		numJoinedGroups = 0;
-		contacts = new //Probably a linked list.
+		// contacts = new //Probably a linked list.
 	}
 	
 	@Override
@@ -70,7 +70,7 @@ public class UserClass implements User {
 	
 	@Override
 	public Iterator<User> listContacts() {
-		return //TODO
+		return null; //TODO
 	}
 	
 }
