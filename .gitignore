@@ -1,16 +1,17 @@
 # Default ignored files
-/shelf/
-/.idea/
-/out/
-/tests/
-/bin/
-/fakebook-project.iml
-/src.iml/
+**/shelf/
+**/out/
+**/tests/
+**/bin/
+**/fakebook-project.iml
+**/.idea/
+**/src.iml/
+**/covid-contacts.iml
 # Datasource local storage ignored files
-/dataSources/
-/dataSources.local.xml
+**/dataSources/
+**/dataSources.local.xml
 # Editor-based HTTP Client requests
-/httpRequests/
+**/httpRequests/
 # Log files
-/log/fakebook**test_log.txt
+**/log/fakebook**test_log.txt
 
