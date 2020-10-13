@@ -1,5 +1,8 @@
 package dataStructures;
 
+import exceptions.InvalidPositionException;
+import exceptions.NoElementException;
+
 import java.io.Serializable;
 
 /**

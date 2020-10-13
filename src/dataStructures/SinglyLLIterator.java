@@ -1,6 +1,7 @@
 package dataStructures;
 
 import dataStructures.SinglyLinkedList.SListNode;
+import exceptions.NoSuchElementException;
 
 /**
  * Implementation of Iterator for SinglyLinkedList

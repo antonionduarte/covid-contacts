@@ -1,5 +1,8 @@
 package dataStructures;
 
+import exceptions.InvalidPositionException;
+import exceptions.NoElementException;
+
 /**
  * Doubly linked list Implementation
  * @param <E> Generic Element
@@ -10,54 +13,9 @@ public class DoublyLinkedList<E> implements List<E> {
 	
 	/* Constants */
 	private static final long serialVersionUID = 0L;
-	
-	protected static class DListNode<E> {
-		
-		/* Variables */
-		private E element;
-		private DListNode<E> previous, next;
-		
-		public DListNode(E elem, DListNode<E> thePrev, DListNode<E> theNext) {
-			element = elem;
-			previous = thePrev;
-			next = theNext;
-		}
-		
-		public DListNode(E theElement) {
-			this(theElement, null, null);
-		}
-		
-		public E getElement() {
-			return element;
-		}
-		
-		public DListNode<E> getNext() {
-			return next;
-		}
-		
-		public DListNode<E> getPrevious() {
-			return previous;
-		}
-		
-		public void setElement(E newElement) {
-			element = newElement;
-		}
-		
-		public void setNext(DListNode<E> newNext) {
-			next = newNext;
-		}
-		
-		public void setPrevious(DListNode<E> newPrevious) {
-			previous = newPrevious;
-		}
-		
-	}
-	
-	
 	/* Variables */
 	protected DListNode<E> head, tail;
 	protected int size;
-	
 	public DoublyLinkedList() {
 		head = null;
 		tail = null;
@@ -74,7 +32,6 @@ public class DoublyLinkedList<E> implements List<E> {
 		return size;
 	}
 	
-	
 	@Override
 	public int find(E element) {
 		DListNode<E> pointerNode = head;
@@ -87,7 +44,6 @@ public class DoublyLinkedList<E> implements List<E> {
 		}
 		return -1;
 	}
-	
 	
 	@Override
 	public E getFirst() throws NoElementException {
@@ -107,8 +63,9 @@ public class DoublyLinkedList<E> implements List<E> {
 	
 	@Override
 	public E get(int position) throws InvalidPositionException {
-		if (position < 0 || position >= size)
+		if (position < 0 || position >= size) {
 			throw new InvalidPositionException();
+		}
 		return getNode(position).getElement();
 	}
 	
@@ -196,7 +153,6 @@ public class DoublyLinkedList<E> implements List<E> {
 		size--;
 	}
 	
-	
 	@Override
 	public E removeFirst() throws NoElementException {
 		if (isEmpty()) {
@@ -223,7 +179,6 @@ public class DoublyLinkedList<E> implements List<E> {
 		}
 		size--;
 	}
-	
 	
 	@Override
 	public E removeLast() throws NoElementException {
@@ -326,6 +281,48 @@ public class DoublyLinkedList<E> implements List<E> {
 			}
 		}
 		list = null;
+	}
+	
+	protected static class DListNode<E> {
+		
+		/* Variables */
+		private E element;
+		private DListNode<E> previous, next;
+		
+		public DListNode(E elem, DListNode<E> thePrev, DListNode<E> theNext) {
+			element = elem;
+			previous = thePrev;
+			next = theNext;
+		}
+		
+		public DListNode(E theElement) {
+			this(theElement, null, null);
+		}
+		
+		public E getElement() {
+			return element;
+		}
+		
+		public void setElement(E newElement) {
+			element = newElement;
+		}
+		
+		public DListNode<E> getNext() {
+			return next;
+		}
+		
+		public void setNext(DListNode<E> newNext) {
+			next = newNext;
+		}
+		
+		public DListNode<E> getPrevious() {
+			return previous;
+		}
+		
+		public void setPrevious(DListNode<E> newPrevious) {
+			previous = newPrevious;
+		}
+		
 	}
 	
 	

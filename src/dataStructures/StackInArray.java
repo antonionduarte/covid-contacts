@@ -1,5 +1,8 @@
 package dataStructures;
 
+import exceptions.EmptyStackException;
+import exceptions.FullStackException;
+
 public class StackInArray<E> implements Stack<E> {
 	
 	/* Constants */
