@@ -1,5 +1,6 @@
 package dataStructures; 
 
+import exceptions.*;
 import dataStructures.DoublyLinkedList.DListNode;
 
 /**
