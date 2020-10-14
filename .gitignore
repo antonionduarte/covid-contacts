@@ -3,7 +3,7 @@
 **/out/
 **/tests/
 **/bin/
-**/.idea/
+/.idea/
 **/src.iml/
 **/covid-contacts.iml
 # Datasource local storage ignored files
