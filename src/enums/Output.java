@@ -11,7 +11,8 @@ public enum Output {
 	
 	/* Outputs */
 	USER_REGISTERED("Registo de utilizador executado."),
-	CONTACT_MADE("Registo de contacto executado."),
+  CONTACT_MADE("Registo de contacto executado."),
+  CONTACT_REMOVED("Remocao de contacto executada."),
 	EXIT("Obrigado. Ate a proxima.");
 	
 	/* Variables */
