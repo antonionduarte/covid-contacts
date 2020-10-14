@@ -1,12 +1,8 @@
-import covidContactsManager.CovidContactsManager;
-import covidContactsManager.CovidContactsManagerClass;
-import enums.Command;
-import enums.Output;
-import exceptions.ContactAlreadyExistsException;
-import exceptions.UserAlreadyExistsException;
-import exceptions.UserDoesNotExistException;
-import users.User;
+import covidContactsManager.*;
+import enums.*;
+import exceptions.*;
 
+import users.User;
 import java.util.Scanner;
 
 /**
@@ -62,7 +58,8 @@ public class Main {
 			case IC:
 				addContact(in, ccm);
 				break;
-			case RC:
+      case RC:
+        removeContact(in, ccm);
 				break;
 			case LC:
 				break;
@@ -138,14 +135,31 @@ public class Main {
 		
 		try {
 			ccm.addContact(login1, login2);
-			System.out.println(Output.USER_REGISTERED.getMessage());
+			System.out.println(Output.CONTACT_MADE.getMessage());
 		}
 		catch (UserDoesNotExistException | ContactAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
 		
-	}
-	
+  }
+  
+  /**
+   * Removes a contact relation between 2 users.
+   * @param in Input scanner.
+   * @param ccm Covid Contacts Manager.
+   */
+  private static void removeContact(Scanner in, CovidContactsManager ccm) {
+    String login1 = in.next(), login2 = in.next();
+
+    try {
+      ccm.removeContact(login1, login2);
+      System.out.println(Output.CONTACT_REMOVED.getMessage());
+    }
+    catch (UserDoesNotExistException | ContactDoesNotExistException e) {
+      System.out.println(e.getMessage());
+    }
+  }	
+
 	/**
 	 * Prints out the exit message.
 	 */
