@@ -16,7 +16,8 @@ public class SinglyLLIterator<E> implements Iterator<E> {
 	private static final long serialVersionUID = 0L;
 	
 	/* Variables */
-	private SListNode<E> firstNode, nextToReturn;
+	private final SListNode<E> firstNode;
+	private SListNode<E> nextToReturn;
 	
 	/**
 	 * Constructor.

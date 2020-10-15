@@ -9,7 +9,7 @@ public class StackInArray<E> implements Stack<E> {
 	private static final int DEFAULT_CAPACITY = 1000;
 	
 	/* Variables */
-	private E[] array;
+	private final E[] array;
 	private int top;
 	
 	@SuppressWarnings("unchecked")

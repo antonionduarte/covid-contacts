@@ -16,6 +16,7 @@ public class DoublyLinkedList<E> implements List<E> {
 	/* Variables */
 	protected DListNode<E> head, tail;
 	protected int size;
+	
 	public DoublyLinkedList() {
 		head = null;
 		tail = null;

@@ -1,6 +1,7 @@
 package dataStructures;
 
-import exceptions.*;
+import exceptions.FullStackException;
+
 import java.util.EmptyStackException;
 
 /**
