@@ -17,7 +17,7 @@ public class UserClass implements User {
 	/**
 	 * Constructor.
 	 * @param login Users' login.
-	 * @param username Users' username
+	 * @param username Users' username.
 	 * @param age Users' age.
 	 * @param location Users' location.
 	 * @param profession Users' profession.
