@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.*;
+import exceptions.NoElementException;
 
 /**
  * Queue List Implementation
@@ -10,49 +10,39 @@ import exceptions.*;
  */
 public class QueueInList<E> implements Queue<E> {
 	
-	/**
-	 * Serial Version UID of the Class
-	 */
-	static final long serialVersionUID = 0L;
+	/* Constants */
+	private static final long serialVersionUID = 0L;
 	
-	/**
-	 * Memory of the queue: a list.
-	 */
-	protected List<E> list;
+	/* Variables */
+	private List<E> list;
 	
-	/**
-	 * Constructor create an empty Doubly Linked List.
-	 */
+	/* Constructor */
 	public QueueInList() {
-		//TODO - inicializar o atributo list (tem que se usar new...)
+		list = new DoublyLinkedList<>();
 	}
-	
 	
 	@Override
 	public boolean isEmpty() {
 		return list.isEmpty();
 	}
 	
-	
 	@Override
 	public int size() {
 		return list.size();
 	}
 	
-	
 	@Override
 	public void enqueue(E element) {
-		//TODO
+		list.addLast(element);
 	}
-	
 	
 	@Override
 	public E dequeue() throws NoElementException {
-		if (list.isEmpty())
+		if (list.isEmpty()) {
 			throw new NoElementException();
+		}
 		
-    //TODO
-    return null;
+		return list.removeFirst();
 	}
 	
 	

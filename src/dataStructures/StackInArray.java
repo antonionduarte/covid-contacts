@@ -23,31 +23,28 @@ public class StackInArray<E> implements Stack<E> {
 		this(DEFAULT_CAPACITY);
 	}
 	
-	// Returns true iff the stack contains no elements.
+	@Override
 	public boolean isEmpty() {
 		return top == 0;
 	}
 	
-	// Returns true iff the stack cannot contain more elements.
 	public boolean isFull() {
 		return top == array.length;
 	}
 	
-	// Returns the number of elements in the stack.
+	@Override
 	public int size() {
 		return top;
 	}
 	
-	// Returns the element at the top of the stack.
-	// Requires: size() > 0
+	@Override
 	public E top() throws EmptyStackException {
 		if (isEmpty())
 			throw new EmptyStackException("Stack is empty.");
 		return array[top - 1];
 	}
 	
-	// Inserts the specified element onto the top of the stack.
-	// Requires: size() < array.length
+	@Override
 	public void push(E element) throws FullStackException {
 		if (isFull()) {
 			throw new FullStackException("Stack is full.");
@@ -55,8 +52,7 @@ public class StackInArray<E> implements Stack<E> {
 		array[top++] = element;
 	}
 	
-	// Removes and returns the element at the top of the stack.
-	// Requires: size() > 0
+	@Override
 	public E pop() throws EmptyStackException {
 		if (isEmpty()) {
 			throw new EmptyStackException("Stack is empty.");
