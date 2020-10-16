@@ -4,30 +4,28 @@ import exceptions.*;
 
 public class StackInList<E> implements Stack<E> {
 	
-	static final long serialVersionUID = 0L;
+	/* Constants */
+	private static final long serialVersionUID = 0L;
 	
+	/* Variables */
+	private List<E> list;
 	
-	// Memory of the stack: a list.
-	protected List<E> list;
-	
+	/* Constructor */
 	public StackInList() {
 		list = new DoublyLinkedList<E>();
 	}
 	
-	
-	// Returns true iff the stack contains no elements.
+	@Override
 	public boolean isEmpty() {
 		return list.isEmpty();
 	}
 	
-	
-	// Returns the number of elements in the stack.
+	@Override
 	public int size() {
 		return list.size();
 	}
 	
-	
-	// Returns the element at the top of the stack.
+	@Override
 	public E top() throws NoElementException {
 		if (list.isEmpty())
 			throw new NoElementException();
@@ -35,21 +33,18 @@ public class StackInList<E> implements Stack<E> {
 		return list.getFirst();
 	}
 	
-	
-	// Inserts the specified element onto the top of the stack.
+	@Override
 	public void push(E element) {
-		//TODO
+		list.addFirst(element);
 	}
 	
-	
-	// Removes and returns the element at the top of the stack.
+	@Override
 	public E pop() throws NoElementException {
-		if (list.isEmpty())
+		if (list.isEmpty()) {
 			throw new NoElementException();
+		}
 		
-    //TODO
-    return null;
+        return list.removeFirst();
 	}
-	
 	
 }
