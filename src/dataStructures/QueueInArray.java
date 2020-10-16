@@ -1,5 +1,7 @@
 package dataStructures;
 
+import exceptions.*;
+
 /**
  * Queue Array Implementation
  * @param <E> Generic Element

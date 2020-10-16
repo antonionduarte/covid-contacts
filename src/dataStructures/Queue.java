@@ -1,6 +1,7 @@
 package dataStructures;
 
 import java.io.Serializable;
+import exceptions.*;
 
 /**
  * Queue Abstract Data Type

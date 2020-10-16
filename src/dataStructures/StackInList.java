@@ -1,5 +1,7 @@
 package dataStructures;
 
+import exceptions.*;
+
 public class StackInList<E> implements Stack<E> {
 	
 	static final long serialVersionUID = 0L;
@@ -45,7 +47,8 @@ public class StackInList<E> implements Stack<E> {
 		if (list.isEmpty())
 			throw new NoElementException();
 		
-		//TODO
+    //TODO
+    return null;
 	}
 	
 	

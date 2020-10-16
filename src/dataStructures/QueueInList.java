@@ -1,5 +1,7 @@
 package dataStructures;
 
+import exceptions.*;
+
 /**
  * Queue List Implementation
  * @param <E> Generic Element
@@ -49,7 +51,8 @@ public class QueueInList<E> implements Queue<E> {
 		if (list.isEmpty())
 			throw new NoElementException();
 		
-		//TODO
+    //TODO
+    return null;
 	}
 	
 	
