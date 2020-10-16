@@ -16,10 +16,10 @@ public class UserClass implements User {
 	
 	/**
 	 * Constructor.
-	 * @param login      Users' login.
-	 * @param username   Users' username
-	 * @param age        Users' age.
-	 * @param location   Users' location.
+	 * @param login Users' login.
+	 * @param username Users' username.
+	 * @param age Users' age.
+	 * @param location Users' location.
 	 * @param profession Users' profession.
 	 */
 	public UserClass(String login, String username, int age, String location, String profession) {
