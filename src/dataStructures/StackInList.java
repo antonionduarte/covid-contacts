@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.*;
+import exceptions.NoElementException;
 
 public class StackInList<E> implements Stack<E> {
 	
@@ -45,7 +45,7 @@ public class StackInList<E> implements Stack<E> {
 			throw new NoElementException();
 		}
 		
-        return list.removeFirst();
+		return list.removeFirst();
 	}
 	
 }

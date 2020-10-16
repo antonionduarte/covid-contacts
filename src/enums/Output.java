@@ -3,7 +3,7 @@ package enums;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- *
+ * <p>
  * All outputs and formatting.
  */
 
@@ -11,8 +11,10 @@ public enum Output {
 	
 	/* Outputs */
 	USER_REGISTERED("Registo de utilizador executado."),
-  CONTACT_MADE("Registo de contacto executado."),
-  CONTACT_REMOVED("Remocao de contacto executada."),
+	CONTACT_MADE("Registo de contacto executado."),
+	CONTACT_REMOVED("Remocao de contacto executada."),
+	GROUP_REGISTERED("Registo de grupo executado."),
+	GROUP_REMOVED("Remocao de grupo executada."),
 	EXIT("Obrigado. Ate a proxima.");
 	
 	/* Variables */

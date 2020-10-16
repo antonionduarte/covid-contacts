@@ -13,5 +13,5 @@ public interface User extends UserGetters {
 	 * @param contact Contact to remove.
 	 */
 	void removeContact(User contact);
-
+	
 }

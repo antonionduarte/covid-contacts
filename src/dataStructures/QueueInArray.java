@@ -1,6 +1,7 @@
 package dataStructures;
 
-import exceptions.*;
+import exceptions.NoElementException;
+import exceptions.OutOfCapacityException;
 
 /**
  * Queue Array Implementation
@@ -22,7 +23,7 @@ public class QueueInArray<E> implements Queue<E> {
 	 * Constructor.
 	 * @param capacity The queues' maximum capacity.
 	 */
-  @SuppressWarnings("unchecked")
+	@SuppressWarnings("unchecked")
 	public QueueInArray(int capacity) {
 		// Compiler gives a warning.
 		array = (E[]) new Object[capacity];
