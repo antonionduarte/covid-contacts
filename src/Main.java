@@ -1,13 +1,12 @@
 import covidContacts.CovidContacts;
 import covidContacts.CovidContactsClass;
+import dataStructures.Iterator;
 import enums.Command;
 import enums.Output;
 import exceptions.*;
 import groups.Group;
-import jdk.swing.interop.SwingInterOpUtils;
 import users.User;
 
-import dataStructures.Iterator;
 import java.util.Scanner;
 
 /**
@@ -46,9 +45,9 @@ public class Main {
 	
 	/**
 	 * Executes a given command.
-	 * @param command Command to execute.
-	 * @param in      Input scanner.
-	 * @param covidContacts     Covid Contacts Manager.
+	 * @param command       Command to execute.
+	 * @param in            Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void executeCommand(Command command, Scanner in, CovidContacts covidContacts) {
 		System.out.println();
@@ -99,7 +98,7 @@ public class Main {
 	
 	/**
 	 * Registers a new user.
-	 * @param in  Input scanner.
+	 * @param in            Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void registerUser(Scanner in, CovidContacts covidContacts) {
@@ -117,7 +116,7 @@ public class Main {
 	
 	/**
 	 * Prints out a users' information.
-	 * @param in  Input scanner.
+	 * @param in            Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void userInfo(Scanner in, CovidContacts covidContacts) {
@@ -133,7 +132,7 @@ public class Main {
 	
 	/**
 	 * Creates a new contact relation between 2 users.
-	 * @param in  Input scanner.
+	 * @param in            Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void addContact(Scanner in, CovidContacts covidContacts) {
@@ -150,7 +149,7 @@ public class Main {
 	
 	/**
 	 * Removes a contact relation between 2 users.
-	 * @param in  Input scanner.
+	 * @param in            Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void removeContact(Scanner in, CovidContacts covidContacts) {
@@ -174,8 +173,7 @@ public class Main {
 				User contact = contacts.next();
 				System.out.printf("%s %s\n", contact.getLogin(), contact.getUsername());
 			}
-		}
-		catch (UserDoesNotExistException | NoContactsException e) {
+		} catch (UserDoesNotExistException | NoContactsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -186,8 +184,7 @@ public class Main {
 		try {
 			covidContacts.insertGroup(name, description);
 			System.out.println(Output.GROUP_REGISTERED.getMessage());
-		}
-		catch (GroupAlreadyExistsException e) {
+		} catch (GroupAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -198,8 +195,7 @@ public class Main {
 		try {
 			Group group = covidContacts.getGroup(name);
 			System.out.printf("%s\n%s\n", group.getName(), group.getDescription());
-		}
-		catch (GroupDoesNotExistException e) {
+		} catch (GroupDoesNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -210,8 +206,7 @@ public class Main {
 		try {
 			covidContacts.removeGroup(name);
 			System.out.println(Output.GROUP_REMOVED.getMessage());
-		}
-		catch (GroupDoesNotExistException e) {
+		} catch (GroupDoesNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}

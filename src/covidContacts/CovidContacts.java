@@ -1,13 +1,12 @@
 package covidContacts;
 
+import dataStructures.Iterator;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 import exceptions.UserAlreadyExistsException;
 import exceptions.UserDoesNotExistException;
 import groups.Group;
 import users.User;
-
-import dataStructures.Iterator;
 
 public interface CovidContacts {
 	
@@ -49,7 +48,7 @@ public interface CovidContacts {
 	
 	/**
 	 * Inserts a new group into the system.
-	 * @param name The groups' name.
+	 * @param name        The groups' name.
 	 * @param description The groups' description.
 	 */
 	void insertGroup(String name, String description);
