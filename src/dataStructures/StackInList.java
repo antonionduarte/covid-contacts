@@ -27,8 +27,9 @@ public class StackInList<E> implements Stack<E> {
 	
 	@Override
 	public E top() throws NoElementException {
-		if (list.isEmpty())
+		if (list.isEmpty()) {
 			throw new NoElementException();
+		}
 		
 		return list.getFirst();
 	}
