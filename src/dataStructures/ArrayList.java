@@ -3,6 +3,8 @@ package dataStructures;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
+import dataStructures.Iterator;
+
 /**
  * List abstract data type, implemented with an array.
  * @param <E> Generic Element.
@@ -11,130 +13,127 @@ import exceptions.NoElementException;
 public class ArrayList<E> implements List<E> {
 	
 	/* Constants */
-
-  private static final long serialVersionUID = 1L;
-  private static final int DEFAULT_SIZE = 10;
-	private static final int GROWTH_FACTOR = 2;
+	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
 	
 	/* Variables */
-	
 	private E[] array;
-	private int counter;
+	private int numElements;
 	
-	/**
-	 * Constructor of the ArrayList.
-	 */
+	/* Constructor */
 	@SuppressWarnings("unchecked")
 	public ArrayList() {
 		array = (E[]) new Object[DEFAULT_SIZE];
-		counter = 0;
-	}
-	
-	/* Methods */
-	
-	@Override
-	public int find(E element) {
-		for (int i = 0; i < counter; i++)
-			if (array[i].equals(element)) return i;
-		return -1;
+		numElements = 0;
 	}
 	
 	@Override
 	public int size() {
-		return counter;
+		return numElements;
 	}
 	
 	@Override
 	public boolean isEmpty() {
-		return counter == 0;
+		return numElements == 0;
+	}
+	
+	@Override
+	public int find(E element) {
+		for (int i = 0; i < numElements; i++) {
+			if (array[i].equals(element)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	
 	@Override
 	public E get(int index) throws InvalidPositionException {
-		if (index >= counter || index < 0) throw new InvalidPositionException();
+		if (index >= numElements || index < 0) {
+			throw new InvalidPositionException();
+		}
 		return array[index];
 	}
 	
 	@Override
 	public E getFirst() throws NoElementException {
-		if (isEmpty()) throw new NoElementException();
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
 		return array[0];
 	}
 	
 	@Override
 	public E getLast() throws NoElementException {
-		if (isEmpty()) throw new NoElementException();
-		return array[counter - 1];
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
+		return array[numElements-1];
 	}
 	
 	@Override
 	public boolean remove(E element) {
-		for (int i = 0; i < counter; i++) {
-			if (array[i].equals(element)) {
-				for (int j = i + 1; j < counter; j++)
-					array[j - 1] = array[j];
-				counter--;
-				array[counter] = null;
-				return true;
-			}
+		int index = find(element);
+		
+		if (index > -1) {
+			remove(index);
+			return true;
 		}
 		return false;
 	}
 	
 	@Override
 	public E remove(int index) throws InvalidPositionException {
-		if (index >= counter || index < 0) throw new InvalidPositionException();
+		if (index < 0  || index >= numElements) {
+			throw new InvalidPositionException();
+		}
 		E element = array[index];
-		for (int i = index + 1; i < counter; i++)
-			array[i - 1] = array[i];
-		counter--;
-		array[counter] = null;
+		for (int i = index; i < numElements; i++) {
+			array[i-1] = array[i];
+		}
+		numElements--;
 		return element;
 	}
 	
 	@Override
 	public E removeFirst() throws NoElementException {
-		if (isEmpty()) throw new NoElementException();
-		E element = array[0];
-		for (int i = 1; i < counter; i++)
-			array[i] = array[i + 1];
-		counter--;
-		return element;
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
+		return remove(0);
 	}
 	
 	@Override
 	public E removeLast() throws NoElementException {
-		if (isEmpty()) throw new NoElementException();
-		E element = array[counter - 1];
-		array[counter - 1] = null;
-		counter--;
-		return element;
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
+		return array[--numElements];
 	}
 	
 	@Override
 	public void add(int index, E element) throws InvalidPositionException {
-		if (index < 0) throw new InvalidPositionException();
-		while (array.length < index) resize();
-		for (int i = counter - 1; i >= index; i--)
-			array[i + 1] = array[i];
+		if (index < 0 || index > numElements) {
+			throw new InvalidPositionException();
+		}
+		if (index == array.length) {
+			resize();
+		}
+		
+		for (int i = numElements-1; i >= index; i--) {
+			array[i+1] = array[i];
+		}
 		array[index] = element;
-		counter++;
+		numElements++;
 	}
 	
 	@Override
 	public void addFirst(E element) {
-		if (counter == array.length) resize();
-		for (int i = counter - 1; i >= 0; i--)
-			array[i + 1] = array[i];
-		array[0] = element;
-		counter++;
+		add(0, element);
 	}
 	
 	@Override
 	public void addLast(E element) {
-		if (counter == array.length) resize();
-		array[counter] = element;
-		counter++;
+		add(numElements, element);
 	}
 	
 	@Override
@@ -150,8 +149,9 @@ public class ArrayList<E> implements List<E> {
 	@SuppressWarnings("unchecked")
 	private void resize() {
 		E[] tempArray = (E[]) new Object[array.length * GROWTH_FACTOR];
-		for (int i = 0; i < counter; i++)
+		for (int i = 0; i < numElements; i++) {
 			tempArray[i] = array[i];
+		}
 		array = tempArray;
 	}
 	

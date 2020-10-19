@@ -26,7 +26,7 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
-		if (!users.find) {
+		if (!users) {
 			throw new UserAlreadyExistsException();
 		}
 		users.addLast(new UserClass(login, username, age, location, profession));
