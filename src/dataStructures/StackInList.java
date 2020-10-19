@@ -4,9 +4,6 @@ import exceptions.NoElementException;
 
 public class StackInList<E> implements Stack<E> {
 	
-	/* Constants */
-	private static final long serialVersionUID = 0L;
-	
 	/* Variables */
 	private List<E> list;
 	

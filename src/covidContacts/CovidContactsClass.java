@@ -53,7 +53,7 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public Iterator<User> listContacts(String login) {
-		return;
+		return null;
 	}
 	
 	@Override

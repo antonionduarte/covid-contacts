@@ -3,8 +3,6 @@ package dataStructures;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
-import java.util.Iterator;
-
 /**
  * List abstract data type, implemented with an array.
  * @param <E> Generic Element.
@@ -13,8 +11,9 @@ import java.util.Iterator;
 public class ArrayList<E> implements List<E> {
 	
 	/* Constants */
-	
-	private static final int DEFAULT_SIZE = 10;
+
+  private static final long serialVersionUID = 1L;
+  private static final int DEFAULT_SIZE = 10;
 	private static final int GROWTH_FACTOR = 2;
 	
 	/* Variables */
