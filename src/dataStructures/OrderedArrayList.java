@@ -50,25 +50,97 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 
 	@Override
 	public int find(E element) {
-				
-			if (comparator.compare(element, array[numElements / 2]) == 0) {
-				return numElements / 2;
+		int start = 0;
+		int end = numElements - 1;
+
+		while (start <= end) {
+			int position = start + ((end - start) / 2);
+			int result = comparator.compare(array[position], element);
+
+			if (result > 0) {
+				end = position - 1;
 			}
-		
+			else if (result < 0) {
+				start = position + 1;
+			}
+			else {
+				return position;
+			}
+		}
 		return -1;
 	}
 
 	@Override
 	public E get(int position) throws InvalidPositionException {
-		// TODO Auto-generated method stub
-		return null;
+		if (position >= numElements || position < 0) {
+			throw new InvalidPositionException();
+		}
+		return array[position];
 	}
 
 
 	@Override
 	public void insert(E element) {
-		// TODO Auto-generated method stub
+		boolean found = false;
+		
+		if (isEmpty()) {
+			insert(0, element);
+			found = true; 
+		}
+		
+		int start = 0;
+		int end = numElements - 1;
 
+		if (start == end) {
+			insert(numElements, element);	
+			found = true;
+		}
+
+		while (!found) {
+			int position = start + ((end - start) / 2);
+			int result = comparator.compare(array[position], element);
+			int result2 = comparator.compare(array[position + 1], element);
+
+			if (result < 0 && result2 > 0) {
+				found = true;
+				insert(position + 1, element);
+			}
+			else if (result > 0) {
+				end = position - 1;
+			}
+			else {
+				start = position + 1;
+			}
+		}
 	}
-	
+
+	/**
+	 * Inserts an element into the specified position.
+	 * @param position Position to inser the element on.
+	 */
+	private void insert(int position, E element) {
+		if (position == array.length) {
+			resize();
+		}
+		
+		for (int i = numElements - 1; i >= position; i--) {
+			array[i + 1] = array[i];
+		}
+
+		array[position] = element;
+		numElements++;
+	}
+
+	/**
+	 * Resizes the array by a specified growth factor
+	 */
+	@SuppressWarnings("unchecked")
+	private void resize() {
+		E[] tempArray = (E[]) new Object[array.length * GROWTH_FACTOR];
+		for (int i = 0; i < numElements; i++) {
+			tempArray[i] = array[i];
+		}
+		array = tempArray;
+	}
+
 }
