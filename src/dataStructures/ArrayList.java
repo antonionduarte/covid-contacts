@@ -2,7 +2,6 @@ package dataStructures;
 
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
-import dataStructures.Iterator;
 
 /**
  * List abstract data type, implemented with an array.
