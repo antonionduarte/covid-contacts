@@ -32,17 +32,20 @@ public interface List<E> extends Serializable {
 	
 	/**
 	 * @return First element in the list.
+   * @throws NoElementException If isEmpty() == true.
 	 */
 	E getFirst() throws NoElementException;
 	
 	/**
-	 * @return Last element in the list
+	 * @return Last element in the list.
+   * @throws NoElementException If isEmpty() == true.
 	 */
 	E getLast() throws NoElementException;
 	
 	/**
 	 * @param position Position of the element to be returned.
 	 * @return Element at the given position in the list.
+   * @throws InvalidPositionException If (position < 0 || position >= numElements)
 	 */
 	E get(int position) throws InvalidPositionException;
 	
