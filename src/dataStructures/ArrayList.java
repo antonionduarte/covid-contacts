@@ -86,6 +86,7 @@ public class ArrayList<E> implements List<E> {
 		if (index < 0  || index >= numElements) {
 			throw new InvalidPositionException();
 		}
+		
 		E element = array[index];
 		for (int i = index; i < numElements; i++) {
 			array[i-1] = array[i];

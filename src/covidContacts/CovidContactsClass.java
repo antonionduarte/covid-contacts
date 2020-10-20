@@ -52,7 +52,7 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public Iterator<User> listContacts(String login) {
+	public Iterator<User> newUserContactsIterator(String login) {
 		return null;
 	}
 	

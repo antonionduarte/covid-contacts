@@ -15,6 +15,9 @@ public enum Output {
 	CONTACT_REMOVED("Remocao de contacto executada."),
 	GROUP_REGISTERED("Registo de grupo executado."),
 	GROUP_REMOVED("Remocao de grupo executada."),
+	PARTICIPANT_ADDED("Registo de participante executado."),
+	PARTICIPANT_REMOVED("Remocao de aderencia executada."),
+	POST_INSERTED("Registo de mensagem executado."),
 	EXIT("Obrigado. Ate a proxima.");
 	
 	/* Variables */
