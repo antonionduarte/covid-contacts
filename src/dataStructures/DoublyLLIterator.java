@@ -20,7 +20,7 @@ class DoublyLLIterator<E> implements TwoWayIterator<E> {
 	/**
 	 * Constructor.
 	 * @param first Node with the first element of the iteration.
-	 * @param last  Node with the last element of the iteration.
+	 * @param last Node with the last element of the iteration.
 	 */
 	public DoublyLLIterator(DListNode<E> first, DListNode<E> last) {
 		firstNode = first;

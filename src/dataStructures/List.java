@@ -67,7 +67,7 @@ public interface List<E> extends Serializable {
 	/**
 	 * Inserts the specified element at the specified position in the list.
 	 * @param position Position to insert the element.
-	 * @param element  Element to be inserted.
+	 * @param element Element to be inserted.
 	 */
 	void add(int position, E element) throws InvalidPositionException;
 	

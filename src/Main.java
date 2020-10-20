@@ -47,8 +47,8 @@ public class Main {
 	
 	/**
 	 * Executes a given command.
-	 * @param command       Command to execute.
-	 * @param in            Input scanner.
+	 * @param command Command to execute.
+	 * @param in Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void executeCommand(Command command, Scanner in, CovidContacts covidContacts) {
@@ -106,7 +106,7 @@ public class Main {
 	
 	/**
 	 * Registers a new user.
-	 * @param in            Input scanner.
+	 * @param in Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void registerUser(Scanner in, CovidContacts covidContacts) {
@@ -125,7 +125,7 @@ public class Main {
 	
 	/**
 	 * Prints out a users' information.
-	 * @param in            Input scanner.
+	 * @param in Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void userInfo(Scanner in, CovidContacts covidContacts) {
@@ -142,7 +142,7 @@ public class Main {
 	
 	/**
 	 * Creates a new contact relation between 2 users.
-	 * @param in            Input scanner.
+	 * @param in Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void addContact(Scanner in, CovidContacts covidContacts) {
@@ -160,7 +160,7 @@ public class Main {
 	
 	/**
 	 * Removes a contact relation between 2 users.
-	 * @param in            Input scanner.
+	 * @param in Input scanner.
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void removeContact(Scanner in, CovidContacts covidContacts) {

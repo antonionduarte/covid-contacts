@@ -1,6 +1,6 @@
 package exceptions;
 
-public class ContactHasNoPostsException extends RuntimeException{
+public class ContactHasNoPostsException extends RuntimeException {
 	
 	/* Constants */
 	private static final long serialVersionUID = 1L;

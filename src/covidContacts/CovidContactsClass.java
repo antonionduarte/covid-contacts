@@ -8,6 +8,7 @@ import exceptions.ContactDoesNotExistException;
 import exceptions.UserAlreadyExistsException;
 import exceptions.UserDoesNotExistException;
 import groups.Group;
+import posts.Post;
 import users.User;
 import users.UserClass;
 
@@ -26,7 +27,7 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
-		if (!users) {
+		if (/* users.find(login) */ true) {
 			throw new UserAlreadyExistsException();
 		}
 		users.addLast(new UserClass(login, username, age, location, profession));
@@ -68,6 +69,36 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public Group getGroup(String name) {
+		return null;
+	}
+	
+	@Override
+	public void insertGroupParticipant(String login, String groupName) {
+	
+	}
+	
+	@Override
+	public void removeGroupParticipant(String login, String groupName) {
+	
+	}
+	
+	@Override
+	public Iterator<User> newGroupParticipantsIterator(String groupName) {
+		return null;
+	}
+	
+	@Override
+	public void insertPost(String login, String title, String text, String url) {
+	
+	}
+	
+	@Override
+	public Iterator<Post> newUserContactPostsIterator(String login1, String login2) {
+		return null;
+	}
+	
+	@Override
+	public Iterator<Post> newGroupPostsIterator(String groupName, String login) {
 		return null;
 	}
 	

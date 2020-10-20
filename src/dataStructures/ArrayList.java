@@ -2,7 +2,6 @@ package dataStructures;
 
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
-import dataStructures.Iterator;
 
 /**
  * List abstract data type, implemented with an array.
@@ -10,9 +9,9 @@ import dataStructures.Iterator;
  * @author António Duarte.
  */
 public class ArrayList<E> implements List<E> {
-	  
-  /* Constants */
-  private static final long serialVersionUID = 1L;
+	
+	/* Constants */
+	private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
 	
 	/* Variables */
@@ -67,7 +66,7 @@ public class ArrayList<E> implements List<E> {
 		if (isEmpty()) {
 			throw new NoElementException();
 		}
-		return array[numElements-1];
+		return array[numElements - 1];
 	}
 	
 	@Override
@@ -83,13 +82,13 @@ public class ArrayList<E> implements List<E> {
 	
 	@Override
 	public E remove(int index) throws InvalidPositionException {
-		if (index < 0  || index >= numElements) {
+		if (index < 0 || index >= numElements) {
 			throw new InvalidPositionException();
 		}
 		
 		E element = array[index];
 		for (int i = index; i < numElements; i++) {
-			array[i-1] = array[i];
+			array[i - 1] = array[i];
 		}
 		numElements--;
 		return element;
@@ -120,8 +119,8 @@ public class ArrayList<E> implements List<E> {
 			resize();
 		}
 		
-		for (int i = numElements-1; i >= index; i--) {
-			array[i+1] = array[i];
+		for (int i = numElements - 1; i >= index; i--) {
+			array[i + 1] = array[i];
 		}
 		array[index] = element;
 		numElements++;

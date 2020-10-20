@@ -1,6 +1,6 @@
 package posts;
 
-import users.*;
+import users.User;
 
 public class PostClass implements Post {
 	
@@ -42,5 +42,5 @@ public class PostClass implements Post {
 	public User getUser() {
 		return user;
 	}
-
+	
 }
