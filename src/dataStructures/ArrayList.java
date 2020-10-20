@@ -2,7 +2,6 @@ package dataStructures;
 
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
-
 import dataStructures.Iterator;
 
 /**
@@ -11,8 +10,9 @@ import dataStructures.Iterator;
  * @author António Duarte.
  */
 public class ArrayList<E> implements List<E> {
-	
-	/* Constants */
+	  
+  /* Constants */
+  private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
 	
 	/* Variables */
