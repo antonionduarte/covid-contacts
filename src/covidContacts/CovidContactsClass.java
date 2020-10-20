@@ -1,8 +1,7 @@
 package covidContacts;
 
-import dataStructures.DoublyLinkedList;
-import dataStructures.Iterator;
-import dataStructures.List;
+import comparators.UserComparator;
+import dataStructures.*;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 import exceptions.UserAlreadyExistsException;
@@ -16,27 +15,27 @@ import users.UserClass;
 public class CovidContactsClass implements CovidContacts {
 	
 	/* Variables */
-	private List<User> users;
+	private OrderedList<User> users;
 	private List<Group> groups;
 	
 	/* Constructor */
 	public CovidContactsClass() {
-		users = new DoublyLinkedList<>();
+		users = new OrderedArrayList<>(new UserComparator());
 		groups = new DoublyLinkedList<>();
 	}
 	
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
-		if (/* users.find(login) */ true) {
+		User newUser = new UserClass(login, username, age, location, profession);
+		if (users.find(newUser) != -1) {
 			throw new UserAlreadyExistsException();
 		}
-		users.addLast(new UserClass(login, username, age, location, profession));
+		users.insert(newUser);
 	}
 	
 	@Override
 	public User getUser(String login) {
-		// TODO Auto-generated method stub
-		return null;
+		return users.get(users.find(new UserClass(login, null, 0, null, null)));
 	}
 	
 	@Override
