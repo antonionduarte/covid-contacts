@@ -4,96 +4,71 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 import comparator.*;
 
-public class OrderedArrayList<E> implements List<E> {
+public class OrderedArrayList<E> implements OrderedList<E> {
 
-  private static final long serialVersionUID = 1L;
+	/* Constants */
+	private static final long serialVersionUID = 1L;
+	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
 
-  public OrderedArrayList(Comparator<E> comparator) {
+	/* Variables */
+	private E[] array;
+	private int numElements;
+	private Comparator<E> comparator;
 
-  }
+	@SuppressWarnings("unchecked")
+	public OrderedArrayList(Comparator<E> comparator) {
+		array = (E[]) new Object[DEFAULT_SIZE];
+		numElements = 0;
+		this.comparator = comparator;
+	}
 
-  @Override
-  public boolean isEmpty() {
-    // TODO Auto-generated method stub
-    return false;
-  }
+	@Override
+	public boolean isEmpty() {
+		return numElements == 0;
+	}
 
-  @Override
-  public int size() {
-    // TODO Auto-generated method stub
-    return 0;
-  }
+	@Override
+	public int size() {
+		return numElements;
+	}
 
-  @Override
-  public Iterator<E> iterator() {
-    // TODO Auto-generated method stub
-    return null;
-  }
+	@Override
+	public E getFirst() throws NoElementException {
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
+		return array[0];
+	}
 
-  @Override
-  public E getFirst() throws NoElementException {
-    // TODO Auto-generated method stub
-    return null;
-  }
+	@Override
+	public E getLast() throws NoElementException {
+		if (isEmpty()) {
+			throw new NoElementException();
+		}
+		return array[numElements - 1];
+	}
 
-  @Override
-  public E getLast() throws NoElementException {
-    // TODO Auto-generated method stub
-    return null;
-  }
+	@Override
+	public int find(E element) {
+				
+			if (comparator.compare(element, array[numElements / 2]) == 0) {
+				return numElements / 2;
+			}
+		
+		return -1;
+	}
 
-  @Override
-  public E get(int position) throws InvalidPositionException {
-    // TODO Auto-generated method stub
-    return null;
-  }
+	@Override
+	public E get(int position) throws InvalidPositionException {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
-  @Override
-  public int find(E element) {
-    // TODO Auto-generated method stub
-    return 0;
-  }
 
-  @Override
-  public void addFirst(E element) {
-    // TODO Auto-generated method stub
+	@Override
+	public void insert(E element) {
+		// TODO Auto-generated method stub
 
-  }
-
-  @Override
-  public void addLast(E element) {
-    // TODO Auto-generated method stub
-
-  }
-
-  @Override
-  public void add(int position, E element) throws InvalidPositionException {
-    // TODO Auto-generated method stub
-
-  }
-
-  @Override
-  public E removeFirst() throws NoElementException {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
-  public E removeLast() throws NoElementException {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
-  public E remove(int position) throws InvalidPositionException {
-    // TODO Auto-generated method stub
-    return null;
-  }
-
-  @Override
-  public boolean remove(Object element) {
-    // TODO Auto-generated method stub
-    return false;
-  }
-  
+	}
+	
 }
