@@ -7,14 +7,13 @@ public class GroupClass implements Group {
 	
 	/**
 	 * Constructor.
-	 * @param name        Groups' name.
+	 * @param name Groups' name.
 	 * @param description Groups' description.
 	 */
 	public GroupClass(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
-	
 	
 	@Override
 	public String getName() {
