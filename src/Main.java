@@ -5,6 +5,7 @@ import enums.Command;
 import enums.Output;
 import exceptions.*;
 import groups.Group;
+import posts.Post;
 import users.User;
 
 import java.util.Scanner;
@@ -38,7 +39,8 @@ public class Main {
 	private static Command readCommand(Scanner in) {
 		try {
 			return Command.valueOf(in.next().toUpperCase());
-		} catch (IllegalArgumentException e) {
+		}
+		catch (IllegalArgumentException e) {
 			return Command.UNKNOWN;
 		}
 	}
@@ -65,7 +67,7 @@ public class Main {
 				removeContact(in, covidContacts);
 				break;
 			case LC:
-				listContacts(in, covidContacts);
+				listUserContacts(in, covidContacts);
 				break;
 			case IG:
 				insertGroup(in, covidContacts);
@@ -77,16 +79,22 @@ public class Main {
 				removeGroup(in, covidContacts);
 				break;
 			case IP:
+				insertGroupParticipant(in, covidContacts);
 				break;
 			case RP:
+				removeGroupParticipant(in, covidContacts);
 				break;
 			case LP:
+				listGroupParticipants(in, covidContacts);
 				break;
 			case IM:
+				insertPost(in, covidContacts);
 				break;
 			case LMC:
+				listUserContactPosts(in, covidContacts);
 				break;
 			case LMG:
+				listGroupPosts(in, covidContacts);
 				break;
 			case FIM:
 				exit();
@@ -109,7 +117,8 @@ public class Main {
 		try {
 			covidContacts.registerUser(login, username, age, location, profession);
 			System.out.println(Output.USER_REGISTERED.getMessage());
-		} catch (UserAlreadyExistsException e) {
+		}
+		catch (UserAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -125,7 +134,8 @@ public class Main {
 		try {
 			User user = covidContacts.getUser(login);
 			System.out.printf("%s %s %d\n%s %s", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
-		} catch (UserDoesNotExistException e) {
+		}
+		catch (UserDoesNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -141,7 +151,8 @@ public class Main {
 		try {
 			covidContacts.addContact(login1, login2);
 			System.out.println(Output.CONTACT_MADE.getMessage());
-		} catch (UserDoesNotExistException | ContactAlreadyExistsException e) {
+		}
+		catch (UserDoesNotExistException | ContactAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
 		
@@ -158,22 +169,24 @@ public class Main {
 		try {
 			covidContacts.removeContact(login1, login2);
 			System.out.println(Output.CONTACT_REMOVED.getMessage());
-		} catch (UserDoesNotExistException | ContactDoesNotExistException | SameUserLoginException e) {
+		}
+		catch (UserDoesNotExistException | ContactDoesNotExistException | SameUserLoginException e) {
 			System.out.println(e.getMessage());
 		}
 	}
 	
-	private static void listContacts(Scanner in, CovidContacts covidContacts) {
+	private static void listUserContacts(Scanner in, CovidContacts covidContacts) {
 		String login = in.next();
 		
 		try {
-			Iterator<User> contacts = covidContacts.listContacts(login);
+			Iterator<User> contacts = covidContacts.newUserContactsIterator(login);
 			
 			while (contacts.hasNext()) {
 				User contact = contacts.next();
 				System.out.printf("%s %s\n", contact.getLogin(), contact.getUsername());
 			}
-		} catch (UserDoesNotExistException | NoContactsException e) {
+		}
+		catch (UserDoesNotExistException | NoContactsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -184,7 +197,8 @@ public class Main {
 		try {
 			covidContacts.insertGroup(name, description);
 			System.out.println(Output.GROUP_REGISTERED.getMessage());
-		} catch (GroupAlreadyExistsException e) {
+		}
+		catch (GroupAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -195,7 +209,8 @@ public class Main {
 		try {
 			Group group = covidContacts.getGroup(name);
 			System.out.printf("%s\n%s\n", group.getName(), group.getDescription());
-		} catch (GroupDoesNotExistException e) {
+		}
+		catch (GroupDoesNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -206,7 +221,82 @@ public class Main {
 		try {
 			covidContacts.removeGroup(name);
 			System.out.println(Output.GROUP_REMOVED.getMessage());
-		} catch (GroupDoesNotExistException e) {
+		}
+		catch (GroupDoesNotExistException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	private static void insertGroupParticipant(Scanner in, CovidContacts covidContacts) {
+		String login = in.next(), groupName = in.next();
+		
+		try {
+			covidContacts.insertGroupParticipant(login, groupName);
+			System.out.println(Output.PARTICIPANT_ADDED.getMessage());
+		}
+		catch (UserDoesNotExistException | GroupDoesNotExistException | UserAlreadyInGroupException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	private static void removeGroupParticipant(Scanner in, CovidContacts covidContacts) {
+		String login = in.next(), groupName = in.next();
+		
+		try {
+			covidContacts.removeGroupParticipant(login, groupName);
+			System.out.println(Output.PARTICIPANT_REMOVED.getMessage());
+		}
+		catch (UserDoesNotExistException | GroupDoesNotExistException | UserNotInGroupException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	private static void listGroupParticipants(Scanner in, CovidContacts covidContacts) {
+		String groupName = in.next();
+		
+		try {
+			Iterator<User> participants = covidContacts.newGroupParticipantsIterator(groupName);
+			
+			while (participants.hasNext()) {
+				User participant = participants.next();
+				System.out.printf("%s %s\n", participant.getLogin(), participant.getUsername());
+			}
+		}
+		catch (GroupDoesNotExistException | NoParticipantsException e) {
+			System.out.println();
+		}
+	}
+	
+	private static void insertPost(Scanner in, CovidContacts covidContacts) {
+		String login = in.next(), title = in.nextLine(), text = in.nextLine(), url = in.nextLine();
+		
+		try {
+			covidContacts.insertPost(login, title, text, url);
+			System.out.println(Output.POST_INSERTED.getMessage());
+		}
+		catch (UserDoesNotExistException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	private static void listUserContactPosts(Scanner in, CovidContacts covidContacts) {
+		String login1 = in.next(), login2 = in.next();
+		
+		try {
+			listPosts(covidContacts.newUserContactPostsIterator(login1, login2));
+		}
+		catch (UserDoesNotExistException | ContactDoesNotExistException | ContactHasNoPostsException e) {
+			System.out.println(e.getMessage());
+		}
+	}
+	
+	private static void listGroupPosts(Scanner in, CovidContacts covidContacts) {
+		String groupName = in.next(), login = in.next();
+		
+		try {
+			listPosts(covidContacts.newGroupPostsIterator(groupName, login));
+		}
+		catch (GroupDoesNotExistException | UserDoesNotExistException | UserNotInGroupException | GroupHasNoPostsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -216,6 +306,17 @@ public class Main {
 	 */
 	private static void exit() {
 		System.out.println(Output.EXIT.getMessage());
+	}
+	
+	/**
+	 * Auxiliary method to list posts.
+	 * @param posts Posts iterator.
+	 */
+	private static void listPosts(Iterator<Post> posts) {
+		while (posts.hasNext()) {
+			Post post = posts.next();
+			System.out.printf("%s\n%s\n%s\n\n", post.getTitle(), post.getText(), post.getUrl());
+		}
 	}
 	
 }
