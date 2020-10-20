@@ -1,8 +1,8 @@
 package dataStructures;
 
+import comparator.Comparator;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
-import comparator.*;
 
 public class OrderedArrayList<E> implements OrderedList<E> {
 
