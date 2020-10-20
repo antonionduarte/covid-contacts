@@ -7,7 +7,6 @@ import exceptions.NoElementException;
 public class OrderedArrayList<E> implements OrderedList<E> {
 
 	/* Constants */
-	private static final long serialVersionUID = 1L;
 	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
 
 	/* Variables */
