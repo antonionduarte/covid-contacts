@@ -34,14 +34,24 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public User getUser(String login) {
-		return users.get(users.find(new UserClass(login, null, 0, null, null)));
+	public User getUser(String login) throws UserDoesNotExistException {
+		int index = users.find(new UserClass(login, null, 0, null, null));
+		
+		if (index == -1) {
+			throw new UserDoesNotExistException();
+		}
+		return users.get(index);
 	}
 	
 	@Override
 	public void addContact(String login1, String login2) throws UserDoesNotExistException, ContactAlreadyExistsException {
-		// TODO Auto-generated method stub
+		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
+			index2 = users.find(new UserClass(login2, null, 0, null, null));
 		
+		if (index1 == -1 || index2 == -1) {
+			throw new UserDoesNotExistException();
+		}
+		users.get(index1).addContact(users.get(index2));
 	}
 	
 	@Override

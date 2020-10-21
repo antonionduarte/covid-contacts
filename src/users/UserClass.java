@@ -1,6 +1,9 @@
 package users;
 
-import dataStructures.Iterator;
+import comparators.UserComparator;
+import dataStructures.*;
+import exceptions.ContactAlreadyExistsException;
+import exceptions.ContactDoesNotExistException;
 import groups.Group;
 
 public class UserClass implements User {
@@ -11,8 +14,8 @@ public class UserClass implements User {
 	/* Variables */
 	private String login, username, location, profession;
 	private int age, numJoinedGroups;
-	private Group[] joinedGroups;
-	private User[] contacts;
+	private List<Group> joinedGroups;
+	private OrderedList<User> contacts;
 	
 	/**
 	 * Constructor.
@@ -28,9 +31,8 @@ public class UserClass implements User {
 		this.age = age;
 		this.location = location;
 		this.profession = profession;
-		joinedGroups = new Group[MAX_GROUPS];
-		numJoinedGroups = 0;
-		// contacts = new //Probably a linked list.
+		joinedGroups = new DoublyLinkedList<>();
+		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
 	}
 	
 	@Override
@@ -59,13 +61,16 @@ public class UserClass implements User {
 	}
 	
 	@Override
-	public void addContact(User contact) {
-		//TODO insert sort by name or something.
+	public void addContact(User contact) throws ContactAlreadyExistsException {
+		if (contacts.find(contact) == -1) {
+			throw new ContactAlreadyExistsException();
+		}
+		contacts.insert(contact);
 	}
 	
 	@Override
 	public void removeContact(User contact) {
-		//TODO
+		contacts.
 	}
 	
 	@Override

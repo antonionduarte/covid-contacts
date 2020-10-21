@@ -3,6 +3,8 @@ package dataStructures;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
+import java.util.Arrays;
+
 /**
  * List abstract data type, implemented with an array.
  * @param <E> Generic Element.
@@ -138,7 +140,7 @@ public class ArrayList<E> implements List<E> {
 	
 	@Override
 	public Iterator<E> iterator() {
-		return null;
+		return new ArrayListIterator<>(array);
 	}
 	
 	/* Private methods */
