@@ -20,8 +20,8 @@ public class CovidContactsClass implements CovidContacts {
 	
 	/* Constructor */
 	public CovidContactsClass() {
-		users = new OrderedArrayList<>(new UserComparator());
-		groups = new DoublyLinkedList<>();
+		users = new OrderedArrayList<>(new UserComparator()); // descriptive comment of why we chose to use an Ordered Array List
+		groups = new DoublyLinkedList<>(); // descriptive comment of why we chose to use a Doubly Linked List
 	}
 	
 	@Override
