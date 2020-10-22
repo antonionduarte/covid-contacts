@@ -37,7 +37,7 @@ public class DoublyLinkedList<E> implements List<E> {
 	public int find(E element) {
 		DListNode<E> pointerNode = head;
 		
-		for (int i = 0; pointerNode != null; i++) {
+		for (int i = 0; pointerNode.getNext() != null; i++) {
 			if (pointerNode.getElement().equals(element)) {
 				return i;
 			}
