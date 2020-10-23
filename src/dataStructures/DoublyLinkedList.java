@@ -13,6 +13,7 @@ public class DoublyLinkedList<E> implements List<E> {
 	
 	/* Constants */
 	private static final long serialVersionUID = 0L;
+	
 	/* Variables */
 	protected DListNode<E> head, tail;
 	protected int size;
@@ -37,7 +38,7 @@ public class DoublyLinkedList<E> implements List<E> {
 	public int find(E element) {
 		DListNode<E> pointerNode = head;
 		
-		for (int i = 0; pointerNode != null; i++) {
+		for (int i = 0; i < size; i++) {
 			if (pointerNode.getElement().equals(element)) {
 				return i;
 			}
@@ -114,6 +115,11 @@ public class DoublyLinkedList<E> implements List<E> {
 		size++;
 	}
 	
+	/**
+	 * Adds a new node to the middle of the linked list.
+	 * @param position Position of the new node.
+	 * @param element Element inside the new node.
+	 */
 	private void addMiddle(int position, E element) {
 		DListNode<E> nextNode = getNode(position), previousNode = nextNode.getPrevious(), newNode = new DListNode<>(element, previousNode, nextNode);
 		previousNode.setNext(newNode);
@@ -262,26 +268,22 @@ public class DoublyLinkedList<E> implements List<E> {
 		return new DoublyLLIterator<E>(head, tail);
 	}
 	
-	/**
-	 * Removes all of the elements from the specified list and
-	 * inserts them at the end of the list (in proper sequence).
-	 * @param list - list to be appended to the end of this
-	 */
-	public void append(DoublyLinkedList<E> list) {
-		if (list != null && !list.isEmpty()) {
+	@Override
+	public void append(List<E> list) {
+		DoublyLinkedList<E> other = (DoublyLinkedList<E>) list;
+		if (other != null && !other.isEmpty()) {
 			if (isEmpty()) {
-				head = list.head;
-				tail = list.tail;
-				size = list.size;
+				head = other.head;
+				tail = other.tail;
+				size = other.size;
 			}
 			else {
-				tail.setNext(list.head);
-				list.head.setPrevious(tail);
-				tail = list.tail;
-				size += list.size;
+				tail.setNext(other.head);
+				other.head.setPrevious(tail);
+				tail = other.tail;
+				size += other.size;
 			}
 		}
-		list = null;
 	}
 	
 	protected static class DListNode<E> {

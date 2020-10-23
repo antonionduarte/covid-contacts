@@ -81,6 +81,17 @@ public class ArrayList<E> implements List<E> {
 	}
 	
 	@Override
+	public void append(List<E> list) {
+		if (numElements + list.size() > array.length) {
+			resize();
+		}
+		
+		for (int i = 0; i < list.size(); i++) {
+			array[numElements + i] = list.get(i);
+		}
+	}
+	
+	@Override
 	public E remove(int index) throws InvalidPositionException {
 		if (index < 0 || index >= numElements) {
 			throw new InvalidPositionException();
@@ -138,7 +149,7 @@ public class ArrayList<E> implements List<E> {
 	
 	@Override
 	public Iterator<E> iterator() {
-		return null;
+		return new ArrayListIterator<>(array);
 	}
 	
 	/* Private methods */

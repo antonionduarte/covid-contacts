@@ -100,4 +100,11 @@ public interface List<E> extends Serializable {
 	 */
 	boolean remove(E element);
 	
+	/**
+	 * Removes all of the elements from the specified list and
+	 * inserts them at the end of the list (in proper sequence).
+	 * @param list List to be appended to the end.
+	 */
+	void append(List<E> list);
+	
 }   

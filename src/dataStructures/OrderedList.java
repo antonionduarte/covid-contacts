@@ -49,4 +49,35 @@ public interface OrderedList<E> {
 	 */
 	void insert(E element);
 	
+	/**
+	 * Removes and returns the element at the first position in the list.
+	 * @return Element removed from the first position in the list.
+	 */
+	E removeFirst() throws NoElementException;
+	
+	/**
+	 * Removes and returns the element at the last position in the list.
+	 * @return Element removed from the last position in the list.
+	 */
+	E removeLast() throws NoElementException;
+	
+	/**
+	 * Removes and returns the element at the specified position in the list.
+	 * @param index Position of element to be removed.
+	 * @return Element removed from the specified position.
+	 */
+	E remove(int index) throws InvalidPositionException;
+	
+	/**
+	 * Finds and removes the first occurrence of the specified element.
+	 * @param element Element to be removed from list
+	 * @return True if the element was found and removed.
+	 */
+	boolean remove(E element);
+	
+	/**
+	 * @return Iterator of the elements in the list.
+	 */
+	Iterator<E> iterator();
+	
 }

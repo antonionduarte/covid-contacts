@@ -89,7 +89,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		while (!found) {
 			int mid = (low + high) / 2, result = comparator.compare(array[mid], element);
 			
-			if (result < 0 && comparator.compare(array[mid + 1], element) > 0) {
+			if (result <= 0 && comparator.compare(array[mid + 1], element) >= 0) {
 				insert(mid + 1, element);
 				found = true;
 			}
@@ -102,9 +102,49 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		}
 	}
 	
+	@Override
+	public E removeFirst() throws NoElementException {
+		return remove(0);
+	}
+	
+	@Override
+	public E removeLast() throws NoElementException {
+		return remove(numElements-1);
+	}
+	
+	@Override
+	public E remove(int index) throws InvalidPositionException {
+		if (index < 0 || index >= numElements) {
+			throw new InvalidPositionException();
+		}
+		
+		E element = array[index];
+		for (int i = index; i < numElements; i++) {
+			array[i - 1] = array[i];
+		}
+		numElements--;
+		return element;
+	}
+	
+	@Override
+	public boolean remove(E element) {
+		int index = find(element);
+		
+		if (index > -1) {
+			remove(index);
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public Iterator<E> iterator() {
+		return new ArrayListIterator<>(array);
+	}
+	
 	/**
 	 * Inserts an element into the specified position.
-	 * @param index Position to inser the element on.
+	 * @param index Position to insert the element on.
 	 */
 	private void insert(int index, E element) {
 		if (index == array.length) {
