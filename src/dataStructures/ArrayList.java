@@ -23,15 +23,15 @@ public class ArrayList<E> implements List<E> {
 	public ArrayList() {
 		array = (E[]) new Object[DEFAULT_SIZE];
 		numElements = 0;
-  }
-  
-  @SuppressWarnings("unchecked")
-  public ArrayList(int size) {
-    array = (E[]) new Object[size];
-    numElements = 0;
-  }
+	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList(int size) {
+		array = (E[]) new Object[size];
+		numElements = 0;
+	}
 
-  /* Methods */
+	/* Methods */
 	
 	@Override
 	public int size() {
