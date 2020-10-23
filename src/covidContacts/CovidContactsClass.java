@@ -148,6 +148,7 @@ public class CovidContactsClass implements CovidContacts {
 
 		if (!user.getNumGroups() == 10) {
 			group.insertParticipant(user);
+			user.addGroup(group);
 		}
 	}
 	
