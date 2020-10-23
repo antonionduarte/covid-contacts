@@ -103,42 +103,19 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void removeGroup(String name) throws GroupDoesNotExistException {
-		if (groups.isEmpty()) {
-			throw new GroupDoesNotExistException();
-		}
-
-		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-		boolean found = false;
-
-		while (iterator.hasNext() && !found) {
-			Group toRemove = iterator.next();
-			if (toRemove.getName().equals(name)) {
-				found = true;
-				groups.remove(toRemove);
-			}
-		}
-
-		if (found == false) {
+		if (!groups.remove(new GroupClass(name, null))) {
 			throw new GroupDoesNotExistException();
 		}
 	}
 	
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
-		if (groups.isEmpty()) {
+		int index = groups.find(new GroupClass(name, null));
+		if (index == -1) {
 			throw new GroupDoesNotExistException();
 		}
-
-		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-
-		while (iterator.hasNext()) {
-			Group toReturn = iterator.next();
-			if (toReturn.getName().equals(name)) {
-				return toReturn;
-			}
-		}
-
-		throw new GroupDoesNotExistException();
+		
+		return groups.get(index);
 	}
 	
 	@Override
@@ -172,7 +149,7 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Post newPost = new PostClass(user, title, text, url);
 
-    user.insertPost(newPost);
+        user.insertPost(newPost);
 	}
 	
 	@Override
