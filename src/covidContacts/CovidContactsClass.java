@@ -123,7 +123,10 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
 
-		group.insertParticipant(user);
+		if (user.getNumGroups() < 10) {
+			group.insertParticipant(user);
+			user.addGroup(group);
+		}
 	}
 	
 	@Override
