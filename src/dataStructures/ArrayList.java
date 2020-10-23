@@ -30,7 +30,7 @@ public class ArrayList<E> implements List<E> {
 		array = (E[]) new Object[size];
 		numElements = 0;
 	}
-
+	
 	/* Methods */
 	
 	@Override

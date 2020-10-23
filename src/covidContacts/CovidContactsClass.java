@@ -2,13 +2,7 @@ package covidContacts;
 
 import comparators.UserComparator;
 import dataStructures.*;
-import exceptions.ContactAlreadyExistsException;
-import exceptions.ContactDoesNotExistException;
-import exceptions.GroupAlreadyExistsException;
-import exceptions.GroupDoesNotExistException;
-import exceptions.UserAlreadyExistsException;
-import exceptions.UserDoesNotExistException;
-import exceptions.UserNotInGroupException;
+import exceptions.*;
 import groups.Group;
 import groups.GroupClass;
 import posts.Post;
@@ -45,22 +39,22 @@ public class CovidContactsClass implements CovidContacts {
 		if (index == -1) {
 			throw new UserDoesNotExistException();
 		}
-
+		
 		return users.get(index);
 	}
 	
 	@Override
 	public void addContact(String login1, String login2) throws UserDoesNotExistException, ContactAlreadyExistsException {
 		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
-				index2 = users.find(new UserClass(login2, null, 0, null, null));
-
+			index2 = users.find(new UserClass(login2, null, 0, null, null));
+		
 		if (index1 == -1 || index2 == -1) {
 			throw new UserDoesNotExistException();
 		}
-
+		
 		User user1 = users.get(index1);
 		User user2 = users.get(index2);
-
+		
 		user1.addContact(user2);
 		user2.addContact(user1);
 	}
@@ -70,26 +64,26 @@ public class CovidContactsClass implements CovidContacts {
 			throws UserDoesNotExistException, ContactDoesNotExistException {
 		
 		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
-				index2 = users.find(new UserClass(login2, null, 0, null, null));
-
+			index2 = users.find(new UserClass(login2, null, 0, null, null));
+		
 		if (index1 == -1 || index2 == -1) {
 			throw new UserDoesNotExistException();
 		}
 		
 		User user1 = users.get(index1);
 		User user2 = users.get(index2);
-				
+		
 		if (!user1.hasContact(user2)) {
 			throw new ContactDoesNotExistException();
 		}
-
+		
 		user1.removeContact(user2);
 		user2.removeContact(user1);
 	}
 	
 	@Override
 	public Iterator<User> newUserContactsIterator(String login) {
-		return null;
+		return getUser(login).newContactsIterator();
 	}
 	
 	@Override
@@ -122,7 +116,7 @@ public class CovidContactsClass implements CovidContacts {
 	public void insertGroupParticipant(String login, String groupName) {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
-
+		
 		if (user.getNumGroups() < 10) {
 			group.insertParticipant(user);
 			user.addGroup(group);
@@ -133,36 +127,36 @@ public class CovidContactsClass implements CovidContacts {
 	public void removeGroupParticipant(String login, String groupName) {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
-
+		
 		if (!group.hasParticipant(user)) {
 			throw new UserNotInGroupException();
 		}
-
+		
 		group.removeParticipant(user);
 	}
-			
+	
 	
 	@Override
 	public Iterator<User> newGroupParticipantsIterator(String groupName) {
-		return null;
+		return getGroup(groupName).newParticipantsIterator();
 	}
 	
 	@Override
 	public void insertPost(String login, String title, String text, String url) {
 		User user = getUser(login);
 		Post newPost = new PostClass(user, title, text, url);
-
-        user.insertPost(newPost);
+		
+		user.insertPost(newPost);
 	}
 	
 	@Override
 	public Iterator<Post> newUserContactPostsIterator(String login1, String login2) {
-		return null;
+		return getUser(login1).newContactPostsIterator(getUser(login2));
 	}
 	
 	@Override
 	public Iterator<Post> newGroupPostsIterator(String groupName, String login) {
-		return null;
+		return getGroup(groupName).newGroupPostsIterator(getUser(login));
 	}
 	
 }

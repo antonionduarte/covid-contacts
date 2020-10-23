@@ -1,5 +1,6 @@
 package users;
 
+import dataStructures.Iterator;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 
@@ -15,12 +16,12 @@ public interface User extends UserGetters {
 	 * Removes an existing contact.
 	 * @param contact Contact to remove.
 	 */
-  void removeContact(User contact) throws ContactDoesNotExistException;
-  
-  /**
-   * @param contact Contact to check for.
-   * @return Return true if the specified contact exists, false if otherwise.
-   */
-  boolean hasContact(User contact);
+	void removeContact(User contact) throws ContactDoesNotExistException;
+	
+	/**
+	 * @param contact Contact to check for.
+	 * @return Return true if the specified contact exists, false if otherwise.
+	 */
+	boolean hasContact(User contact);
 	
 }

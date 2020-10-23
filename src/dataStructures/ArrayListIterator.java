@@ -3,7 +3,7 @@ package dataStructures;
 import exceptions.NoSuchElementException;
 
 public class ArrayListIterator<E> implements Iterator<E> {
-
+	
 	/* Constants */
 	private static final long serialVersionUID = 1L;
 	

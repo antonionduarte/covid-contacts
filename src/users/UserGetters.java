@@ -1,6 +1,8 @@
 package users;
 
 import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
+import posts.Post;
 
 public interface UserGetters {
 	
@@ -30,8 +32,13 @@ public interface UserGetters {
 	int getAge();
 	
 	/**
-	 * @return Contacts iterator.
+	 * @return New contacts iterator.
 	 */
-	Iterator<User> listContacts();
+	Iterator<User> newContactsIterator();
 	
+	/**
+	 * @param other User to list received posts from.
+	 * @return New contact posts iterator.
+	 */
+	Iterator<Post> newContactPostsIterator(User other);
 }

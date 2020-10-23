@@ -1,9 +1,9 @@
 package dataStructures;
 
 import comparators.Comparator;
+import dataStructures.DoublyLinkedList.DListNode;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
-import dataStructures.DoublyLinkedList.DListNode;
 
 public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
@@ -102,8 +102,8 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 			
 			for (int i = 0; i < size - 1 && !found; i++) {
 				if (comparator.compare(pointerNode.getElement(), element) <= 0 &&
-					comparator.compare(pointerNode.getNext().getElement(), element) >= 0) {
-					addMiddle(i+1, element);
+						comparator.compare(pointerNode.getNext().getElement(), element) >= 0) {
+					addMiddle(i + 1, element);
 					found = true;
 				}
 				pointerNode = pointerNode.getNext();

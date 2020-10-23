@@ -109,7 +109,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	
 	@Override
 	public E removeLast() throws NoElementException {
-		return remove(numElements-1);
+		return remove(numElements - 1);
 	}
 	
 	@Override

@@ -1,7 +1,7 @@
 package comparators;
 
 public interface Comparator<E> {
- 
+	
 	/**
 	 * Compares two elements of a generic type.
 	 * @param element1 First element.
