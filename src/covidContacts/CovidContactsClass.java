@@ -141,13 +141,17 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void insertGroupParticipant(String login, String groupName) {
-	
+    User user = getUser(login);
+    Group group = getGroup(groupName);
+
+    group.insertParticipant(user);
 	}
 	
 	@Override
 	public void removeGroupParticipant(String login, String groupName) {
-	
-	}
+      
+  }
+      
 	
 	@Override
 	public Iterator<User> newGroupParticipantsIterator(String groupName) {
