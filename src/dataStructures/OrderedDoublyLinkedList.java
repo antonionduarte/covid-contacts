@@ -2,7 +2,7 @@ package dataStructures;
 
 import comparators.Comparator;
 
-public class OrderedDoublyLinkedList<E> extends DoublyLinkedList<E> implements OrderedList<E> {
+public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	/* Variables */
 	Comparator<E> comparator;
