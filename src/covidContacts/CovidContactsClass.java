@@ -4,9 +4,11 @@ import comparators.UserComparator;
 import dataStructures.*;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
+import exceptions.GroupAlreadyExistsException;
 import exceptions.UserAlreadyExistsException;
 import exceptions.UserDoesNotExistException;
 import groups.Group;
+import groups.GroupClass;
 import posts.Post;
 import users.User;
 import users.UserClass;
@@ -52,15 +54,34 @@ public class CovidContactsClass implements CovidContacts {
 		if (index1 == -1 || index2 == -1) {
 			throw new UserDoesNotExistException();
 		}
-		
-		users.get(index1).addContact(users.get(index2));
+
+		User user1 = users.get(index1);
+		User user2 = users.get(index2);
+
+		user1.addContact(user2);
+		user2.addContact(user1);
 	}
 	
 	@Override
 	public void removeContact(String login1, String login2)
 			throws UserDoesNotExistException, ContactDoesNotExistException {
-		// TODO Auto-generated method stub
 		
+		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
+				index2 = users.find(new UserClass(login2, null, 0, null, null));
+
+		if (index1 == -1 || index2 == -1) {
+			throw new UserDoesNotExistException();
+		}
+		
+		User user1 = users.get(index1);
+		User user2 = users.get(index2);
+				
+		if (!user1.hasContact(user2)) {
+			throw new ContactDoesNotExistException();
+		}
+
+		user1.removeContact(user2);
+		user2.removeContact(user1);
 	}
 	
 	@Override
@@ -69,13 +90,21 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public void insertGroup(String name, String description) {
-	
+	public void insertGroup(String name, String description) throws GroupAlreadyExistsException {
+		Group newGroup = new GroupClass(name, description);
+		if (groups.find(newGroup) != -1) {
+			throw new UserAlreadyExistsException();
+		}
+		groups.addLast(newGroup);
 	}
 	
 	@Override
 	public void removeGroup(String name) {
-	
+		Iterator<Group> iterator = groups.iterator();
+		// Devemos utilizar um iterador para verificar
+		// a existência de um grupo, em vez de criar
+		// um outro grupo com o mesmo identificador
+
 	}
 	
 	@Override
