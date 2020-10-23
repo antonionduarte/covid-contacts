@@ -106,19 +106,20 @@ public class CovidContactsClass implements CovidContacts {
 		}
 
 		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-		Group toRemove = null;
+		Group toRemove;
 		boolean found = false;
 
 		while (iterator.hasNext() && !found) {
 			toRemove = iterator.next();
-			found = toRemove.getName().equals(name);
+			if (toRemove.getName().equals(name)) {
+				found = true;
+				groups.remove(toRemove);
+			}
 		}
 
 		if (found == false) {
 			throw new GroupDoesNotExistException();
 		}
-		
-		groups.remove(toRemove);
 	}
 	
 	@Override
@@ -128,19 +129,16 @@ public class CovidContactsClass implements CovidContacts {
 		}
 
 		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-		Group toReturn = null;
-		boolean found = false;
+		Group toReturn;
 
-		while (iterator.hasNext() && !found) {
+		while (iterator.hasNext()) {
 			toReturn = iterator.next();
-			found = toReturn.getName().equals(name);
+			if (toReturn.getName().equals(name)) {
+				return toReturn;
+			}
 		}
 
-		if (found == false) {
-			throw new GroupDoesNotExistException();
-		}
-
-		return toReturn;
+		throw new GroupDoesNotExistException();
 	}
 	
 	@Override
