@@ -5,6 +5,7 @@ import dataStructures.*;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 import exceptions.GroupAlreadyExistsException;
+import exceptions.GroupDoesNotExistException;
 import exceptions.UserAlreadyExistsException;
 import exceptions.UserDoesNotExistException;
 import groups.Group;
@@ -99,17 +100,47 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public void removeGroup(String name) {
-		Iterator<Group> iterator = groups.iterator();
-		// Devemos utilizar um iterador para verificar
-		// a existência de um grupo, em vez de criar
-		// um outro grupo com o mesmo identificador
+	public void removeGroup(String name) throws GroupDoesNotExistException {
+		if (groups.isEmpty()) {
+			throw new GroupDoesNotExistException();
+		}
 
+		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
+		Group toRemove = null;
+		boolean found = false;
+
+		while (iterator.hasNext() && !found) {
+			toRemove = iterator.next();
+			found = toRemove.getName().equals(name);
+		}
+
+		if (found == false) {
+			throw new GroupDoesNotExistException();
+		}
+		
+		groups.remove(toRemove);
 	}
 	
 	@Override
-	public Group getGroup(String name) {
-		return null;
+	public Group getGroup(String name) throws GroupDoesNotExistException {
+		if (groups.isEmpty()) {
+			throw new GroupDoesNotExistException();
+		}
+
+		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
+		Group toReturn = null;
+		boolean found = false;
+
+		while (iterator.hasNext() && !found) {
+			toReturn = iterator.next();
+			found = toReturn.getName().equals(name);
+		}
+
+		if (found == false) {
+			throw new GroupDoesNotExistException();
+		}
+
+		return toReturn;
 	}
 	
 	@Override
