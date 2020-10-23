@@ -172,8 +172,7 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Post newPost = new PostClass(user, title, text, url);
 
-		
-
+    user.insertPost(newPost);
 	}
 	
 	@Override
