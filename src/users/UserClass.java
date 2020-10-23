@@ -58,7 +58,12 @@ public class UserClass implements User {
 	@Override
 	public int getAge() {
 		return age;
-	}
+  }
+  
+  @Override
+  public boolean hasContact(User contact) {
+    return contacts.find(contact) != -1;
+  }
 	
 	@Override
 	public void addContact(User contact) {
