@@ -106,11 +106,10 @@ public class CovidContactsClass implements CovidContacts {
 		}
 
 		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-		Group toRemove;
 		boolean found = false;
 
 		while (iterator.hasNext() && !found) {
-			toRemove = iterator.next();
+			Group toRemove = iterator.next();
 			if (toRemove.getName().equals(name)) {
 				found = true;
 				groups.remove(toRemove);
@@ -129,10 +128,9 @@ public class CovidContactsClass implements CovidContacts {
 		}
 
 		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-		Group toReturn;
 
 		while (iterator.hasNext()) {
-			toReturn = iterator.next();
+			Group toReturn = iterator.next();
 			if (toReturn.getName().equals(name)) {
 				return toReturn;
 			}
