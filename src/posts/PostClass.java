@@ -22,7 +22,6 @@ public class PostClass implements Post {
 		this.url = url;
 	}
 	
-	
 	@Override
 	public String getTitle() {
 		return title;
