@@ -18,12 +18,20 @@ public class ArrayList<E> implements List<E> {
 	private E[] array;
 	private int numElements;
 	
-	/* Constructor */
+	/* Constructors */
 	@SuppressWarnings("unchecked")
 	public ArrayList() {
 		array = (E[]) new Object[DEFAULT_SIZE];
 		numElements = 0;
 	}
+	
+	@SuppressWarnings("unchecked")
+	public ArrayList(int size) {
+		array = (E[]) new Object[size];
+		numElements = 0;
+	}
+
+	/* Methods */
 	
 	@Override
 	public int size() {
