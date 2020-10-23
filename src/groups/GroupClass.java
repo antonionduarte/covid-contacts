@@ -1,9 +1,12 @@
 package groups;
 
+import dataStructures.*;
+
 public class GroupClass implements Group {
 	
 	/* Variables */
 	private String name, description;
+	private List participants;
 	
 	/**
 	 * Constructor.
@@ -13,6 +16,7 @@ public class GroupClass implements Group {
 	public GroupClass(String name, String description) {
 		this.name = name;
 		this.description = description;
+		participants = new ArrayList<>();
 	}
 	
 	@Override
