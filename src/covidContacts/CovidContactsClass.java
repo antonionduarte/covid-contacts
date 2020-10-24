@@ -73,10 +73,6 @@ public class CovidContactsClass implements CovidContacts {
 		User user1 = users.get(index1);
 		User user2 = users.get(index2);
 		
-		if (!user1.hasContact(user2)) {
-			throw new ContactDoesNotExistException();
-		}
-		
 		user1.removeContact(user2);
 		user2.removeContact(user1);
 	}
@@ -102,6 +98,7 @@ public class CovidContactsClass implements CovidContacts {
 		}
 	}
 	
+	// TODO: we're searching through the list twice
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
 		int index = groups.find(new GroupClass(name, null));
@@ -128,11 +125,8 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
 		
-		if (!group.hasParticipant(user)) {
-			throw new UserNotInGroupException();
-		}
-		
 		group.removeParticipant(user);
+		user.removeGroup(group);
 	}
 	
 	

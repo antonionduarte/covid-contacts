@@ -1,5 +1,7 @@
 package users;
 
+import posts.*;
+import groups.*;
 import dataStructures.Iterator;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
@@ -19,9 +21,21 @@ public interface User extends UserGetters {
 	void removeContact(User contact) throws ContactDoesNotExistException;
 	
 	/**
-	 * @param contact Contact to check for.
-	 * @return Return true if the specified contact exists, false if otherwise.
+	 * Adds a new group to the Users' group list.
+	 * @param group The group to add.
 	 */
-	boolean hasContact(User contact);
+	void addGroup(Group group);
+
+	/**
+	 * Adds a new post to the Users' post list.
+	 * @param post The post to add.
+	 */
+	void insertPost(Post post);
+
+	/**
+	 * Removes a group from the Users' group list.
+	 * @param group The group to remove.
+	 */
+	void removeGroup(Group group);
 	
 }
