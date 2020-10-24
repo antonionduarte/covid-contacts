@@ -105,13 +105,6 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public void removeGroup(String name) throws GroupDoesNotExistException {
-		if (!groups.remove(new GroupClass(name, null))) {
-			throw new GroupDoesNotExistException();
-		}
-	}
-	
-	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
 		Iterator<Group> iterator = groups.iterator();
 		
@@ -122,6 +115,13 @@ public class CovidContactsClass implements CovidContacts {
 			}
 		}
 		throw new GroupDoesNotExistException();
+	}
+	
+	@Override
+	public void removeGroup(String name) throws GroupDoesNotExistException {
+		if (!groups.remove(new GroupClass(name, null))) {
+			throw new GroupDoesNotExistException();
+		}
 	}
 	
 	@Override

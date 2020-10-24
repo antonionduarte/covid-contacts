@@ -52,16 +52,16 @@ public interface CovidContacts {
 	void insertGroup(String name, String description) throws GroupAlreadyExistsException;
 	
 	/**
-	 * Removes the specified group.
-	 * @param name The groups' name.
-	 */
-	void removeGroup(String name);
-	
-	/**
 	 * @param name The specified groups' name.
 	 * @return Group with the specified name.
 	 */
 	Group getGroup(String name) throws GroupDoesNotExistException;
+	
+	/**
+	 * Removes the specified group.
+	 * @param name The groups' name.
+	 */
+	void removeGroup(String name) throws GroupDoesNotExistException;
 	
 	/**
 	 * Inserts a user into a group.
