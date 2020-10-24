@@ -170,7 +170,7 @@ public class Main {
 			covidContacts.removeContact(login1, login2);
 			System.out.println(Output.CONTACT_REMOVED.getMessage());
 		}
-		catch (UserDoesNotExistException | ContactDoesNotExistException | SameUserLoginException e) {
+		catch (UserDoesNotExistException | SameUserLoginException | ContactDoesNotExistException e) {
 			System.out.println(e.getMessage());
 		}
 	}

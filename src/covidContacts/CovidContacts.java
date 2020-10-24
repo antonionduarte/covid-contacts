@@ -1,10 +1,7 @@
 package covidContacts;
 
 import dataStructures.Iterator;
-import exceptions.ContactAlreadyExistsException;
-import exceptions.ContactDoesNotExistException;
-import exceptions.UserAlreadyExistsException;
-import exceptions.UserDoesNotExistException;
+import exceptions.*;
 import groups.Group;
 import posts.Post;
 import users.User;
@@ -32,14 +29,14 @@ public interface CovidContacts {
 	 * @param login1 First users' login.
 	 * @param login2 Second users' login.
 	 */
-	void addContact(String login1, String login2);
+	void addContact(String login1, String login2) throws ContactAlreadyExistsException;
 	
 	/**
 	 * Removes the 2-way contact between 2 users.
 	 * @param login1 First users' login.
 	 * @param login2 Second users' login.
 	 */
-	void removeContact(String login1, String login2) throws UserDoesNotExistException, ContactDoesNotExistException;
+	void removeContact(String login1, String login2) throws SameUserLoginException;
 	
 	/**
 	 * @param login The specified users' login.
