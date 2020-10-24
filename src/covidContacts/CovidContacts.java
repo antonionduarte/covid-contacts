@@ -1,10 +1,7 @@
 package covidContacts;
 
 import dataStructures.Iterator;
-import exceptions.UserAlreadyExistsException;
-import exceptions.ContactAlreadyExistsException;
-import exceptions.SameUserLoginException;
-import exceptions.UserDoesNotExistException;
+import exceptions.*;
 import groups.Group;
 import posts.Post;
 import users.User;
@@ -45,26 +42,26 @@ public interface CovidContacts {
 	 * @param login The specified users' login.
 	 * @return Iterator of the specified users' contacts.
 	 */
-	Iterator<User> newUserContactsIterator(String login) throws UserDoesNotExistException;
+	Iterator<User> newUserContactsIterator(String login);
 	
 	/**
 	 * Inserts a new group into the system.
 	 * @param name The groups' name.
 	 * @param description The groups' description.
 	 */
-	void insertGroup(String name, String description);
-	
-	/**
-	 * Removes the specified group.
-	 * @param name The groups' name.
-	 */
-	void removeGroup(String name);
+	void insertGroup(String name, String description) throws GroupAlreadyExistsException;
 	
 	/**
 	 * @param name The specified groups' name.
 	 * @return Group with the specified name.
 	 */
-	Group getGroup(String name);
+	Group getGroup(String name) throws GroupDoesNotExistException;
+	
+	/**
+	 * Removes the specified group.
+	 * @param name The groups' name.
+	 */
+	void removeGroup(String name) throws GroupDoesNotExistException;
 	
 	/**
 	 * Inserts a user into a group.

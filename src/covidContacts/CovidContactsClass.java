@@ -105,28 +105,23 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
+	public Group getGroup(String name) throws GroupDoesNotExistException {
+		Iterator<Group> iterator = groups.iterator();
+		
+		while (iterator.hasNext()) {
+			Group group = iterator.next();
+			if (group.getName().equals(name)) {
+				return group;
+			}
+		}
+		throw new GroupDoesNotExistException();
+	}
+	
+	@Override
 	public void removeGroup(String name) throws GroupDoesNotExistException {
 		if (!groups.remove(new GroupClass(name, null))) {
 			throw new GroupDoesNotExistException();
 		}
-	}
-	
-	@Override
-	public Group getGroup(String name) throws GroupDoesNotExistException {
-		if (groups.isEmpty()) {
-			throw new GroupDoesNotExistException();
-		}
-		
-		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-
-		while (iterator.hasNext()) {
-			Group toReturn = iterator.next();
-			if (toReturn.getName().equals(name)) {
-				return toReturn;
-			}
-		}
-
-		throw new GroupDoesNotExistException();
 	}
 	
 	@Override

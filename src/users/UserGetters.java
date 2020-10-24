@@ -1,6 +1,7 @@
 package users;
 
 import dataStructures.Iterator;
+import exceptions.NoContactsException;
 import posts.Post;
 
 public interface UserGetters {
@@ -38,7 +39,7 @@ public interface UserGetters {
 	/**
 	 * @return New contacts iterator.
 	 */
-	Iterator<User> newContactsIterator();
+	Iterator<User> newContactsIterator() throws NoContactsException;
 	
 	/**
 	 * @return New posts iterator.
