@@ -12,6 +12,9 @@ import users.UserClass;
 
 
 public class CovidContactsClass implements CovidContacts {
+
+	/* Constants */
+	private static final int MAX_GROUPS_USER = 10;
 	
 	/* Variables */
 	private OrderedList<User> users;
@@ -105,7 +108,7 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
 		
-		if (user.getNumGroups() < 10) {
+		if (user.getNumGroups() < MAX_GROUPS_USER) {
 			group.insertParticipant(user);
 			user.addGroup(group);
 		}

@@ -11,9 +11,6 @@ import posts.Post;
 
 public class UserClass implements User {
 
-	/* Constants */
-	private static final int MAX_GROUPS = 10;
-
 	/* Variables */
 	private String login, username, location, profession;
 	private int age, numGroups;
@@ -49,7 +46,7 @@ public class UserClass implements User {
 		UserClass userClass = (UserClass) o;
 		return getLogin().equals(userClass.getLogin());
 	}
-	
+
 	@Override
 	public String getLogin() {
 		return login;
