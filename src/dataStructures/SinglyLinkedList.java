@@ -249,5 +249,10 @@ public class SinglyLinkedList<E> implements List<E> {
 		}
 		return index > -1;
 	}
-	
+
+	@Override
+	public void append(List<E> list) {
+		// TODO
+	}
+
 }
