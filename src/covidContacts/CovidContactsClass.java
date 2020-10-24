@@ -19,8 +19,8 @@ public class CovidContactsClass implements CovidContacts {
 	
 	/* Constructor */
 	public CovidContactsClass() {
-		users = new OrderedArrayList<>(new UserComparator()); // descriptive comment of why we chose to use an Ordered Array List
-		groups = new DoublyLinkedList<>(); // descriptive comment of why we chose to use a Doubly Linked List
+		users = new OrderedArrayList<>(new UserComparator()); // We chose an Ordered Array List since finding/checking if a user exists and accessing the user is a much more common occurrence than adding or removing a user from the system or resizing the array in the case it's full (even when adding or removing a user, its existence has to be checked first), thus, by keeping the array ordered after every insertion, we can take advantage of the binary search and binary insertion we implemented, which have O(log2(n)) time complexity.
+		groups = new DoublyLinkedList<>(); // We chose a Doubly Linked List because there are far less groups than users in the system and it will only be used to add and remove groups, since other operations like adding a post and a participant will be done via the users (which have much smaller collections of groups).
 	}
 	
 	@Override
