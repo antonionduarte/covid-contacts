@@ -43,6 +43,14 @@ public class UserClass implements User {
 	}
 
 	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		UserClass userClass = (UserClass) o;
+		return getLogin().equals(userClass.getLogin());
+	}
+	
+	@Override
 	public String getLogin() {
 		return login;
 	}
