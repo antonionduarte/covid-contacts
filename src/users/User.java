@@ -1,8 +1,5 @@
 package users;
 
-import posts.*;
-import groups.*;
-import dataStructures.Iterator;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 import groups.Group;
