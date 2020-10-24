@@ -110,15 +110,22 @@ public class CovidContactsClass implements CovidContacts {
 		}
 	}
 	
-	// TODO: we're searching through the list twice - use an iterator in this case
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
-		int index = groups.find(new GroupClass(name, null));
-		if (index == -1) {
+		if (groups.isEmpty()) {
 			throw new GroupDoesNotExistException();
 		}
 		
-		return groups.get(index);
+		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
+
+		while (iterator.hasNext()) {
+			Group toReturn = iterator.next();
+			if (toReturn.getName().equals(name)) {
+				return toReturn;
+			}
+		}
+
+		throw new GroupDoesNotExistException();
 	}
 	
 	@Override
