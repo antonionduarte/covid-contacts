@@ -111,9 +111,9 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void registerUser(Scanner in, CovidContacts covidContacts) {
-		String login = in.next(), username = in.next();
+		String login = in.next().toUpperCase().toUpperCase(), username = in.next().toUpperCase();
 		int age = in.nextInt();
-		String location = in.next(), profession = in.next();
+		String location = in.next().toUpperCase(), profession = in.next().toUpperCase();
 		
 		try {
 			covidContacts.registerUser(login, username, age, location, profession);
@@ -130,7 +130,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void userInfo(Scanner in, CovidContacts covidContacts) {
-		String login = in.next();
+		String login = in.next().toUpperCase();
 		
 		try {
 			UserGetters user = covidContacts.getUser(login);
@@ -147,7 +147,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void addContact(Scanner in, CovidContacts covidContacts) {
-		String login1 = in.next(), login2 = in.next();
+		String login1 = in.next().toUpperCase(), login2 = in.next().toUpperCase();
 		
 		try {
 			covidContacts.addContact(login1, login2);
@@ -164,7 +164,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void removeContact(Scanner in, CovidContacts covidContacts) {
-		String login1 = in.next(), login2 = in.next();
+		String login1 = in.next().toUpperCase(), login2 = in.next().toUpperCase();
 		
 		try {
 			covidContacts.removeContact(login1, login2);
@@ -176,7 +176,7 @@ public class Main {
 	}
 	
 	private static void listUserContacts(Scanner in, CovidContacts covidContacts) {
-		String login = in.next();
+		String login = in.next().toUpperCase();
 		
 		try {
 			Iterator<User> contacts = covidContacts.newUserContactsIterator(login);
@@ -192,7 +192,7 @@ public class Main {
 	}
 	
 	private static void insertGroup(Scanner in, CovidContacts covidContacts) {
-		String name = in.next(), description = in.next() + in.nextLine();
+		String name = in.next().toUpperCase(), description = in.next().toUpperCase() + in.nextLine();
 		
 		try {
 			covidContacts.insertGroup(name, description);
@@ -204,7 +204,7 @@ public class Main {
 	}
 	
 	private static void groupInfo(Scanner in, CovidContacts covidContacts) {
-		String name = in.next();
+		String name = in.next().toUpperCase();
 		
 		try {
 			Group group = covidContacts.getGroup(name);
@@ -216,7 +216,7 @@ public class Main {
 	}
 	
 	private static void removeGroup(Scanner in, CovidContacts covidContacts) {
-		String name = in.next();
+		String name = in.next().toUpperCase();
 		
 		try {
 			covidContacts.removeGroup(name);
@@ -228,7 +228,7 @@ public class Main {
 	}
 	
 	private static void insertGroupParticipant(Scanner in, CovidContacts covidContacts) {
-		String login = in.next(), groupName = in.next();
+		String login = in.next().toUpperCase(), groupName = in.next().toUpperCase();
 		
 		try {
 			covidContacts.insertGroupParticipant(login, groupName);
@@ -240,7 +240,7 @@ public class Main {
 	}
 	
 	private static void removeGroupParticipant(Scanner in, CovidContacts covidContacts) {
-		String login = in.next(), groupName = in.next();
+		String login = in.next().toUpperCase(), groupName = in.next().toUpperCase();
 		
 		try {
 			covidContacts.removeGroupParticipant(login, groupName);
@@ -252,7 +252,7 @@ public class Main {
 	}
 	
 	private static void listGroupParticipants(Scanner in, CovidContacts covidContacts) {
-		String groupName = in.next();
+		String groupName = in.next().toUpperCase();
 		
 		try {
 			Iterator<User> participants = covidContacts.newGroupParticipantsIterator(groupName);
@@ -268,7 +268,7 @@ public class Main {
 	}
 	
 	private static void insertPost(Scanner in, CovidContacts covidContacts) {
-		String login = in.next(), title = in.nextLine(), text = in.nextLine(), url = in.nextLine();
+		String login = in.next().toUpperCase(), title = in.nextLine(), text = in.nextLine(), url = in.nextLine();
 		
 		try {
 			covidContacts.insertPost(login, title, text, url);
@@ -280,7 +280,7 @@ public class Main {
 	}
 	
 	private static void listUserContactPosts(Scanner in, CovidContacts covidContacts) {
-		String login1 = in.next(), login2 = in.next();
+		String login1 = in.next().toUpperCase(), login2 = in.next().toUpperCase();
 		
 		try {
 			listPosts(covidContacts.newUserContactPostsIterator(login1, login2));
@@ -291,7 +291,7 @@ public class Main {
 	}
 	
 	private static void listGroupPosts(Scanner in, CovidContacts covidContacts) {
-		String groupName = in.next(), login = in.next();
+		String groupName = in.next().toUpperCase(), login = in.next().toUpperCase();
 		
 		try {
 			listPosts(covidContacts.newGroupPostsIterator(groupName, login));
