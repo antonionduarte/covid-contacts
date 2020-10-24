@@ -12,6 +12,9 @@ import users.UserClass;
 
 
 public class CovidContactsClass implements CovidContacts {
+
+	/* Constants */
+	private static final int MAX_GROUPS_USER = 10;
 	
 	/* Variables */
 	private OrderedList<User> users;
@@ -19,8 +22,26 @@ public class CovidContactsClass implements CovidContacts {
 	
 	/* Constructor */
 	public CovidContactsClass() {
-		users = new OrderedArrayList<>(new UserComparator()); // We chose an Ordered Array List since finding/checking if a user exists and accessing the user is a much more common occurrence than adding or removing a user from the system or resizing the array in the case it's full (even when adding or removing a user, its existence has to be checked first), thus, by keeping the array ordered after every insertion, we can take advantage of the binary search and binary insertion we implemented, which have O(log2(n)) time complexity.
-		groups = new DoublyLinkedList<>(); // We chose a Doubly Linked List because there are far less groups than users in the system and it will only be used to add and remove groups, since other operations like adding a post and a participant will be done via the users (which have much smaller collections of groups).
+		/* 
+		 * We chose an Ordered Array List since finding/checking 
+		 * if a user exists and accessing the user is 
+		 * a much more common occurrence than adding or 
+		 * removing a user from the system or 
+		 * resizing the array in the case it's full 
+		 * (even when adding or removing a user, its existence has to be checked first), 
+		 * thus, by keeping the array ordered after every insertion, 
+		 * we can take advantage of the binary search and binary insertion 
+		 * we implemented, which have O(log2(n)) time complexity.
+		*/
+		users = new OrderedArrayList<>(new UserComparator());
+		/* 
+		 * We chose a Doubly Linked List because 
+		 * there are far less groups than users in the system and 
+		 * it will only be used to add and remove groups, 
+		 * since other operations like adding a post and a participant 
+		 * will be done via the users (which have much smaller collections of groups). 
+		*/
+		groups = new DoublyLinkedList<>();
 	}
 	
 	@Override
@@ -90,15 +111,22 @@ public class CovidContactsClass implements CovidContacts {
 		}
 	}
 	
-	// TODO: we're searching through the list twice
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
-		int index = groups.find(new GroupClass(name, null));
-		if (index == -1) {
+		if (groups.isEmpty()) {
 			throw new GroupDoesNotExistException();
 		}
 		
-		return groups.get(index);
+		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
+
+		while (iterator.hasNext()) {
+			Group toReturn = iterator.next();
+			if (toReturn.getName().equals(name)) {
+				return toReturn;
+			}
+		}
+
+		throw new GroupDoesNotExistException();
 	}
 	
 	@Override
@@ -106,7 +134,7 @@ public class CovidContactsClass implements CovidContacts {
 		User user = getUser(login);
 		Group group = getGroup(groupName);
 		
-		if (user.getNumGroups() < 10) {
+		if (user.getNumGroups() < MAX_GROUPS_USER) {
 			group.insertParticipant(user);
 			user.addGroup(group);
 		}

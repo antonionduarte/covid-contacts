@@ -11,9 +11,6 @@ import posts.Post;
 
 public class UserClass implements User {
 
-	/* Constants */
-	private static final int MAX_GROUPS = 10;
-
 	/* Variables */
 	private String login, username, location, profession;
 	private int age, numGroups;
@@ -40,6 +37,14 @@ public class UserClass implements User {
 		joinedGroups = new DoublyLinkedList<>();
 		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
 		numGroups = 0;
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		UserClass userClass = (UserClass) o;
+		return getLogin().equals(userClass.getLogin());
 	}
 
 	@Override
