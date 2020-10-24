@@ -1,7 +1,6 @@
 package users;
 
 import dataStructures.Iterator;
-import dataStructures.TwoWayIterator;
 import posts.Post;
 
 public interface UserGetters {
@@ -46,9 +45,5 @@ public interface UserGetters {
 	 * @return New contact posts iterator.
 	 */
 	Iterator<Post> newContactPostsIterator(User other);
-	
-	/**
-	 * @return Number of groups the user is a part of.
-	 */
-	int getNumGroups();
+
 }
