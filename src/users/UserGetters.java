@@ -41,6 +41,11 @@ public interface UserGetters {
 	Iterator<User> newContactsIterator();
 	
 	/**
+	 * @return New posts iterator.
+	 */
+	Iterator<Post> postsIterator();
+
+	/**
 	 * @param other User to list received posts from.
 	 * @return New contact posts iterator.
 	 */

@@ -133,11 +133,22 @@ public class UserClass implements User {
 	}
 
 	@Override
-	public Iterator<Post> newContactPostsIterator(User other) {
-		// TODO Auto-generated method stub
-		return null;
+	public Iterator<Post> postsIterator() {
+		return posts.iterator();
 	}
 
+	@Override
+	public Iterator<Post> newContactPostsIterator(User other) throws ContactDoesNotExistException {
+		Iterator<User> userIterator = contacts.iterator(); 
 
+		while (userIterator.hasNext()) {
+			User contact = userIterator.next();
+			if (contact.equals(other)) {
+				return contact.postsIterator();
+			}
+		}
+
+		throw new ContactDoesNotExistException();
+	}
 	
 }
