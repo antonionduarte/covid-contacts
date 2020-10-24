@@ -24,6 +24,12 @@ public interface Group {
 	void insertParticipant(User user);
 	
 	/**
+	 * Inserts a new post intro the group.
+	 * @param post New post.
+	 */
+	void insertPost(Post post);
+	
+	/**
 	 * @param user User to check if he is a participant.
 	 * @return True if the user is a participant in the group.
 	 */

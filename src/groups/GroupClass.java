@@ -2,6 +2,9 @@ package groups;
 
 import comparators.UserComparator;
 import dataStructures.*;
+import exceptions.GroupDoesNotExistException;
+import exceptions.GroupHasNoPostsException;
+import exceptions.NoParticipantsException;
 import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
@@ -11,6 +14,7 @@ public class GroupClass implements Group {
 	/* Variables */
 	private String name, description;
 	private OrderedList<User> participants;
+	private List<Post> posts;
 	
 	/**
 	 * Constructor.
@@ -21,6 +25,7 @@ public class GroupClass implements Group {
 		this.name = name;
 		this.description = description;
 		participants = new OrderedDoublyLinkedList<>(new UserComparator());
+		posts = new DoublyLinkedList<>();
 	}
 	
 	@Override
@@ -39,6 +44,11 @@ public class GroupClass implements Group {
 	}
 	
 	@Override
+	public void insertPost(Post post) {
+		posts.addLast(post);
+	}
+	
+	@Override
 	public boolean hasParticipant(User user) {
 		return participants.find(user) != -1;
 	}
@@ -52,13 +62,19 @@ public class GroupClass implements Group {
 	}
 	
 	@Override
-	public Iterator<User> newParticipantsIterator() {
-		return null;
+	public Iterator<User> newParticipantsIterator() throws NoParticipantsException {
+		if (participants.isEmpty()) {
+			throw new NoParticipantsException();
+		}
+		return participants.iterator();
 	}
 	
 	@Override
-	public Iterator<Post> newGroupPostsIterator(User user) {
-		return null;
+	public Iterator<Post> newGroupPostsIterator(User user) throws GroupDoesNotExistException {
+		if (posts.isEmpty()) {
+			throw new GroupHasNoPostsException();
+		}
+		return posts.iterator();
 	}
 	
 }
