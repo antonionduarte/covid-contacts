@@ -24,7 +24,7 @@ public class GroupClass implements Group {
 		participants = new OrderedDoublyLinkedList<>(new UserComparator());
 		posts = new DoublyLinkedList<>();
 	}
-
+	
 	@Override
 	public boolean equals(Object other) {
 		if (this == other) {
@@ -35,7 +35,7 @@ public class GroupClass implements Group {
 		}
 		return name.equals(((GroupClass) other).getName());
 	}
-
+	
 	@Override
 	public String getName() {
 		return name;

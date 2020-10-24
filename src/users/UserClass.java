@@ -10,17 +10,16 @@ public class UserClass implements User {
 	
 	/* Constants */
 	private static final int MAX_GROUPS = 10;
-
+	
 	/* Variables */
 	private String login, username, location, profession;
 	private int age;
 	private List<Group> groups;
 	private List<Post> posts;
 	private OrderedList<User> contacts;
-
+	
 	/**
 	 * Constructor.
-	 * 
 	 * @param login Users' login.
 	 * @param username Users' username.
 	 * @param age Users' age.
@@ -37,7 +36,7 @@ public class UserClass implements User {
 		groups = new ArrayList<>(10);
 		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
 	}
-
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -45,32 +44,32 @@ public class UserClass implements User {
 		UserClass userClass = (UserClass) o;
 		return getLogin().equals(userClass.getLogin());
 	}
-
+	
 	@Override
 	public String getLogin() {
 		return login;
 	}
-
+	
 	@Override
 	public String getUsername() {
 		return username;
 	}
-
+	
 	@Override
 	public String getLocation() {
 		return location;
 	}
-
+	
 	@Override
 	public String getProfession() {
 		return profession;
 	}
-
+	
 	@Override
 	public int getAge() {
 		return age;
 	}
-
+	
 	@Override
 	public boolean groupListFull() {
 		return groups.size() == MAX_GROUPS;
@@ -91,7 +90,7 @@ public class UserClass implements User {
 		}
 		contacts.insert(contact);
 	}
-
+	
 	@Override
 	public void removeContact(User contact) throws ContactDoesNotExistException {
 		if (!contacts.remove(contact)) {
@@ -113,42 +112,42 @@ public class UserClass implements User {
 			throw new UserNotInGroupException();
 		}
 	}
-
+	
 	@Override
 	public void receivePost(Post post) {
 		posts.addLast(post);
 	}
-
+	
 	@Override
 	public void insertPost(Post post) {
 		Iterator<User> userIterator = (TwoWayIterator<User>) contacts.iterator();
 		Iterator<Group> groupIterator = (TwoWayIterator<Group>) groups.iterator();
-
+		
 		while (userIterator.hasNext()) {
 			userIterator.next().receivePost(post);
 		}
-
+		
 		while (groupIterator.hasNext()) {
 			groupIterator.next().insertPost(post);
 		}
 	}
-
+	
 	@Override
 	public Iterator<Post> postsIterator() {
 		return posts.iterator();
 	}
-
+	
 	@Override
 	public Iterator<Post> newContactPostsIterator(User other) throws ContactDoesNotExistException {
-		Iterator<User> userIterator = contacts.iterator(); 
-
+		Iterator<User> userIterator = contacts.iterator();
+		
 		while (userIterator.hasNext()) {
 			User contact = userIterator.next();
 			if (contact.equals(other)) {
 				return contact.postsIterator();
 			}
 		}
-
+		
 		throw new ContactDoesNotExistException();
 	}
 	
