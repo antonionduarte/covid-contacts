@@ -1,7 +1,6 @@
 package covidContacts;
 
 import dataStructures.Iterator;
-import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
 import exceptions.UserAlreadyExistsException;
 import exceptions.UserDoesNotExistException;
