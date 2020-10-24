@@ -29,12 +29,12 @@ public interface UserGetters {
 	/**
 	 * @return Users' age.
 	 */
-  int getAge();
-  
-  /**
-   * @return Amount of groups that the user has joined.
-   */
-  int getNumGroups();
+	int getAge();
+	
+	/**
+	 * @return True if the users' group list is full.
+	 */
+	boolean groupListFull();
 	
 	/**
 	 * @return New contacts iterator.
@@ -45,11 +45,11 @@ public interface UserGetters {
 	 * @return New posts iterator.
 	 */
 	Iterator<Post> postsIterator();
-
+	
 	/**
 	 * @param other User to list received posts from.
 	 * @return New contact posts iterator.
 	 */
 	Iterator<Post> newContactPostsIterator(User other);
-
+	
 }

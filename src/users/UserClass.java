@@ -7,11 +7,14 @@ import groups.Group;
 import posts.Post;
 
 public class UserClass implements User {
+	
+	/* Constants */
+	private static final int MAX_GROUPS = 10;
 
 	/* Variables */
 	private String login, username, location, profession;
-	private int age, numGroups;
-	private List<Group> joinedGroups;
+	private int age;
+	private List<Group> groups;
 	private List<Post> posts;
 	private OrderedList<User> contacts;
 
@@ -31,9 +34,8 @@ public class UserClass implements User {
 		this.location = location;
 		this.profession = profession;
 		posts = new DoublyLinkedList<>();
-		joinedGroups = new DoublyLinkedList<>();
+		groups = new ArrayList<>(10);
 		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
-		numGroups = 0;
 	}
 
 	@Override
@@ -70,8 +72,8 @@ public class UserClass implements User {
 	}
 
 	@Override
-	public int getNumGroups() {
-		return numGroups;
+	public boolean groupListFull() {
+		return groups.size() == MAX_GROUPS;
 	}
 	
 	@Override
@@ -99,16 +101,15 @@ public class UserClass implements User {
 	
 	@Override
 	public void addGroup(Group group) throws UserAlreadyInGroupException {
-		if (joinedGroups.find(group) > -1) {
+		if (groups.find(group) != -1) {
 			throw new UserAlreadyInGroupException();
 		}
-
-		joinedGroups.addLast(group);
+		groups.addLast(group);
 	}
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (!joinedGroups.remove(group)) {
+		if (!groups.remove(group)) {
 			throw new UserNotInGroupException();
 		}
 	}
@@ -121,7 +122,7 @@ public class UserClass implements User {
 	@Override
 	public void insertPost(Post post) {
 		Iterator<User> userIterator = (TwoWayIterator<User>) contacts.iterator();
-		Iterator<Group> groupIterator = (TwoWayIterator<Group>) joinedGroups.iterator();
+		Iterator<Group> groupIterator = (TwoWayIterator<Group>) groups.iterator();
 
 		while (userIterator.hasNext()) {
 			userIterator.next().receivePost(post);

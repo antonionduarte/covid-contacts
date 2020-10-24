@@ -2,10 +2,7 @@ package groups;
 
 import comparators.UserComparator;
 import dataStructures.*;
-import exceptions.GroupDoesNotExistException;
-import exceptions.GroupHasNoPostsException;
-import exceptions.NoParticipantsException;
-import exceptions.UserNotInGroupException;
+import exceptions.*;
 import posts.Post;
 import users.User;
 
@@ -50,7 +47,10 @@ public class GroupClass implements Group {
 	}
 	
 	@Override
-	public void insertParticipant(User user) {
+	public void insertParticipant(User user) throws UserAlreadyInGroupException {
+		if (participants.find(user) != -1) {
+			throw new UserAlreadyInGroupException();
+		}
 		participants.insert(user);
 	}
 	

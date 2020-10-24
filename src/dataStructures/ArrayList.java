@@ -12,7 +12,7 @@ public class ArrayList<E> implements List<E> {
 	
 	/* Constants */
 	private static final long serialVersionUID = 1L;
-	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
+	private static final int DEFAULT_SIZE = 100, GROWTH_FACTOR = 2;
 	
 	/* Variables */
 	private E[] array;

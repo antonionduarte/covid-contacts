@@ -1,6 +1,7 @@
 package groups;
 
 import dataStructures.Iterator;
+import exceptions.UserAlreadyInGroupException;
 import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
@@ -21,7 +22,7 @@ public interface Group {
 	 * Inserts a new user into the group.
 	 * @param user User to insert.
 	 */
-	void insertParticipant(User user);
+	void insertParticipant(User user) throws UserAlreadyInGroupException;
 	
 	/**
 	 * Inserts a new post intro the group.
