@@ -111,7 +111,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void registerUser(Scanner in, CovidContacts covidContacts) {
-		String login = in.next().toUpperCase().toUpperCase(), username = in.next().toUpperCase();
+		String login = in.next().toUpperCase(), username = in.next().toUpperCase();
 		int age = in.nextInt();
 		String location = in.next().toUpperCase(), profession = in.next().toUpperCase();
 		
