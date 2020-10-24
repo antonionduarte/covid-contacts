@@ -9,8 +9,6 @@ import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 
-import java.util.Objects;
-
 public class GroupClass implements Group {
 	
 	/* Variables */
