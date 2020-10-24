@@ -126,13 +126,7 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public void removeGroupParticipant(String login, String groupName) {
 		User user = getUser(login);
-		Group group = getGroup(groupName);
-		
-		if (!group.hasParticipant(user)) {
-			throw new UserNotInGroupException();
-		}
-		
-		group.removeParticipant(user);
+		getGroup(groupName).removeParticipant(user);
 	}
 	
 	
@@ -144,9 +138,7 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public void insertPost(String login, String title, String text, String url) {
 		User user = getUser(login);
-		Post newPost = new PostClass(user, title, text, url);
-		
-		user.insertPost(newPost);
+		user.insertPost(new PostClass(user, title, text, url));
 	}
 	
 	@Override

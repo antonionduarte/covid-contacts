@@ -4,6 +4,7 @@ import comparators.UserComparator;
 import dataStructures.*;
 import exceptions.ContactAlreadyExistsException;
 import groups.Group;
+import posts.Post;
 
 public class UserClass implements User {
 	
@@ -66,8 +67,28 @@ public class UserClass implements User {
 	}
 	
 	@Override
+	public Iterator<Post> newContactPostsIterator(User other) {
+		return null;
+	}
+	
+	@Override
+	public int getNumGroups() {
+		return 0;
+	}
+	
+	@Override
 	public boolean hasContact(User contact) {
 		return contacts.find(contact) != -1;
+	}
+	
+	@Override
+	public void insertPost(Post post) {
+	
+	}
+	
+	@Override
+	public int addGroup(Group group) {
+		return 0;
 	}
 	
 	@Override

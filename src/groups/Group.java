@@ -1,6 +1,7 @@
 package groups;
 
 import dataStructures.Iterator;
+import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 
@@ -32,7 +33,7 @@ public interface Group {
 	 * Removes a user from the group.
 	 * @param user User to remove.
 	 */
-	void removeParticipant(User user);
+	void removeParticipant(User user) throws UserNotInGroupException;
 	
 	/**
 	 * @return New participants iterator.

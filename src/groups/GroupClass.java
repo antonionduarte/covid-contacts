@@ -1,6 +1,8 @@
 package groups;
 
+import comparators.UserComparator;
 import dataStructures.*;
+import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 
@@ -18,7 +20,7 @@ public class GroupClass implements Group {
 	public GroupClass(String name, String description) {
 		this.name = name;
 		this.description = description;
-		participants = new DoublyLinkedList<>();
+		participants = new OrderedDoublyLinkedList<>(new UserComparator());
 	}
 	
 	@Override
@@ -33,17 +35,20 @@ public class GroupClass implements Group {
 	
 	@Override
 	public void insertParticipant(User user) {
-	
+		participants.insert(user);
 	}
 	
 	@Override
 	public boolean hasParticipant(User user) {
-		return false;
+		return participants.find(user) != -1;
 	}
 	
 	@Override
-	public void removeParticipant(User user) {
-	
+	public void removeParticipant(User user) throws UserNotInGroupException {
+		if (participants.find(user) == -1) {
+			throw new UserNotInGroupException();
+		}
+		participants.remove(user);
 	}
 	
 	@Override
