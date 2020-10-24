@@ -89,7 +89,7 @@ public class CovidContactsClass implements CovidContacts {
 		}
 	}
 	
-	// TODO: we're searching through the list twice
+	// TODO: we're searching through the list twice - use an iterator in this case
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
 		int index = groups.find(new GroupClass(name, null));
