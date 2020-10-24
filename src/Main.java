@@ -7,6 +7,7 @@ import exceptions.*;
 import groups.Group;
 import posts.Post;
 import users.User;
+import users.UserGetters;
 
 import java.util.Scanner;
 
@@ -132,8 +133,8 @@ public class Main {
 		String login = in.next();
 		
 		try {
-			User user = covidContacts.getUser(login);
-			System.out.printf("%s %s %d\n%s %s", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
+			UserGetters user = covidContacts.getUser(login);
+			System.out.printf("%s %s %d\n%s %s\n", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
 		}
 		catch (UserDoesNotExistException e) {
 			System.out.println(e.getMessage());

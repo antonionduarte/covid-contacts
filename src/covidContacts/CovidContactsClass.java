@@ -26,6 +26,7 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
 		User newUser = new UserClass(login, username, age, location, profession);
+		
 		if (users.find(newUser) != -1) {
 			throw new UserAlreadyExistsException();
 		}
@@ -39,7 +40,6 @@ public class CovidContactsClass implements CovidContacts {
 		if (index == -1) {
 			throw new UserDoesNotExistException();
 		}
-		
 		return users.get(index);
 	}
 	
@@ -60,8 +60,7 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public void removeContact(String login1, String login2)
-			throws UserDoesNotExistException, ContactDoesNotExistException {
+	public void removeContact(String login1, String login2) throws UserDoesNotExistException, ContactDoesNotExistException {
 		
 		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
 			index2 = users.find(new UserClass(login2, null, 0, null, null));
