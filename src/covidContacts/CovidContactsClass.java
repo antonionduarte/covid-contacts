@@ -29,7 +29,7 @@ public class CovidContactsClass implements CovidContacts {
 		users = new OrderedArrayList<>(new UserComparator());
 		/*
 		 * We chose a Doubly Linked List because there are far less groups than users in the system and
-		 * it will only be used to add and remove groups, since other operations like adding a post and a participant
+		 * it will only be used to add and remove groups, since other operations like adding a post
 		 * will be done via the users (which have much smaller collections of groups).
 		 */
 		groups = new DoublyLinkedList<>();

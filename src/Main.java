@@ -192,7 +192,7 @@ public class Main {
 	}
 	
 	private static void insertGroup(Scanner in, CovidContacts covidContacts) {
-		String name = in.next().toUpperCase(), description = in.next().toUpperCase() + in.nextLine();
+		String name = in.next().toUpperCase(), description = in.next().toUpperCase() + in.nextLine().toUpperCase();
 		
 		try {
 			covidContacts.insertGroup(name, description);
@@ -258,7 +258,7 @@ public class Main {
 			Iterator<User> participants = covidContacts.newGroupParticipantsIterator(groupName);
 			
 			while (participants.hasNext()) {
-				User participant = participants.next();
+				UserGetters participant = participants.next();
 				System.out.printf("%s %s\n", participant.getLogin(), participant.getUsername());
 			}
 		}
@@ -268,7 +268,7 @@ public class Main {
 	}
 	
 	private static void insertPost(Scanner in, CovidContacts covidContacts) {
-		String login = in.next().toUpperCase(), title = in.nextLine(), text = in.nextLine(), url = in.nextLine();
+		String login = in.next().toUpperCase(), title = in.nextLine().toUpperCase(), text = in.nextLine().toUpperCase(), url = in.nextLine().toUpperCase();
 		
 		try {
 			covidContacts.insertPost(login, title, text, url);
