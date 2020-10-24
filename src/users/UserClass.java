@@ -113,11 +113,23 @@ public class UserClass implements User {
 		}
 	}
 
+	@Override
+	public void receivePost(Post post) {
+		posts.addLast(post);
+	}
 
-	// TODO: Might have to think about this
 	@Override
 	public void insertPost(Post post) {
-		posts.addLast(post);
+		Iterator<User> userIterator = (TwoWayIterator<User>) contacts.iterator();
+		Iterator<Group> groupIterator = (TwoWayIterator<Group>) joinedGroups.iterator();
+
+		while (userIterator.hasNext()) {
+			userIterator.next().receivePost(post);
+		}
+
+		while (groupIterator.hasNext()) {
+			groupIterator.next().insertPost(post);
+		}
 	}
 
 	@Override
