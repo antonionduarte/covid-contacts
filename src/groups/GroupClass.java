@@ -9,8 +9,6 @@ import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 
-import java.util.Objects;
-
 public class GroupClass implements Group {
 	
 	/* Variables */
@@ -29,15 +27,7 @@ public class GroupClass implements Group {
 		participants = new OrderedDoublyLinkedList<>(new UserComparator());
 		posts = new DoublyLinkedList<>();
 	}
-
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		GroupClass that = (GroupClass) o;
-		return getName().equals(that.getName());
-	}
-
+	
 	@Override
 	public String getName() {
 		return name;
