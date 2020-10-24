@@ -2,10 +2,7 @@ package users;
 
 import comparators.UserComparator;
 import dataStructures.*;
-import exceptions.ContactAlreadyExistsException;
-import exceptions.ContactDoesNotExistException;
-import exceptions.UserAlreadyInGroupException;
-import exceptions.UserNotInGroupException;
+import exceptions.*;
 import groups.Group;
 import posts.Post;
 
@@ -78,7 +75,10 @@ public class UserClass implements User {
 	}
 	
 	@Override
-	public Iterator<User> newContactsIterator() {
+	public Iterator<User> newContactsIterator() throws NoContactsException {
+		if (contacts.isEmpty()) {
+			throw new NoContactsException();
+		}
 		return contacts.iterator();
 	}
 	

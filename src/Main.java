@@ -182,7 +182,7 @@ public class Main {
 			Iterator<User> contacts = covidContacts.newUserContactsIterator(login);
 			
 			while (contacts.hasNext()) {
-				User contact = contacts.next();
+				UserGetters contact = contacts.next();
 				System.out.printf("%s %s\n", contact.getLogin(), contact.getUsername());
 			}
 		}
