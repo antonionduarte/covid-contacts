@@ -78,6 +78,16 @@ public class UserClass implements User {
 	}
 
 	@Override
+	public void insertPost(Post post) {
+	
+	}
+	
+	@Override
+	public int addGroup(Group group) {
+		return 0;
+	}
+	
+	@Override
 	public void addContact(User contact) {
 		if (contacts.find(contact) != -1) {
 			throw new ContactAlreadyExistsException();

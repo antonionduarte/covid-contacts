@@ -46,4 +46,9 @@ public interface UserGetters {
 	 * @return New contact posts iterator.
 	 */
 	Iterator<Post> newContactPostsIterator(User other);
+	
+	/**
+	 * @return Number of groups the user is a part of.
+	 */
+	int getNumGroups();
 }

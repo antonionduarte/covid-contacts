@@ -5,6 +5,8 @@ import groups.*;
 import dataStructures.Iterator;
 import exceptions.ContactAlreadyExistsException;
 import exceptions.ContactDoesNotExistException;
+import groups.Group;
+import posts.Post;
 
 public interface User extends UserGetters {
 	
@@ -38,4 +40,16 @@ public interface User extends UserGetters {
 	 */
 	void removeGroup(Group group);
 	
+	/**
+	 * Inserts a new post
+	 * @param post Post to insert.
+	 */
+	void insertPost(Post post);
+	
+	/**
+	 * Adds a new group to the user.
+	 * @param group Group to add.
+	 * @return
+	 */
+	int addGroup(Group group);
 }
