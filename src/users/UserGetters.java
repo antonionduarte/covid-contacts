@@ -29,7 +29,12 @@ public interface UserGetters {
 	/**
 	 * @return Users' age.
 	 */
-	int getAge();
+  int getAge();
+  
+  /**
+   * @return Amount of groups that the user has joined.
+   */
+  int getNumGroups();
 	
 	/**
 	 * @return New contacts iterator.
