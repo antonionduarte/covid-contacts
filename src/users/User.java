@@ -32,6 +32,12 @@ public interface User extends UserGetters {
 	void insertPost(Post post);
 
 	/**
+	 * Receives a post from another User in the contact list.
+	 * @param post The post to receive.
+	 */
+	void receivePost(Post post);
+
+	/**
 	 * Removes a group from the Users' group list.
 	 * @param group The group to remove.
 	 */
