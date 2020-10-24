@@ -113,19 +113,14 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public Group getGroup(String name) throws GroupDoesNotExistException {
-		if (groups.isEmpty()) {
-			throw new GroupDoesNotExistException();
-		}
+		Iterator<Group> iterator = groups.iterator();
 		
-		Iterator<Group> iterator = (TwoWayIterator<Group>) groups.iterator();
-
 		while (iterator.hasNext()) {
-			Group toReturn = iterator.next();
-			if (toReturn.getName().equals(name)) {
-				return toReturn;
+			Group group = iterator.next();
+			if (group.getName().equals(name)) {
+				return group;
 			}
 		}
-
 		throw new GroupDoesNotExistException();
 	}
 	

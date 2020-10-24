@@ -61,7 +61,7 @@ public interface CovidContacts {
 	 * @param name The specified groups' name.
 	 * @return Group with the specified name.
 	 */
-	Group getGroup(String name);
+	Group getGroup(String name) throws GroupDoesNotExistException;
 	
 	/**
 	 * Inserts a user into a group.
