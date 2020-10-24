@@ -76,16 +76,6 @@ public class UserClass implements User {
 	public Iterator<User> newContactsIterator() {
 		return contacts.iterator();
 	}
-
-	@Override
-	public void insertPost(Post post) {
-	
-	}
-	
-	@Override
-	public int addGroup(Group group) {
-		return 0;
-	}
 	
 	@Override
 	public void addContact(User contact) {
