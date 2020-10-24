@@ -156,7 +156,6 @@ public class Main {
 		catch (UserDoesNotExistException | ContactAlreadyExistsException e) {
 			System.out.println(e.getMessage());
 		}
-		
 	}
 	
 	/**

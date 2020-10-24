@@ -32,7 +32,7 @@ public interface CovidContacts {
 	 * @param login1 First users' login.
 	 * @param login2 Second users' login.
 	 */
-	void addContact(String login1, String login2) throws UserDoesNotExistException, ContactAlreadyExistsException;
+	void addContact(String login1, String login2);
 	
 	/**
 	 * Removes the 2-way contact between 2 users.

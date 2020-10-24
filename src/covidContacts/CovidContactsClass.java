@@ -44,17 +44,9 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public void addContact(String login1, String login2) throws UserDoesNotExistException, ContactAlreadyExistsException {
-		int index1 = users.find(new UserClass(login1, null, 0, null, null)),
-			index2 = users.find(new UserClass(login2, null, 0, null, null));
-		
-		if (index1 == -1 || index2 == -1) {
-			throw new UserDoesNotExistException();
-		}
-		
-		User user1 = users.get(index1);
-		User user2 = users.get(index2);
-		
+	public void addContact(String login1, String login2) {
+		User user1 = getUser(login1);
+		User user2 = getUser(login2);
 		user1.addContact(user2);
 		user2.addContact(user1);
 	}

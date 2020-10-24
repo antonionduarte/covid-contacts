@@ -78,11 +78,10 @@ public class UserClass implements User {
 	}
 	
 	@Override
-	public void addContact(User contact) {
+	public void addContact(User contact) throws ContactAlreadyExistsException {
 		if (contacts.find(contact) != -1) {
 			throw new ContactAlreadyExistsException();
 		}
-
 		contacts.insert(contact);
 	}
 
