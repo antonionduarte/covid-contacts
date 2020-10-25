@@ -1,6 +1,7 @@
 import covidContacts.CovidContacts;
 import covidContacts.CovidContactsClass;
 import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
 import exceptions.*;
@@ -312,9 +313,9 @@ public class Main {
 	 * Auxiliary method to list posts.
 	 * @param posts Posts iterator.
 	 */
-	private static void listPosts(Iterator<Post> posts) {
-		while (posts.hasNext()) {
-			Post post = posts.next();
+	private static void listPosts(TwoWayIterator<Post> posts) {
+		while (posts.hasPrevious()) {
+			Post post = posts.previous();
 			System.out.printf("%s\n%s\n%s\n\n", post.getTitle(), post.getText(), post.getUrl());
 		}
 	}

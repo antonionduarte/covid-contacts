@@ -81,11 +81,14 @@ public class GroupClass implements Group {
 	}
 	
 	@Override
-	public Iterator<Post> newGroupPostsIterator(User user) throws GroupDoesNotExistException {
+	public TwoWayIterator<Post> newPostsIterator(User user) throws UserNotInGroupException, GroupDoesNotExistException {
+		if (participants.find(user) == -1) {
+			throw new UserNotInGroupException();
+		}
 		if (posts.isEmpty()) {
 			throw new GroupHasNoPostsException();
 		}
-		return posts.iterator();
+		return (TwoWayIterator<Post>) posts.iterator();
 	}
 	
 }

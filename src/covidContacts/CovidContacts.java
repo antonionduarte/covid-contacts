@@ -1,6 +1,7 @@
 package covidContacts;
 
 import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import exceptions.*;
 import groups.Group;
 import posts.Post;
@@ -97,12 +98,12 @@ public interface CovidContacts {
 	 * @param login2 Specified users' contact.
 	 * @return New user contact posts iterator.
 	 */
-	Iterator<Post> newUserContactPostsIterator(String login1, String login2);
+	TwoWayIterator<Post> newUserContactPostsIterator(String login1, String login2);
 	
 	/**
 	 * @param groupName Groups' name.
 	 * @param login Users' login.
 	 * @return New group posts iterator.
 	 */
-	Iterator<Post> newGroupPostsIterator(String groupName, String login);
+	TwoWayIterator<Post> newGroupPostsIterator(String groupName, String login);
 }

@@ -1,6 +1,7 @@
 package users;
 
 import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import exceptions.NoContactsException;
 import posts.Post;
 
@@ -42,14 +43,9 @@ public interface UserGetters {
 	Iterator<User> newContactsIterator() throws NoContactsException;
 	
 	/**
-	 * @return New posts iterator.
-	 */
-	Iterator<Post> postsIterator();
-	
-	/**
-	 * @param other User to list received posts from.
+	 * @param other User to check if he's a contact.
 	 * @return New contact posts iterator.
 	 */
-	Iterator<Post> newContactPostsIterator(User other);
+	TwoWayIterator<Post> newPostsIterator(User other);
 	
 }

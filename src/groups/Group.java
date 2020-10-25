@@ -1,6 +1,7 @@
 package groups;
 
 import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import exceptions.NoParticipantsException;
 import exceptions.UserAlreadyInGroupException;
 import exceptions.UserNotInGroupException;
@@ -52,6 +53,6 @@ public interface Group {
 	 * @param user User to check if he is a participant.
 	 * @return New group posts iterator.
 	 */
-	Iterator<Post> newGroupPostsIterator(User user);
+	TwoWayIterator<Post> newPostsIterator(User user);
 	
 }

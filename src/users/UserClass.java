@@ -135,22 +135,14 @@ public class UserClass implements User {
 	}
 	
 	@Override
-	public Iterator<Post> postsIterator() {
-		return posts.iterator();
-	}
-	
-	@Override
-	public Iterator<Post> newContactPostsIterator(User other) throws ContactDoesNotExistException {
-		Iterator<User> userIterator = contacts.iterator();
-		
-		while (userIterator.hasNext()) {
-			User contact = userIterator.next();
-			if (contact.equals(other)) {
-				return contact.postsIterator();
-			}
+	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException{
+		if (!login.equals(other.getLogin()) || contacts.find(other) == -1) {
+			throw new ContactDoesNotExistException();
 		}
-		
-		throw new ContactDoesNotExistException();
+		if (posts.isEmpty()) {
+			throw new ContactHasNoPostsException();
+		}
+		return (TwoWayIterator<Post>) posts.iterator();
 	}
 	
 }

@@ -148,13 +148,13 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public Iterator<Post> newUserContactPostsIterator(String login1, String login2) {
-		return getUser(login1).newContactPostsIterator(getUser(login2));
+	public TwoWayIterator<Post> newUserContactPostsIterator(String login1, String login2) {
+		return getUser(login1).newPostsIterator(getUser(login2));
 	}
 	
 	@Override
-	public Iterator<Post> newGroupPostsIterator(String groupName, String login) {
-		return getGroup(groupName).newGroupPostsIterator(getUser(login));
+	public TwoWayIterator<Post> newGroupPostsIterator(String groupName, String login) {
+		return getGroup(groupName).newPostsIterator(getUser(login));
 	}
 	
 }
