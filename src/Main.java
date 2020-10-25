@@ -54,7 +54,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void executeCommand(Command command, Scanner in, CovidContacts covidContacts) {
-		System.out.println();
+		//System.out.println();
 		switch (command) {
 			case IU:
 				registerUser(in, covidContacts);

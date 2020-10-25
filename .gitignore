@@ -1,9 +1,9 @@
 # Default ignored files
 **/shelf/
-**/out/
-**/tests/
+/tests/out.txt/
 **/bin/
 /.idea/
+/out/
 /src/src.iml
 **/covid-contacts.iml
 # Datasource local storage ignored files

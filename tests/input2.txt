@@ -1,0 +1,608 @@
+IU user111 nome111 apelido111
+333222 localidade111
+profissao111
+
+IU user222 nome222 apelido222
+555444 localidade222
+profissao111
+
+IU user333 nome333 apelido333
+333222 localidade333
+profissao333
+
+IU user444 nome444 apelido444
+0000 localidade444
+finalmente reformado
+
+IU user555 nome555 apelido555
+555 localidade555
+estudante preescolar
+
+IU user666 nome666 apelido666
+444555 localidade666
+profissao666
+
+IU user777 nome777 apelido777
+333222 localidade777
+profissao777
+
+IU user888 nome888 apelido888
+222555 localidade888
+eng. informatico
+
+IU user999 nome999 apelido999
+111888 localidade999
+estudante
+
+IU user000 nome000 apelido000
+7770 localidade000
+ja era
+
+IG grupo111
+amigos da onca
+
+IG grupo222
+brigada do reumatico
+
+IG grupo333
+clube de matematica
+
+IG grupo444
+amigos de peniche
+
+IG grupo555
+fans do java
+
+IG grupo666
+grupo vira o disco e toca o mesmo
+
+IG grupo777
+clube nunca mais e sabado
+
+IG grupo888
+clube quando tu nasceste ja ca eu andava
+
+IG grupo999
+ja vamos no 999 e so falta 111
+
+IG grupo000
+e com este ja sao 000
+
+IC user222 user111
+
+IC user333 user111
+
+IC user333 user222
+
+IC user444 user111
+
+IC user555 user111
+
+IC user777 user666
+
+IC user999 user888
+
+IC user000 user999
+
+IM user222
+conversa do user222
+conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user000
+conversa do user000
+conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user777
+conversa do user777
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user111 user111
+
+LMC user111 user222
+
+LMC user111 user555
+
+LMC user222 user555
+
+LMC user999 user888
+
+LMC user666 user777
+
+LC user111 
+
+LC user333 
+
+LC user999 
+
+LC user000 
+
+LC user777 
+
+LC user666
+
+IM user111
+conversa do user111
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user222
+conversa do user222
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user444
+conversa do user444
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user555
+conversa do user555
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user666
+conversa do user666
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user888
+conversa do user888
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user111 user222
+
+LMC user777 user666
+
+LMC user777 user000
+
+LMC user999 user888
+
+LMC user111 user333
+
+IP user111 grupo111
+
+IP user444 grupo111
+
+IP user333 grupo111
+
+IP user888 grupo222
+
+IP user999 grupo222
+
+IP user999 grupo333
+
+IP user000 grupo333
+
+IP user111 grupo444
+
+IP user222 grupo444
+
+IP user333 grupo444
+
+IP user111 grupo555
+
+IP user222 grupo555
+
+IP user333 grupo555
+
+IP user444 grupo555
+
+IP user555 grupo555
+
+IP user666 grupo555
+
+IP user777 grupo555
+
+IP user888 grupo555
+
+IP user999 grupo555
+
+IP user000 grupo555
+
+IP user666 grupo666
+
+IP user777 grupo666
+
+IP user777 grupo777
+
+IP user777 grupo000
+
+LMG grupo555 user000
+
+LMG grupo111 user333
+
+LMG grupo111 user222
+
+IM user111
+conversa do user111 parte222
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user333
+conversa do user333 parte222
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user777
+conversa do user777 parte111
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user999
+conversa do user999 parte111
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LP grupo555
+
+LMG grupo555 user000
+
+LMG grupo111 user333
+
+LMG grupo111 user222
+
+RG grupo555
+
+RG grupo111
+
+RG grupo666
+
+LMG grupo555 user000
+
+LP grupo444
+
+LP grupo111
+
+LMG grupo111 user333
+
+LC user666
+
+LC user666
+
+RP user000 grupo333
+
+RC user666 user777
+
+DU user666
+
+IM user777
+conversa do user777 parte111
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user666 user666
+
+LMC user000 user777
+
+IC user666 user777
+
+LMC user666 user666
+
+RC user111 user444
+
+RP user111 grupo111
+
+IM user111
+conversa do user111 parte333
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMG grupo111 user444
+
+LMC user444 user444
+
+IC user111 user444
+
+LC user444
+
+DG grupo555
+
+DG grupo777
+
+IU user1 nome1 apelido1
+32 localidade1
+profissao1
+
+IU user2 nome2 apelido2
+54 localidade2
+profissao1
+
+IU user3 nome3 apelido3
+32 localidade3
+profissao3
+
+IU user4 nome4 apelido4
+100 localidade4
+finalmente reformado
+
+IU user5 nome5 apelido5
+5 localidade5
+estudante preescolar
+
+IU user6 nome6 apelido6
+45 localidade6
+profissao6
+
+IU user7 nome7 apelido7
+32 localidade7
+profissao7
+
+IU user8 nome8 apelido8
+25 localidade8
+eng. informatico
+
+IU user9 nome9 apelido9
+18 localidade9
+estudante
+
+IU user10 nome10 apelido10
+70 localidade10
+ja era
+
+IG grupo1
+amigos da onca
+
+IG grupo2
+brigada do reumatico
+
+IG grupo3
+clube de matematica
+
+IG grupo4
+amigos de peniche
+
+IG grupo5
+fans do java
+
+IG grupo6
+grupo vira o disco e toca o mesmo
+
+IG grupo7
+clube nunca mais e sabado
+
+IG grupo8
+clube quando tu nasceste ja ca eu andava
+
+IG grupo9
+ja vamos no 9 e so falta 1
+
+IG grupo10
+e com este ja sao 10
+
+IC user2 user1
+
+IC user3 user1
+
+IC user3 user5
+
+IC user4 user1
+
+IC user5 user1
+
+IC user7 user8
+
+IC user9 user8
+
+IC user10 user9
+
+IM user2
+conversa do user2
+conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user10
+conversa do user10
+conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user7
+conversa do user7
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user1 user1
+
+LMC user1 user2
+
+LMC user1 user5
+
+LMC user2 user5
+
+LMC user9 user8
+
+LMC user6 user7
+
+LC user1 
+
+LC user3 
+
+LC user4
+
+LC user10 
+
+LC user7 
+
+LC user6
+
+IM user1
+conversa do user1
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user2
+conversa do user2
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user4
+conversa do user4
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user5
+conversa do user5
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user6
+conversa do user6
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user8
+conversa do user8
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user1 user2
+
+LMC user7 user6
+
+LMC user7 user10
+
+LMC user9 user8
+
+LMC user1 user3
+
+IP user1 grupo1
+
+IP user4 grupo1
+
+IP user3 grupo1
+
+IP user9 grupo2
+
+IP user9 grupo3
+
+IP user10 grupo3
+
+IP user1 grupo4
+
+IP user2 grupo4
+
+IP user3 grupo4
+
+IP user1 grupo5
+
+IP user2 grupo5
+
+IP user3 grupo5
+
+IP user4 grupo5
+
+IP user5 grupo5
+
+IP user6 grupo5
+
+IP user7 grupo5
+
+IP user8 grupo5
+
+IP user9 grupo5
+
+IP user10 grupo5
+
+IP user6 grupo6
+
+IP user7 grupo6
+
+IP user7 grupo7
+
+IP user7 grupo10
+
+LMG grupo5 user10
+
+LMG grupo1 user3
+
+LMG grupo1 user2
+
+IM user1
+conversa do user1 parte2
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user3
+conversa do user3 parte2
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user7
+conversa do user7 parte1
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+IM user9
+conversa do user9 parte1
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LP grupo5
+
+LMG grupo5 user10
+
+LMG grupo1 user3
+
+LMG grupo1 user2
+
+DG grupo5
+
+DG grupo7
+
+RG grupo5
+
+RG grupo1
+
+RG grupo6
+
+LMG grupo5 user10
+
+LP grupo4
+
+LP grupo1
+
+LMG grupo1 user3
+
+LC user6
+
+LC user6
+
+RP user10 grupo3
+
+RC user6 user7
+
+DU user6
+
+IM user7
+conversa do user7 parte1
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMC user6 user6
+
+LMC user10 user7
+
+IC user6 user7
+
+LMC user6 user6
+
+RP user1 grupo1
+
+IM user1
+conversa do user1 parte3
+mais conversa
+http://sitedodia.com/fotouser.jpg
+
+LMG grupo1 user4
+
+LMC user4 user4
+
+IC user1 user4
+
+LC user4
+
+FIM
+
