@@ -20,11 +20,11 @@ ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
-> > Inexistencia do utilizador referido.
-> > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
-> 
-> 
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do grupo referido.
+> Inexistencia de participantes.
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
@@ -32,11 +32,24 @@ ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
 > Inexistencia do utilizador referido.
 > Inexistencia do grupo referido.
 > Inexistencia do grupo referido.
-> Exception in thread "main" java.util.InputMismatchException
-	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
-	at java.base/java.util.Scanner.next(Scanner.java:1594)
-	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
-	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
-	at Main.registerUser(Main.java:117)
-	at Main.executeCommand(Main.java:61)
+> Registo de utilizador executado.
+> LUISA LUIS ANTONIO 25
+COSTA DE CAPARICA DOCENTE UNIVERSITARIO
+> null
+> Inexistencia do utilizador referido.
+> Contacto nao pode ser removido.
+> PROFESSORES
+ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
+> PROFESSORES
+ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
+> Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> Utilizador ja existente.
+> Inexistencia do contacto referido.
+> Exception in thread "main" java.lang.NullPointerException
+	at dataStructures.OrderedDoublyLinkedList.insert(OrderedDoublyLinkedList.java:93)
+	at groups.GroupClass.insertParticipant(GroupClass.java:54)
+	at covidContacts.CovidContactsClass.insertGroupParticipant(CovidContactsClass.java:124)
+	at Main.insertGroupParticipant(Main.java:236)
+	at Main.executeCommand(Main.java:85)
 	at Main.main(Main.java:31)

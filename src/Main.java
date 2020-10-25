@@ -113,9 +113,9 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void registerUser(Scanner in, CovidContacts covidContacts) {
-		String login = in.next().toUpperCase(), username = in.next().toUpperCase();
+		String login = in.next().toUpperCase(), username = (in.next() + in.nextLine()).toUpperCase();
 		int age = in.nextInt();
-		String location = in.next().toUpperCase(), profession = in.next().toUpperCase();
+		String location = (in.next() + in.nextLine()).toUpperCase(), profession = (in.next() + in.nextLine()).toUpperCase();
 		
 		try {
 			covidContacts.registerUser(login, username, age, location, profession);
@@ -265,12 +265,12 @@ public class Main {
 			}
 		}
 		catch (GroupDoesNotExistException | NoParticipantsException e) {
-			System.out.println();
+			System.out.println(e.getMessage());
 		}
 	}
 	
 	private static void insertPost(Scanner in, CovidContacts covidContacts) {
-		String login = in.next().toUpperCase(), title = in.nextLine().toUpperCase(), text = in.nextLine().toUpperCase(), url = in.nextLine().toUpperCase();
+		String login = in.next().toUpperCase(), title = (in.next() + in.nextLine()).toUpperCase(), text = in.nextLine().toUpperCase(), url = in.nextLine().toUpperCase();
 		
 		try {
 			covidContacts.insertPost(login, title, text, url);
