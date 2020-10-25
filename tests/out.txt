@@ -49,20 +49,44 @@ ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
 > Registo de participante executado.
 > Existencia de aderencia referida.
 > Registo de mensagem executado.
-> > Remocao de aderencia executada.
-> Inexistencia de aderencia referida.
+> FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> Remocao de aderencia executada.
+> Inexistencia do participante referido.
 > Registo de mensagem executado.
-> > Inexistencia de aderencia referida.
+> ALMOCO PROFESSORES
+RESTAURANTE O BOM GARFO.
+HTTP://ESCOLA.PT/POSTER2.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> Inexistencia do participante referido.
 > Inexistencia do grupo referido.
 > Inexistencia de aderencia referida.
 > Inexistencia de contactos.
 > Inexistencia do utilizador referido.
-> Inexistencia de aderencia referida.
+> Inexistencia do participante referido.
 > Inexistencia do grupo referido.
 > Inexistencia do utilizador referido.
 > Grupo ja existente.
 > Registo de participante executado.
-> > > Registo de mensagem executado.
+> FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> ALMOCO PROFESSORES
+RESTAURANTE O BOM GARFO.
+HTTP://ESCOLA.PT/POSTER2.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> Registo de mensagem executado.
 > LUISA LUIS ANTONIO 25
 COSTA DE CAPARICA DOCENTE UNIVERSITARIO
 > Inexistencia do utilizador referido.
@@ -71,7 +95,15 @@ COSTA DE CAPARICA DOCENTE UNIVERSITARIO
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
 > Inexistencia do grupo referido.
-> > LUISA LUIS ANTONIO 25
+> SEXTA FEIRA NAO HA AULAS
+NAO VALE A PENA APARECER
+HTTP://ESCOLA.PT/HORARIO.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> LUISA LUIS ANTONIO 25
 COSTA DE CAPARICA DOCENTE UNIVERSITARIO
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
@@ -83,16 +115,72 @@ COSTA DE CAPARICA DOCENTE UNIVERSITARIO
 > Inexistencia de contactos.
 > Inexistencia do grupo referido.
 > LUISA LUIS ANTONIO
-> > Inexistencia do utilizador referido.
+> PRIMEIRA SEMANA
+TUDO CORREU BEM NA PRIMEIRA SEMANA.
+HTTP://ESCOLA.PT/SEMANA1.JPG
+
+INICIO DAS AULAS
+AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
+HTTP://ESCOLA.PT/INICIO.JPG
+
+SEXTA FEIRA NAO HA AULAS
+NAO VALE A PENA APARECER
+HTTP://ESCOLA.PT/HORARIO.JPG
+
+ALMOCO PROFESSORES
+RESTAURANTE O BOM GARFO.
+HTTP://ESCOLA.PT/POSTER2.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
-> > Inexistencia do grupo referido.
+> Inexistencia do utilizador referido.
+> PRIMEIRA SEMANA
+TUDO CORREU BEM NA PRIMEIRA SEMANA.
+HTTP://ESCOLA.PT/SEMANA1.JPG
+
+INICIO DAS AULAS
+AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
+HTTP://ESCOLA.PT/INICIO.JPG
+
+SEXTA FEIRA NAO HA AULAS
+NAO VALE A PENA APARECER
+HTTP://ESCOLA.PT/HORARIO.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> Inexistencia do grupo referido.
 > Inexistencia do grupo referido.
 > Remocao de grupo executada.
 > Inexistencia do grupo referido.
 > Inexistencia do grupo referido.
-> > Registo de grupo executado.
-> Inexistencia de aderencia referida.
+> PRIMEIRA SEMANA
+TUDO CORREU BEM NA PRIMEIRA SEMANA.
+HTTP://ESCOLA.PT/SEMANA1.JPG
+
+INICIO DAS AULAS
+AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
+HTTP://ESCOLA.PT/INICIO.JPG
+
+SEXTA FEIRA NAO HA AULAS
+NAO VALE A PENA APARECER
+HTTP://ESCOLA.PT/HORARIO.JPG
+
+ALMOCO PROFESSORES
+RESTAURANTE O BOM GARFO.
+HTTP://ESCOLA.PT/POSTER2.JPG
+
+FIM PANDEMIA
+JA NAO ERA SEM TEMPO...
+HTTP://QUALQUERCOISA
+
+> Registo de grupo executado.
+> Inexistencia do participante referido.
 > Existencia de aderencia referida.
 > Grupo nao tem mensagens.
 > Inexistencia do utilizador referido.

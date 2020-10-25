@@ -298,7 +298,7 @@ public class Main {
 		try {
 			listPosts(covidContacts.newGroupPostsIterator(groupName, login));
 		}
-		catch (GroupDoesNotExistException | UserDoesNotExistException | UserNotInGroupException | GroupHasNoPostsException e) {
+		catch (GroupDoesNotExistException | UserDoesNotExistException | UserNotInGroupException2 | GroupHasNoPostsException e) {
 			System.out.println(e.getMessage());
 		}
 	}
@@ -315,6 +315,7 @@ public class Main {
 	 * @param posts Posts iterator.
 	 */
 	private static void listPosts(TwoWayIterator<Post> posts) {
+		posts.fullForward();
 		while (posts.hasPrevious()) {
 			Post post = posts.previous();
 			System.out.printf("%s\n%s\n%s\n\n", post.getTitle(), post.getText(), post.getUrl());
