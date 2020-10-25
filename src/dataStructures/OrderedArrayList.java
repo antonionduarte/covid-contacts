@@ -139,7 +139,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	
 	@Override
 	public Iterator<E> iterator() {
-		return new ArrayListIterator<>(array);
+		return new ArrayListIterator<>(array, numElements);
 	}
 	
 	/**

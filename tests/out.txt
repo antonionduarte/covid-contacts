@@ -35,7 +35,7 @@ ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
 > Registo de utilizador executado.
 > LUISA LUIS ANTONIO 25
 COSTA DE CAPARICA DOCENTE UNIVERSITARIO
-> null
+> Existencia do contacto referido.
 > Inexistencia do utilizador referido.
 > Contacto nao pode ser removido.
 > PROFESSORES
@@ -45,11 +45,64 @@ ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
 > Inexistencia do grupo referido.
 > Inexistencia do grupo referido.
 > Utilizador ja existente.
-> Inexistencia do contacto referido.
+> Contacto nao tem mensagens.
+> Registo de participante executado.
+> Existencia de aderencia referida.
+> Registo de mensagem executado.
+> > Remocao de aderencia executada.
+> Inexistencia de aderencia referida.
+> Registo de mensagem executado.
+> > Inexistencia de aderencia referida.
+> Inexistencia do grupo referido.
+> Inexistencia de aderencia referida.
+> Inexistencia de contactos.
+> Inexistencia do utilizador referido.
+> Inexistencia de aderencia referida.
+> Inexistencia do grupo referido.
+> Inexistencia do utilizador referido.
+> Grupo ja existente.
+> Registo de participante executado.
+> > > Registo de mensagem executado.
+> LUISA LUIS ANTONIO 25
+COSTA DE CAPARICA DOCENTE UNIVERSITARIO
+> Inexistencia do utilizador referido.
+> LUISA LUIS ANTONIO
+> Inexistencia do grupo referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do grupo referido.
+> > LUISA LUIS ANTONIO 25
+COSTA DE CAPARICA DOCENTE UNIVERSITARIO
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Registo de mensagem executado.
+> Inexistencia do utilizador referido.
+> Registo de mensagem executado.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia de contactos.
+> Inexistencia do grupo referido.
+> LUISA LUIS ANTONIO
+> > Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> > Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> Remocao de grupo executada.
+> Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> > Registo de grupo executado.
+> Inexistencia de aderencia referida.
+> Existencia de aderencia referida.
+> Grupo nao tem mensagens.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Registo de utilizador executado.
 > Exception in thread "main" java.lang.NullPointerException
-	at dataStructures.OrderedDoublyLinkedList.insert(OrderedDoublyLinkedList.java:93)
-	at groups.GroupClass.insertParticipant(GroupClass.java:54)
-	at covidContacts.CovidContactsClass.insertGroupParticipant(CovidContactsClass.java:124)
-	at Main.insertGroupParticipant(Main.java:236)
-	at Main.executeCommand(Main.java:85)
+	at comparators.UserComparator.compare(UserComparator.java:9)
+	at comparators.UserComparator.compare(UserComparator.java:5)
+	at dataStructures.OrderedArrayList.insert(OrderedArrayList.java:92)
+	at covidContacts.CovidContactsClass.registerUser(CovidContactsClass.java:45)
+	at Main.registerUser(Main.java:121)
+	at Main.executeCommand(Main.java:61)
 	at Main.main(Main.java:31)

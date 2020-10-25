@@ -90,7 +90,7 @@ public class CovidContactsClass implements CovidContacts {
 	public void insertGroup(String name, String description) throws GroupAlreadyExistsException {
 		Group newGroup = new GroupClass(name, description);
 		if (groups.find(newGroup) != -1) {
-			throw new UserAlreadyExistsException();
+			throw new GroupAlreadyExistsException();
 		}
 		groups.addLast(newGroup);
 	}

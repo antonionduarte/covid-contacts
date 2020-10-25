@@ -136,7 +136,7 @@ public class UserClass implements User {
 	
 	@Override
 	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException{
-		if (!login.equals(other.getLogin()) || contacts.find(other) == -1) {
+		if (!login.equals(other.getLogin()) && contacts.find(other) == -1) {
 			throw new ContactDoesNotExistException();
 		}
 		if (posts.isEmpty()) {

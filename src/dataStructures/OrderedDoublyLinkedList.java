@@ -90,7 +90,7 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	@Override
 	public void insert(E element) {
-		if (comparator.compare(head.getElement(), element) >= 0) {
+		if (head == null || comparator.compare(head.getElement(), element) >= 0) {
 			addFirst(element);
 		}
 		else if (comparator.compare(tail.getElement(), element) <= 0) {

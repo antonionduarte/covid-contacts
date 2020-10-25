@@ -9,16 +9,17 @@ public class ArrayListIterator<E> implements Iterator<E> {
 	
 	/* Variables */
 	E[] array;
-	int nextElement;
+	int numElements, nextElement;
 	
-	public ArrayListIterator(E[] array) {
+	public ArrayListIterator(E[] array, int numElements) {
 		this.array = array;
+		this.numElements = numElements;
 		rewind();
 	}
 	
 	@Override
 	public boolean hasNext() {
-		return nextElement < array.length;
+		return nextElement < numElements;
 	}
 	
 	@Override

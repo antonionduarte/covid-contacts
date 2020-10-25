@@ -106,8 +106,8 @@ public class ArrayList<E> implements List<E> {
 		}
 		
 		E element = array[index];
-		for (int i = index; i < numElements; i++) {
-			array[i - 1] = array[i];
+		for (int i = index; i < numElements - 1; i++) {
+			array[i] = array[i + 1];
 		}
 		numElements--;
 		return element;
@@ -157,7 +157,7 @@ public class ArrayList<E> implements List<E> {
 	
 	@Override
 	public Iterator<E> iterator() {
-		return new ArrayListIterator<>(array);
+		return new ArrayListIterator<>(array, numElements);
 	}
 	
 	/* Private methods */
