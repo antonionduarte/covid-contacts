@@ -26,6 +26,7 @@ public class Main {
 		Command command;
 		
 		do {
+			System.out.print("> ");
 			command = readCommand(in);
 			executeCommand(command, in, covidContacts);
 		} while (command != Command.FIM);

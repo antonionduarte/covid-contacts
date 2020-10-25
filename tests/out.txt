@@ -1,42 +1,42 @@
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do grupo referido.
-Registo de grupo executado.
-Inexistencia do grupo referido.
-PEDREIROS
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do grupo referido.
+> Registo de grupo executado.
+> Inexistencia do grupo referido.
+> PEDREIROS
 GRUPO DOS PEDREIROS DE ALMADA
-Inexistencia do grupo referido.
-Remocao de grupo executada.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Registo de grupo executado.
-PROFESSORES
+> Inexistencia do grupo referido.
+> Remocao de grupo executada.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Registo de grupo executado.
+> PROFESSORES
 ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-
-
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do utilizador referido.
-Inexistencia do grupo referido.
-Inexistencia do grupo referido.
-Exception in thread "main" java.util.InputMismatchException
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> > Inexistencia do utilizador referido.
+> > Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> 
+> 
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do utilizador referido.
+> Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> Exception in thread "main" java.util.InputMismatchException
 	at java.base/java.util.Scanner.throwFor(Scanner.java:939)
 	at java.base/java.util.Scanner.next(Scanner.java:1594)
 	at java.base/java.util.Scanner.nextInt(Scanner.java:2258)
 	at java.base/java.util.Scanner.nextInt(Scanner.java:2212)
-	at Main.registerUser(Main.java:116)
-	at Main.executeCommand(Main.java:60)
-	at Main.main(Main.java:30)
+	at Main.registerUser(Main.java:117)
+	at Main.executeCommand(Main.java:61)
+	at Main.main(Main.java:31)
