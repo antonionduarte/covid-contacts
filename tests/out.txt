@@ -1,835 +1,487 @@
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do grupo referido.
-> Registo de grupo executado.
-> Inexistencia do grupo referido.
-> PEDREIROS
-GRUPO DOS PEDREIROS DE ALMADA
-> Inexistencia do grupo referido.
-> Remocao de grupo executada.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Registo de grupo executado.
-> PROFESSORES
-ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do grupo referido.
-> Inexistencia de participantes.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do grupo referido.
-> Inexistencia do grupo referido.
 > Registo de utilizador executado.
-> LUISA LUIS ANTONIO 25
-COSTA DE CAPARICA DOCENTE UNIVERSITARIO
-> Existencia do contacto referido.
-> Inexistencia do utilizador referido.
-> Contacto nao pode ser removido.
-> PROFESSORES
-ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
-> PROFESSORES
-ASSOCIACAO DOS PROFESSORES DA COSTA DA CAPARICA
-> Inexistencia do grupo referido.
-> Inexistencia do grupo referido.
-> Utilizador ja existente.
-> Contacto nao tem mensagens.
-> Registo de participante executado.
-> Existencia de aderencia referida.
-> Registo de mensagem executado.
-> FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> Remocao de aderencia executada.
-> Inexistencia do participante referido.
-> Registo de mensagem executado.
-> ALMOCO PROFESSORES
-RESTAURANTE O BOM GARFO.
-HTTP://ESCOLA.PT/POSTER2.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> Inexistencia do participante referido.
-> Inexistencia do grupo referido.
-> Inexistencia de aderencia referida.
-> Inexistencia de contactos.
-> Inexistencia do utilizador referido.
-> Inexistencia do participante referido.
-> Inexistencia do grupo referido.
-> Inexistencia do utilizador referido.
-> Grupo ja existente.
-> Registo de participante executado.
-> FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> ALMOCO PROFESSORES
-RESTAURANTE O BOM GARFO.
-HTTP://ESCOLA.PT/POSTER2.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> Registo de mensagem executado.
-> LUISA LUIS ANTONIO 25
-COSTA DE CAPARICA DOCENTE UNIVERSITARIO
-> Inexistencia do utilizador referido.
-> LUISA LUIS ANTONIO
-> Inexistencia do grupo referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do grupo referido.
-> SEXTA FEIRA NAO HA AULAS
-NAO VALE A PENA APARECER
-HTTP://ESCOLA.PT/HORARIO.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> LUISA LUIS ANTONIO 25
-COSTA DE CAPARICA DOCENTE UNIVERSITARIO
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Registo de mensagem executado.
-> Inexistencia do utilizador referido.
-> Registo de mensagem executado.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia de contactos.
-> Inexistencia do grupo referido.
-> LUISA LUIS ANTONIO
-> PRIMEIRA SEMANA
-TUDO CORREU BEM NA PRIMEIRA SEMANA.
-HTTP://ESCOLA.PT/SEMANA1.JPG
-
-INICIO DAS AULAS
-AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
-HTTP://ESCOLA.PT/INICIO.JPG
-
-SEXTA FEIRA NAO HA AULAS
-NAO VALE A PENA APARECER
-HTTP://ESCOLA.PT/HORARIO.JPG
-
-ALMOCO PROFESSORES
-RESTAURANTE O BOM GARFO.
-HTTP://ESCOLA.PT/POSTER2.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> PRIMEIRA SEMANA
-TUDO CORREU BEM NA PRIMEIRA SEMANA.
-HTTP://ESCOLA.PT/SEMANA1.JPG
-
-INICIO DAS AULAS
-AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
-HTTP://ESCOLA.PT/INICIO.JPG
-
-SEXTA FEIRA NAO HA AULAS
-NAO VALE A PENA APARECER
-HTTP://ESCOLA.PT/HORARIO.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
-> Inexistencia do grupo referido.
-> Inexistencia do grupo referido.
-> Remocao de grupo executada.
-> Inexistencia do grupo referido.
-> Inexistencia do grupo referido.
-> PRIMEIRA SEMANA
-TUDO CORREU BEM NA PRIMEIRA SEMANA.
-HTTP://ESCOLA.PT/SEMANA1.JPG
-
-INICIO DAS AULAS
-AS AULAS JA COMECARAM COM VARIAS MEDIDAS NOVAS.
-HTTP://ESCOLA.PT/INICIO.JPG
-
-SEXTA FEIRA NAO HA AULAS
-NAO VALE A PENA APARECER
-HTTP://ESCOLA.PT/HORARIO.JPG
-
-ALMOCO PROFESSORES
-RESTAURANTE O BOM GARFO.
-HTTP://ESCOLA.PT/POSTER2.JPG
-
-FIM PANDEMIA
-JA NAO ERA SEM TEMPO...
-HTTP://QUALQUERCOISA
-
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
 > Registo de grupo executado.
-> Inexistencia do participante referido.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> CONVERSA DO USER222
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER222
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER222
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
+> CONVERSA DO USER000
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER777
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> USER222 NOME222 APELIDO222
+USER333 NOME333 APELIDO333
+USER444 NOME444 APELIDO444
+USER555 NOME555 APELIDO555
+> USER111 NOME111 APELIDO111
+USER222 NOME222 APELIDO222
+> USER000 NOME000 APELIDO000
+USER888 NOME888 APELIDO888
+> USER999 NOME999 APELIDO999
+> USER666 NOME666 APELIDO666
+> USER777 NOME777 APELIDO777
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> CONVERSA DO USER555
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER444
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER222
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER666
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER777
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
+> CONVERSA DO USER888
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER000
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER555
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER444
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER222
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
 > Registo de participante executado.
 > Grupo nao tem mensagens.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> USER2 NOME2 APELIDO2 54
-LOCALIDADE2 PROFISSAO1
-> Inexistencia do utilizador referido.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de utilizador executado.
-> Registo de contacto executado.
-> Registo de contacto executado.
-> Registo de contacto executado.
-> Registo de mensagem executado.
-> Registo de contacto executado.
-> Registo de contacto executado.
-> Registo de mensagem executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de grupo executado.
-> Registo de grupo executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Existencia do contacto referido.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Inexistencia do contacto referido.
-> Remocao de contacto executada.
-> Inexistencia do utilizador referido.
-> Existencia do contacto referido.
-> Remocao de contacto executada.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de contacto executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de participante executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Remocao de aderencia executada.
-> Remocao de aderencia executada.
-> Remocao de aderencia executada.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de participante executado.
-> Registo de participante executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de participante executado.
-> Registo de mensagem executado.
+> Grupo nao tem mensagens.
 > Inexistencia do participante referido.
-> MAIS OUTRO POST
-CA VAI OUTRO
-HTTP://SITEDODIA.COM/MAISOUTRAFOTO.JPG
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> USER000 NOME000 APELIDO000
+USER111 NOME111 APELIDO111
+USER222 NOME222 APELIDO222
+USER333 NOME333 APELIDO333
+USER444 NOME444 APELIDO444
+USER555 NOME555 APELIDO555
+USER666 NOME666 APELIDO666
+USER777 NOME777 APELIDO777
+USER888 NOME888 APELIDO888
+USER999 NOME999 APELIDO999
+> CONVERSA DO USER999 PARTE111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
+CONVERSA DO USER777 PARTE111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
+CONVERSA DO USER333 PARTE222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
+CONVERSA DO USER111 PARTE222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
+> CONVERSA DO USER333 PARTE222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER111 PARTE222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do participante referido.
 > Remocao de grupo executada.
+> Remocao de grupo executada.
+> Remocao de grupo executada.
+> Inexistencia do grupo referido.
+> USER111 NOME111 APELIDO111
+USER222 NOME222 APELIDO222
+USER333 NOME333 APELIDO333
+> Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> USER777 NOME777 APELIDO777
+> USER777 NOME777 APELIDO777
+> Remocao de aderencia executada.
 > Remocao de contacto executada.
+> USER666 NOME666 APELIDO666 444555
+LOCALIDADE666 PROFISSAO666
+> Registo de mensagem executado.
+> CONVERSA DO USER777 PARTE111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER666
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER777
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
 > Registo de contacto executado.
-> Registo de grupo executado.
+> CONVERSA DO USER777 PARTE111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER666
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER777
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Remocao de contacto executada.
+> Inexistencia do grupo referido.
 > Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> Registo de mensagem executado.
-> USER1 NOME1 APELIDO1 32
-LOCALIDADE1 PROFISSAO1
-> USER2 NOME2 APELIDO2 54
-LOCALIDADE2 PROFISSAO1
-> USER3 NOME3 APELIDO3 32
-LOCALIDADE3 PROFISSAO3
-> USER4 NOME4 APELIDO4 100
-LOCALIDADE4 FINALMENTE REFORMADO
-> USER5 NOME5 APELIDO5 5
-LOCALIDADE5 ESTUDANTE PREESCOLAR
-> USER6 NOME6 APELIDO6 45
-LOCALIDADE6 PROFISSAO6
-> USER7 NOME7 APELIDO7 32
-LOCALIDADE7 PROFISSAO7
-> USER8 NOME8 APELIDO8 25
-LOCALIDADE8 ENG. INFORMATICO
-> USER9 NOME9 APELIDO9 18
-LOCALIDADE9 ESTUDANTE
-> USER10 NOME10 APELIDO10 70
-LOCALIDADE10 JA ERA
-> Inexistencia do utilizador referido.
-> GRUPO1
-AMIGOS DA ONCA
-> GRUPO2
-BRIGADA DO REUMATICO
-> GRUPO3
-CLUBE DE MATEMATICA
-> GRUPO4
-AMIGOS DE PENICHE
-> GRUPO5
-ESTE E UM NOVO GRUPO5
-> GRUPO6
-GRUPO VIRA O DISCO E TOCA O MESMO
-> GRUPO7
+> Inexistencia do grupo referido.
+> CONVERSA DO USER111 PARTE222
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER444
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER111
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Registo de contacto executado.
+> USER111 NOME111 APELIDO111
+> Inexistencia do grupo referido.
+> GRUPO777
 CLUBE NUNCA MAIS E SABADO
-> GRUPO8
-CLUBE QUANDO TU NASCESTE JA CA EU ANDAVA
-> GRUPO9
-JA VAMOS NO 9 E SO FALTA 1
-> GRUPO10
-E COM ESTE JA SAO 10
-> Inexistencia do grupo referido.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de utilizador executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de grupo executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de contacto executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> CONVERSA DO USER2
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER2
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> CONVERSA DO USER2
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
+> CONVERSA DO USER10
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
+> USER2 NOME2 APELIDO2
+USER3 NOME3 APELIDO3
+USER4 NOME4 APELIDO4
+USER5 NOME5 APELIDO5
 > USER1 NOME1 APELIDO1
-> USER4 NOME4 APELIDO4
+USER5 NOME5 APELIDO5
 > USER1 NOME1 APELIDO1
-> USER4 NOME4 APELIDO4
-> Inexistencia de participantes.
-> USER4 NOME4 APELIDO4
-> USER1 NOME1 APELIDO1
-> USER4 NOME4 APELIDO4
 > USER9 NOME9 APELIDO9
-> USER4 NOME4 APELIDO4
-> Inexistencia do grupo referido.
-> USER3 NOME3 APELIDO3
-> Inexistencia de contactos.
-> USER1 NOME1 APELIDO1
 > USER8 NOME8 APELIDO8
-> USER7 NOME7 APELIDO7
 > Inexistencia de contactos.
-> USER5 NOME5 APELIDO5
-> USER4 NOME4 APELIDO4
-> USER10 NOME10 APELIDO10
-> USER9 NOME9 APELIDO9
-> Inexistencia do utilizador referido.
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-MAIS OUTRO POST
-CA VAI OUTRO
-HTTP://SITEDODIA.COM/MAISOUTRAFOTO.JPG
-
-MAIS UM POST
-CA VAI UM
-HTTP://SITEDODIA.COM/OUTRAFOTO.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-CONVERSA DO USER3 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3II.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-CONVERSA DO USER3
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3.JPG
-
-> CONVERSA DO USER2 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER2II.JPG
-
-CONVERSA DO USER4
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4.JPG
-
-CONVERSA DO USER2
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER2.JPG
-
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-MAIS OUTRO POST
-CA VAI OUTRO
-HTTP://SITEDODIA.COM/MAISOUTRAFOTO.JPG
-
-MAIS UM POST
-CA VAI UM
-HTTP://SITEDODIA.COM/OUTRAFOTO.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-CONVERSA DO USER3 III
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3III.JPG
-
-CONVERSA DO USER3 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3II.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-CONVERSA DO USER3
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3.JPG
-
-> CONVERSA DO USER4 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
-
-CONVERSA DO USER4
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4.JPG
-
-CONVERSA DO USER2
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER2.JPG
-
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
 > CONVERSA DO USER5
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER5
+CONVERSA DO USER4
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER7 NOVAMENTE
+CONVERSA DO USER2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER7
+CONVERSA DO USER1
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
+CONVERSA DO USER2
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Inexistencia do contacto referido.
+> Inexistencia do contacto referido.
 > CONVERSA DO USER8
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER8.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER10
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
 > CONVERSA DO USER5
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER5
+CONVERSA DO USER4
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER7 NOVAMENTE
+CONVERSA DO USER2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER7
+CONVERSA DO USER1
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-> CONVERSA DO USER4 II
+CONVERSA DO USER2
+CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Registo de participante executado.
+> Grupo nao tem mensagens.
+> Grupo nao tem mensagens.
+> Inexistencia do participante referido.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> Registo de mensagem executado.
+> USER1 NOME1 APELIDO1
+USER10 NOME10 APELIDO10
+USER2 NOME2 APELIDO2
+USER3 NOME3 APELIDO3
+USER4 NOME4 APELIDO4
+USER5 NOME5 APELIDO5
+USER6 NOME6 APELIDO6
+USER7 NOME7 APELIDO7
+USER8 NOME8 APELIDO8
+USER9 NOME9 APELIDO9
+> CONVERSA DO USER9 PARTE1
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER8
+CONVERSA DO USER7 PARTE1
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER8.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER8
+CONVERSA DO USER3 PARTE2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER8.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-> CONVERSA DO USER10
+CONVERSA DO USER1 PARTE2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER9
+> CONVERSA DO USER3 PARTE2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER9
+CONVERSA DO USER1 PARTE2
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER10
+> Inexistencia do participante referido.
+> GRUPO5
+FANS DO JAVA
+> GRUPO7
+CLUBE NUNCA MAIS E SABADO
+> Remocao de grupo executada.
+> Remocao de grupo executada.
+> Remocao de grupo executada.
+> Inexistencia do grupo referido.
+> USER1 NOME1 APELIDO1
+USER2 NOME2 APELIDO2
+USER3 NOME3 APELIDO3
+> Inexistencia do grupo referido.
+> Inexistencia do grupo referido.
+> Inexistencia de contactos.
+> Inexistencia de contactos.
+> Remocao de aderencia executada.
+> Inexistencia do contacto referido.
+> USER6 NOME6 APELIDO6 45
+LOCALIDADE6 PROFISSAO6
+> Registo de mensagem executado.
+> CONVERSA DO USER6
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
-
-> CONVERSA DO USER10
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
-
-CONVERSA DO USER9
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
-
-CONVERSA DO USER9
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
-
-CONVERSA DO USER10
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
-
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> Inexistencia do utilizador referido.
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-MAIS OUTRO POST
-CA VAI OUTRO
-HTTP://SITEDODIA.COM/MAISOUTRAFOTO.JPG
-
-MAIS UM POST
-CA VAI UM
-HTTP://SITEDODIA.COM/OUTRAFOTO.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-CONVERSA DO USER3 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3II.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-CONVERSA DO USER3
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3.JPG
-
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-MAIS OUTRO POST
-CA VAI OUTRO
-HTTP://SITEDODIA.COM/MAISOUTRAFOTO.JPG
-
-MAIS UM POST
-CA VAI UM
-HTTP://SITEDODIA.COM/OUTRAFOTO.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-CONVERSA DO USER3 III
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3III.JPG
-
-CONVERSA DO USER3 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3II.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-CONVERSA DO USER3
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER3.JPG
-
-> CONVERSA DO USER5
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
-
-CONVERSA DO USER5
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER5.JPG
-
-CONVERSA DO USER7 NOVAMENTE
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
-
-CONVERSA DO USER7
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER7.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
 > Inexistencia do contacto referido.
-> CONVERSA DO USER10
+> Registo de contacto executado.
+> CONVERSA DO USER6
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
-
-CONVERSA DO USER9
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
-
-CONVERSA DO USER9
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
-
-CONVERSA DO USER10
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER10.JPG
-
-> CONVERSA DO USER4 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
-
-CONVERSA DO USER8
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER8.JPG
-
-CONVERSA DO USER8
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER8.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
 > Inexistencia do grupo referido.
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-> Inexistencia do participante referido.
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA VII
-AFINAL AINDA VOU REPETIR MAIS ALGUMAS VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVII.JPG
-
-POST DO DIA VI
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES. JA CHEGA.
-HTTP://SITEDODIA.COM/FOTODODIAVI.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-POST DO DIA II
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAII.JPG
-
-POST DO DIA I
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAI.JPG
-
-> Inexistencia do participante referido.
-> POST DO DIA VIII
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES.
-HTTP://SITEDODIA.COM/FOTODODIAVIII.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-> Inexistencia do participante referido.
-> CONVERSA DO USER4 II
+> Registo de mensagem executado.
+> Inexistencia do grupo referido.
+> CONVERSA DO USER1 PARTE3
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
+
+CONVERSA DO USER1 PARTE2
+MAIS CONVERSA
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
 CONVERSA DO USER4
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-> CONVERSA DO USER4 II
+CONVERSA DO USER1
 MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
+HTTP://SITEDODIA.COM/FOTOUSER.JPG
 
-CONVERSA DO USER4
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4.JPG
-
-> CONVERSA DO USER4 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
-
-> CONVERSA DO USER4 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
-
-> CONVERSA DO USER4 II
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER4II.JPG
-
-> Inexistencia do participante referido.
-> CONVERSA DO USER9
-MAIS CONVERSA
-HTTP://SITEDODIA.COM/FOTOUSER9.JPG
-
-POST DO DIA V
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAV.JPG
-
-POST DO DIA IV
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIV.JPG
-
-POST DO DIA III
-VAMOS LA REPETIR ISTO UMA SERIE DE VEZES
-HTTP://SITEDODIA.COM/FOTODODIAIII.JPG
-
-> Inexistencia do grupo referido.
+> Existencia do contacto referido.
+> USER1 NOME1 APELIDO1
 > Obrigado. Ate a proxima.
