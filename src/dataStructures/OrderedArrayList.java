@@ -79,19 +79,16 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	@Override
 	public void insert(E element) {
 		int low = 0, high = numElements - 1;
-		boolean found = false;
 		
 		if (isEmpty() || low == high) {
 			insert(numElements, element);
-			found = true;
 		}
 		
-		while (!found) {
+		while (low <= high) {
 			int mid = (low + high) / 2, result = comparator.compare(array[mid], element);
 			
-			if (result <= 0 && comparator.compare(array[mid + 1], element) >= 0) {
+			if (mid == numElements - 1 || (result <= 0 && comparator.compare(array[mid + 1], element) >= 0)) {
 				insert(mid + 1, element);
-				found = true;
 			}
 			else if (result > 0) {
 				high = mid - 1;

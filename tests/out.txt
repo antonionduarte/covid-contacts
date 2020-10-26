@@ -185,11 +185,9 @@ HTTP://QUALQUERCOISA
 > Grupo nao tem mensagens.
 > Inexistencia do utilizador referido.
 > Inexistencia do utilizador referido.
-> Registo de utilizador executado.
-> Exception in thread "main" java.lang.NullPointerException
-	at comparators.UserComparator.compare(UserComparator.java:9)
-	at comparators.UserComparator.compare(UserComparator.java:5)
-	at dataStructures.OrderedArrayList.insert(OrderedArrayList.java:92)
+> Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index 10 out of bounds for length 10
+	at dataStructures.OrderedArrayList.insert(OrderedArrayList.java:152)
+	at dataStructures.OrderedArrayList.insert(OrderedArrayList.java:91)
 	at covidContacts.CovidContactsClass.registerUser(CovidContactsClass.java:45)
 	at Main.registerUser(Main.java:121)
 	at Main.executeCommand(Main.java:61)
