@@ -1,417 +1,681 @@
 DU luisa
+
 IC luisa LUISA
+
 IC luisA pedroV
+
 RC luisa LUISA
+
 DG professores
+
 IG PedreiroS
 Grupo dos Pedreiros de Almada
+
 DG professores
+
 DG pedreiros
+
 RG professores
+
 RG PEDreiros
+
 IP LUISA proFESSORES
+
 IP LuisA pedreiros
+
 RP luisa pedreiros
+
 RP pedroV professores
+
 IG professores
 Associacao dos professores da costa da caparica
+
 DG Professores
+
 IP luisa professores
+
 IP pedroV professores
+
 RP luisA PROFESSORES
+
 IM luisa
 Interessante
 mensagem interessante bla bla bla.
 http://qualquercoisa
+
 IM PedroV
 Vamos Todos!
 Est.
 http://escola.pt/fotoPedro.jpg
+
 LC pedrov
+
 LC luisa
+
 LP pedreiros
+
 LP professores
+
 LMC luisa luiSA
+
 LMC PEDROV pedroV
+
 LMC LuisA PedroV
+
 LMG Professores pedroV
+
 LMG professores LuiSA
+
 LMG pedreiros PEDROV
+
 LMG PEDREIROS pedrov
+
 IU LuisA Luis Antonio
 25 Costa de Caparica
 Docente Universitario
+
 DU luisa
+
 IC luisa LUISA
+
 IC luisA pedroV
+
 RC luisa LUISA
+
 DG professores
+
 DG PRofessores
+
 DG pedreiros
+
 RG PEDreiros
+
 IU Luisa Luisa Andrade
 40 Vale da Eira
 Engenheira Civil
+
 LMC luisa LUISA
+
 IP LUISA proFESSORES
+
 IP luisa professores
+
 IM luisA
 Fim pandemia
 Ja nao era sem tempo...
 http://qualquercoisa
+
 LMG PROFESSORES LUISA
+
 RP luisa professores
+
 LMG PROFESSORES LUISA
+
 IM luisa
 Almoco professores
 Restaurante O Bom Garfo.
 http://escola.pt/poster2.jpg
+
 LMC luisa luisa
+
 LMG professores LUISA
+
 IP LuisA pedreiros
+
 RP luisa professorES
+
 Lc luisa
+
 du pedrov
+
 lmg professores luisa
+
 lmg pedreiros luisa
+
 RP pedroV professores
+
 IG professores
 Associacao dos professores da costa da caparica
+
 IP luisa professores
+
 LMG professores LUISA
+
 LMC luisa luisa
+
 IM luisa
 Sexta feira nao ha aulas
 Nao vale a pena aparecer
 http://escola.pt/horario.jpg
+
 du luisa
+
 du pedrov
+
 lp professores
+
 lp pedreiros
+
 lmg professores pedroV
+
 RP pedroV professores
+
 LMG pedreiros pedrov
+
 LMG professores luisa
+
 du luisa
+
 IP pedroV professores
+
 RP pedroV PROFESSORES
+
 IM luisa
 Inicio das aulas
 As aulas ja comecaram com varias medidas novas.
 http://escola.pt/inicio.jpg
+
 IM PedroV
 Vamos todos
 Todos cumprimos as medidas de seguranca.
 http://escola.pt/fotoPedro.jpg
+
 IM luisa
 Primeira Semana
 Tudo correu bem na primeira semana.
 http://escola.pt/semana1.jpg
+
 IM PedroV
 Problemas ?
 Contactem a secretaria.
 http://escola.pt/fotosecretaria.jpg
+
 LC pedrov
+
 LC luisa
+
 LP pedreiros
+
 LP professores
+
 LMC luisa luiSA
+
 LMC PEDROV pedroV
+
 LMC LuisA PedroV
+
 LMG Professores pedroV
+
 LMG professores LuiSA
+
 LMG pedreiros PEDROV
+
 LMG PEDREIROS pedrov
+
 RG professores
+
 LP professores
+
 LMG professores luisa
+
 LMC luisa luisa
+
 IG professores
 Associacao dos professores da costa da caparica
+
 LMG professores luisa
+
 IP LUISA PROFESSORES
+
 LMG professores luisa
+
 IP user10 grupo10
+
 IM user7
 conversa do user7
 mais conversa
 http://sitedodia.com/fotouser7.jpg
+
 IU user1 nome1 apelido1
 32 localidade1
 profissao1
+
 IU user2 nome2 apelido2
 54 localidade2
 profissao1
+
 IU user3 nome3 apelido3
 32 localidade3
 profissao3
+
 IC user10 user9
+
 IM user7
 conversa do user7 novamente
 mais conversa
 http://sitedodia.com/fotouser7.jpg
+
 DU user2
+
 DU user20
+
 IU user4 nome4 apelido4
 100 localidade4
 finalmente reformado
+
 IU user5 nome5 apelido5
 5 localidade5
 estudante preescolar
+
 IU user6 nome6 apelido6
 45 localidade6
 profissao6
+
 IU user7 nome7 apelido7
 32 localidade7
 profissao7
+
 IU user8 nome8 apelido8
 25 localidade8
 eng. informatico
+
 IU user9 nome9 apelido9
 18 localidade9
 estudante
+
 IU user10 nome10 apelido10
 70 localidade10
 ja era
+
 IC user1 user3
+
 IC user2 user4
+
 IC user5 user7
+
 IM user7
 conversa do user7
 mais conversa
 http://sitedodia.com/fotouser7.jpg
+
 IC user8 user6
+
 IC user10 user9
+
 IM user7
 conversa do user7 novamente
 mais conversa
 http://sitedodia.com/fotouser7.jpg
+
 IG grupo1
 amigos da onca
+
 IG grupo2
 brigada do reumatico
+
 IG grupo3
 clube de matematica
+
 IG grupo4
 amigos de peniche
+
 IG grupo5
 fans do java
+
 IG grupo6
 grupo vira o disco e toca o mesmo
+
 IG grupo7
 clube nunca mais e sabado
+
 IG grupo8
 clube quando tu nasceste ja ca eu andava
+
 IM user8
 conversa do user8
 mais conversa
 http://sitedodia.com/fotouser8.jpg
+
 IM user5
 conversa do user5
 mais conversa
 http://sitedodia.com/fotouser5.jpg
+
 IM user3
 conversa do user3
 mais conversa
 http://sitedodia.com/fotouser3.jpg
+
 IG grupo9
 ja vamos no 9 e so falta 1
+
 IG grupo10
 e com este ja sao 10
+
 IP user1 grupo1
+
 IP user1 grupo3
+
 IM user1
 Post do dia I
 Vamos la repetir isto uma serie de vezes
 http://sitedodia.com/fotododiaI.jpg
+
 IM user1
 Post do dia II
 Vamos la repetir isto uma serie de vezes
 http://sitedodia.com/fotododiaII.jpg
+
 IP user1 grupo5
+
 IP user4 grupo2
+
 IP user4 grupo4
+
 IC user4 user2
+
 IM user2
 conversa do user2
 mais conversa
 http://sitedodia.com/fotouser2.jpg
+
 IM user4
 conversa do user4
 mais conversa
 http://sitedodia.com/fotouser4.jpg
+
 IM user3
 conversa do user3 II
 mais conversa
 http://sitedodia.com/fotouser3II.jpg
+
 RC user3 user5
+
 RC user6 user8
+
 RC user10 user11
+
 IC user1 user3
+
 RC user1 user3
+
 IM user8
 conversa do user8
 mais conversa
 http://sitedodia.com/fotouser8.jpg
+
 IM user5
 conversa do user5
 mais conversa
 http://sitedodia.com/fotouser5.jpg
+
 IM user3
 conversa do user3 III
 mais conversa
 http://sitedodia.com/fotouser3III.jpg
+
 IC user3 user1
+
 IP user1 grupo7
+
 IP user1 grupo9
+
 IP user4 grupo6
+
 IP user4 grupo8
+
 IM user10
 conversa do user10
 mais conversa
 http://sitedodia.com/fotouser10.jpg
+
 IM user9
 conversa do user9
 mais conversa
 http://sitedodia.com/fotouser9.jpg
+
 IP user4 grupo10
+
 IM user1
 Post do dia III
 Vamos la repetir isto uma serie de vezes
 http://sitedodia.com/fotododiaIII.jpg
+
 IM user1
 Post do dia IV
 Vamos la repetir isto uma serie de vezes
 http://sitedodia.com/fotododiaIV.jpg
+
 IM user1
 Post do dia V
 Vamos la repetir isto uma serie de vezes
 http://sitedodia.com/fotododiaV.jpg
+
 RP user1 grupo5
+
 RP user1 grupo7
+
 RP user1 grupo9
+
 IM user1
 Post do dia VI
 Vamos la repetir isto uma serie de vezes. Ja chega.
 http://sitedodia.com/fotododiaVI.jpg
+
 IM user3
 Mais um post
 Ca vai um
 http://sitedodia.com/outrafoto.jpg
+
 IP user3 grupo5
+
 IP user9 grupo9
+
 IM user3
 Mais outro post
 Ca vai outro
 http://sitedodia.com/maisoutrafoto.jpg
+
 IM user1
 Post do dia VII
 Afinal ainda vou repetir mais algumas vezes.
 http://sitedodia.com/fotododiaVII.jpg
+
 IP user1 grupo7
+
 IM user1
 Post do dia VIII
 Vamos la repetir isto uma serie de vezes.
 http://sitedodia.com/fotododiaVIII.jpg
+
 LMG grupo5 user1
+
 LMG grupo5 user3
+
 RG grupo5
+
 RC user2 user4
+
 IC user4 user8
+
 IG grupo5
 Este e um novo grupo5
+
 IM user2
 conversa do user2 II
 mais conversa
 http://sitedodia.com/fotouser2II.jpg
+
 IM user4
 conversa do user4 II
 mais conversa
 http://sitedodia.com/fotouser4II.jpg
+
 IM user9
 conversa do user9
 mais conversa
 http://sitedodia.com/fotouser9.jpg
+
 IM user10
 conversa do user10
 mais conversa
 http://sitedodia.com/fotouser10.jpg
+
 DU user1
+
 DU user2
+
 DU user3
+
 DU user4
+
 DU user5
+
 DU user6
+
 DU user7
+
 DU user8
+
 DU user9
+
 DU user10
+
 DU user11
+
 DG grupo1
+
 DG grupo2
+
 DG grupo3
+
 DG grupo4
+
 DG grupo5
+
 DG grupo6
+
 DG grupo7
+
 DG grupo8
+
 DG grupo9
+
 DG grupo10
+
 DG grupo11
+
 LP grupo1
+
 LP grupo2
+
 LP grupo3
+
 LP grupo4
+
 LP grupo5
+
 LP grupo6
+
 LP grupo7
+
 LP grupo8
+
 LP grupo9
+
 LP grupo10
+
 LP grupo11
+
 LC user1
+
 LC user2
+
 LC user3
+
 LC user4
+
 LC user5
+
 LC user6
+
 LC user7
+
 LC user8
+
 LC user9
+
 LC user10
+
 LC grupo1
+
 LMC user1 user1
+
 LMC user2 user2
+
 LMC user3 user3
+
 LMC user4 user4
+
 LMC user5 user5
+
 LMC user6 user6
+
 LMC user7 user7
+
 LMC user8 user8
+
 LMC user9 user9
+
 LMC user10 user10
+
 LMC user11 user11
+
 LMC user11 user10
+
 LMC user10 user11
+
 LMC user1 user3
+
 LMC user3 user1
+
 LMC user5 user7
+
 LMC user6 user8
+
 LMC user10 user9
+
 LMC user8 user4
+
 LMG grupo0 user1
+
 LMG grupo1 user1
+
 LMG grupo2 user1
+
 LMG grupo3 user1
+
 LMG grupo5 user1
+
 LMG grupo7 user1
+
 LMG grupo9 user1
+
 LMG grupo2 user4
+
 LMG grupo4 user4
+
 LMG grupo6 user4
+
 LMG grupo8 user4
+
 LMG grupo10 user4
+
 LMG grupo5 user3
+
 LMG grupo9 user9
+
 LMG user9 grupo10
+
 FIM
+
