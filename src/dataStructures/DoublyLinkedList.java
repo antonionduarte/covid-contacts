@@ -231,11 +231,11 @@ public class DoublyLinkedList<E> implements List<E> {
 	}
 	
 	@Override
-	public boolean remove(E element) {
+	public E remove(E element) {
 		DListNode<E> node = findNode(element);
 		
 		if (node == null) {
-			return false;
+			return null;
 		}
 		else if (node == head) {
 			removeFirstNode();
@@ -246,7 +246,7 @@ public class DoublyLinkedList<E> implements List<E> {
 		else {
 			removeMiddleNode(node);
 		}
-		return true;
+		return node.getElement();
 	}
 	
 	/**

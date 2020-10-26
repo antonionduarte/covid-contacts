@@ -45,6 +45,11 @@ public interface Group {
 	void removeParticipant(User user) throws UserNotInGroupException;
 	
 	/**
+	 * Clears all connections between the group and the participants.
+	 */
+	void clearParticipants();
+	
+	/**
 	 * @return New participants iterator.
 	 */
 	Iterator<User> newParticipantsIterator() throws NoParticipantsException;

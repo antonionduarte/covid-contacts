@@ -73,6 +73,15 @@ public class GroupClass implements Group {
 	}
 	
 	@Override
+	public void clearParticipants() {
+		Iterator<User> participantsIterator = participants.iterator();
+		
+		while (participantsIterator.hasNext()) {
+			participantsIterator.next().removeGroup(this);
+		}
+	}
+	
+	@Override
 	public Iterator<User> newParticipantsIterator() throws NoParticipantsException {
 		if (participants.isEmpty()) {
 			throw new NoParticipantsException();

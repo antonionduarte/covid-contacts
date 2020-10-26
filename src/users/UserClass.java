@@ -108,7 +108,7 @@ public class UserClass implements User {
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (!groups.remove(group)) {
+		if (groups.remove(group) == null) {
 			throw new UserNotInGroupException();
 		}
 	}

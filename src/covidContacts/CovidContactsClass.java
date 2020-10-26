@@ -110,9 +110,12 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void removeGroup(String name) throws GroupDoesNotExistException {
-		if (!groups.remove(new GroupClass(name, null))) {
+		Group group = groups.remove(new GroupClass(name, null));
+		
+		if (group == null) {
 			throw new GroupDoesNotExistException();
 		}
+		group.clearParticipants();
 	}
 	
 	@Override

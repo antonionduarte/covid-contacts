@@ -98,7 +98,7 @@ public interface List<E> extends Serializable {
 	 * @param element Element to be removed from list
 	 * @return True if the element was found and removed.
 	 */
-	boolean remove(E element);
+	E remove(E element);
 	
 	/**
 	 * Removes all of the elements from the specified list and

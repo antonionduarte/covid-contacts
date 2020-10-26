@@ -242,12 +242,12 @@ public class SinglyLinkedList<E> implements List<E> {
 	}
 	
 	@Override
-	public boolean remove(E element) {
+	public E remove(E element) {
 		int index = find(element);
 		if (index > -1) {
-			remove(index);
+			return remove(index);
 		}
-		return index > -1;
+		return null;
 	}
 	
 	@Override

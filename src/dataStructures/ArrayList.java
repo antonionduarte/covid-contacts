@@ -78,14 +78,13 @@ public class ArrayList<E> implements List<E> {
 	}
 	
 	@Override
-	public boolean remove(E element) {
+	public E remove(E element) {
 		int index = find(element);
 		
 		if (index > -1) {
-			remove(index);
-			return true;
+			return remove(index);
 		}
-		return false;
+		return null;
 	}
 	
 	@Override
