@@ -6,7 +6,7 @@ import exceptions.NoElementException;
 /**
  * List abstract data type, implemented with an array.
  * @param <E> Generic Element.
- * @author António Duarte.
+ * @author Antonio Duarte.
  */
 public class ArrayList<E> implements List<E> {
 	
