@@ -5,6 +5,14 @@ import dataStructures.DoublyLinkedList.DListNode;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
+/**
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Ordered Doubly Linked List abstract data type.
+ */
+
 public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	/* Variables */

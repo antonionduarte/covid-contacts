@@ -8,6 +8,14 @@ import exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Contains all the information regarding a groups, which is a collection of users that 
+ * contain their posts.
+ */
+
 public interface Group {
 	
 	/**

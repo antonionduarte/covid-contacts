@@ -1,5 +1,12 @@
 package enums;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * All commands.
+ */
+
 public enum Command {
 	
 	/* Commands */

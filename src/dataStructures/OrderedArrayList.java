@@ -4,6 +4,15 @@ import comparators.Comparator;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
+/**
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Ordered Array List abstract data type.
+ * Uses binary search for searched and insertions.
+ */
+
 public class OrderedArrayList<E> implements OrderedList<E> {
 	
 	/* Constants */

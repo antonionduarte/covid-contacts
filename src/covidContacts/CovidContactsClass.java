@@ -10,6 +10,12 @@ import posts.PostClass;
 import users.User;
 import users.UserClass;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Manage all the operations between users, their contacts and their groups.
+ */
 
 public class CovidContactsClass implements CovidContacts {
 	

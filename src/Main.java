@@ -17,7 +17,6 @@ import java.util.Scanner;
  * @author Goncalo Virginia (56773).
  * <<<Description>>>
  */
-
 public class Main {
 	
 	public static void main(String[] args) {

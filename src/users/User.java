@@ -5,6 +5,13 @@ import exceptions.ContactDoesNotExistException;
 import groups.Group;
 import posts.Post;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ *
+ * Base interface  concerning the User.
+ */
+
 public interface User extends UserGetters {
 	
 	/**
