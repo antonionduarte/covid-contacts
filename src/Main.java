@@ -15,11 +15,18 @@ import java.util.Scanner;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * <<<Description>>>
+ * This program simulates a simple social network themed around the current COVID-19 pandemic (let's hope Trump isn't
+ * lying about the cure).
+ * Users can add others as contacts, create/join groups, post messages (which are sent to all contacts and groups with
+ * the main purpose of notifying others if they're infected) and of course, receive messages.
  */
 
 public class Main {
 	
+	/**
+	 * Reads and executes input commands repeatedly until the exit command is typed.
+	 * @param args Arguments used for the execution of the program (not used).
+	 */
 	public static void main(String[] args) {
 		CovidContacts covidContacts = new CovidContactsClass();
 		Scanner in = new Scanner(System.in);
@@ -177,6 +184,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Lists a specified users' contacts.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void listUserContacts(Scanner in, CovidContacts covidContacts) {
 		String login = in.next().toUpperCase();
 		
@@ -193,6 +205,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Inserts a new group into the system.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void insertGroup(Scanner in, CovidContacts covidContacts) {
 		String name = in.next().toUpperCase(), description = in.next().toUpperCase() + in.nextLine().toUpperCase();
 		
@@ -205,6 +222,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Prints out a specified groups' information.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void groupInfo(Scanner in, CovidContacts covidContacts) {
 		String name = in.next().toUpperCase();
 		
@@ -217,6 +239,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Removes the specified group from the system.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void removeGroup(Scanner in, CovidContacts covidContacts) {
 		String name = in.next().toUpperCase();
 		
@@ -229,6 +256,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Inserts a specified user into a certain group.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void insertGroupParticipant(Scanner in, CovidContacts covidContacts) {
 		String login = in.next().toUpperCase(), groupName = in.next().toUpperCase();
 		
@@ -241,6 +273,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Removes a user from a group.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void removeGroupParticipant(Scanner in, CovidContacts covidContacts) {
 		String login = in.next().toUpperCase(), groupName = in.next().toUpperCase();
 		
@@ -253,6 +290,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Lists a groups participants.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void listGroupParticipants(Scanner in, CovidContacts covidContacts) {
 		String groupName = in.next().toUpperCase();
 		
@@ -269,6 +311,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Enables a user to insert a new post.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void insertPost(Scanner in, CovidContacts covidContacts) {
 		String login = in.next().toUpperCase(), title = (in.next() + in.nextLine()).toUpperCase(), text = in.nextLine().toUpperCase(), url = in.nextLine().toUpperCase();
 		
@@ -281,6 +328,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Lists a specified users' sent and received posts.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void listUserContactPosts(Scanner in, CovidContacts covidContacts) {
 		String login1 = in.next().toUpperCase(), login2 = in.next().toUpperCase();
 		
@@ -292,6 +344,11 @@ public class Main {
 		}
 	}
 	
+	/**
+	 * Lists a specified groups' posts.
+	 * @param in Input scanner.
+	 * @param covidContacts Covid Contacts Manager.
+	 */
 	private static void listGroupPosts(Scanner in, CovidContacts covidContacts) {
 		String groupName = in.next().toUpperCase(), login = in.next().toUpperCase();
 		
