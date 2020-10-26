@@ -133,7 +133,7 @@ public class ArrayList<E> implements List<E> {
 		if (index < 0 || index > numElements) {
 			throw new InvalidPositionException();
 		}
-		if (index == array.length) {
+		if (numElements == array.length - 1) {
 			resize();
 		}
 		

@@ -144,7 +144,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	 * @param index Position to insert the element on.
 	 */
 	private void insert(int index, E element) {
-		if (index == array.length) {
+		if (numElements == array.length - 1) {
 			resize();
 		}
 		
