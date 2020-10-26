@@ -80,22 +80,30 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	public void insert(E element) {
 		int low = 0, high = numElements - 1;
 		
-		if (isEmpty() || low == high) {
-			insert(numElements, element);
+		if (isEmpty()) {
+			insert(0, element);
 		}
 		
-		while (low <= high) {
+		while (low < high) {
 			int mid = (low + high) / 2, result = comparator.compare(array[mid], element);
 			
-			if (mid == numElements - 1 || (result <= 0 && comparator.compare(array[mid + 1], element) >= 0)) {
-				insert(mid + 1, element);
-			}
-			else if (result > 0) {
+			if (result > 0) {
 				high = mid - 1;
 			}
-			else {
+			else if (result < 0) {
 				low = mid + 1;
 			}
+			else {
+				low = mid;
+				high = mid;
+			}
+		}
+		
+		if (comparator.compare(array[low], element) >= 0) {
+			insert(low, element);
+		}
+		else {
+			insert(low + 1, element);
 		}
 	}
 	
@@ -129,9 +137,8 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		
 		if (index > -1) {
 			remove(index);
-			return true;
 		}
-		return false;
+		return index > -1;
 	}
 	
 	@Override
