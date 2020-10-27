@@ -154,8 +154,8 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	 * @param element Element inside the new node.
 	 */
 	private void addMiddle(DListNode<E> pointerNode, E element) {
-		DListNode<E> previousNode = pointerNode.getPrevious(), newNode = new DListNode<>(element, previousNode, pointerNode);
-		previousNode.setNext(newNode);
+		DListNode<E> newNode = new DListNode<>(element, pointerNode.getPrevious(), pointerNode);
+		pointerNode.getPrevious().setNext(newNode);
 		pointerNode.setPrevious(newNode);
 		size++;
 	}
