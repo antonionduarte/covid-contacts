@@ -9,7 +9,14 @@ import posts.Post;
 import posts.PostClass;
 import users.User;
 import users.UserClass;
+import users.UserGetters;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Manage all the operations between users, their contacts and their groups.
+ */
 
 public class CovidContactsClass implements CovidContacts {
 	
@@ -46,13 +53,8 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public User getUser(String login) throws UserDoesNotExistException {
-		int index = users.find(new UserClass(login, null, 0, null, null));
-		
-		if (index == -1) {
-			throw new UserDoesNotExistException();
-		}
-		return users.get(index);
+	public UserGetters getUserGetters(String login) throws UserDoesNotExistException {
+		return (UserGetters) getUser(login);
 	}
 	
 	@Override
@@ -158,6 +160,17 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public TwoWayIterator<Post> newGroupPostsIterator(String groupName, String login) {
 		return getGroup(groupName).newPostsIterator(getUser(login));
+	}
+
+	/* Private Methods */
+
+	private User getUser(String login) throws UserDoesNotExistException {
+		int index = users.find(new UserClass(login, null, 0, null, null));
+		
+		if (index == -1) {
+			throw new UserDoesNotExistException();
+		}
+		return users.get(index);
 	}
 	
 }

@@ -3,6 +3,14 @@ package dataStructures;
 import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
+/**
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * List Abstract Data Type.
+ */
+
 public interface OrderedList<E> {
 	
 	/**

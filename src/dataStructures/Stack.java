@@ -12,6 +12,7 @@ import java.util.EmptyStackException;
  * @author AED Team
  * @version 1.0
  */
+
 public interface Stack<E> {
 	/**
 	 * Returns true iff the stack contains no

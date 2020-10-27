@@ -6,6 +6,14 @@ import exceptions.*;
 import groups.Group;
 import posts.Post;
 import users.User;
+import users.UserGetters;
+
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * Manage all the operations between users, their contacts and their groups.
+ */
 
 public interface CovidContacts {
 	
@@ -23,7 +31,7 @@ public interface CovidContacts {
 	 * @param login Users' login.
 	 * @return Specified user.
 	 */
-	User getUser(String login) throws UserDoesNotExistException;
+	UserGetters getUserGetters(String login) throws UserDoesNotExistException;
 	
 	/**
 	 * Creates a new 2-way contact between 2 users.

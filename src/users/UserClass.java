@@ -7,6 +7,13 @@ import exceptions.*;
 import groups.Group;
 import posts.Post;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ *
+ * User implementation, handles the information of a user.
+ */
+
 public class UserClass implements User {
 	
 	/* Constants */

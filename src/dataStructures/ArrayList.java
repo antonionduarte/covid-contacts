@@ -4,10 +4,13 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * List abstract data type, implemented with an array.
  * @param <E> Generic Element.
- * @author Antonio Duarte.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * 
+ * List abstract data type, implemented with an array.
  */
+
 public class ArrayList<E> implements List<E> {
 	
 	/* Constants */

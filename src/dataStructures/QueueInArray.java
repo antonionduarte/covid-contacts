@@ -9,6 +9,7 @@ import exceptions.OutOfCapacityException;
  * @author AED  Team
  * @version 1.0
  */
+
 public class QueueInArray<E> implements Queue<E> {
 	
 	/* Constants */

@@ -20,7 +20,6 @@ import java.util.Scanner;
  * Users can add others as contacts, create/join groups, post messages (which are sent to all contacts and groups with
  * the main purpose of notifying others if they're infected) and of course, receive messages.
  */
-
 public class Main {
 	
 	/**
@@ -142,7 +141,7 @@ public class Main {
 		String login = in.next().toUpperCase();
 		
 		try {
-			UserGetters user = covidContacts.getUser(login);
+			UserGetters user = covidContacts.getUserGetters(login);
 			System.out.printf("%s %s %d\n%s %s\n", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
 		}
 		catch (UserDoesNotExistException e) {
