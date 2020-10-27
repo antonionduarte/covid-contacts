@@ -11,13 +11,13 @@ import users.UserGetters;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Manage all the operations between users, their contacts and their groups.
+ * Manages all the operations between users, their contacts and their groups.
  */
 
 public interface CovidContacts {
 	
 	/**
-	 * Register a new user into the contacts manager.
+	 * Registers a new user.
 	 * @param login The users' login.
 	 * @param username The users' name.
 	 * @param age The users' age.
@@ -113,4 +113,5 @@ public interface CovidContacts {
 	 * @return New group posts iterator.
 	 */
 	TwoWayIterator<Post> newGroupPostsIterator(String groupName, String login);
+	
 }

@@ -2,8 +2,8 @@ package comparators;
 
 /**
  * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773). The comparator interface, receives two generics elements and returns an int
- * indicative of the result of comparison.
+ * @author Goncalo Virginia (56773).
+ * Comparator interface, receives two generics elements and returns an int indicative of the result of comparison.
  */
 
 public interface Comparator<E> {

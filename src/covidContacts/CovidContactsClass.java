@@ -13,7 +13,8 @@ import users.UserGetters;
 
 /**
  * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773). Manages all the operations between users, their contacts and their groups.
+ * @author Goncalo Virginia (56773).
+ * Manages all the operations between users, their contacts and their groups.
  */
 
 public class CovidContactsClass implements CovidContacts {
