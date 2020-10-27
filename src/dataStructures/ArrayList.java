@@ -28,7 +28,6 @@ public class ArrayList<E> implements List<E> {
 		numElements = 0;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public ArrayList() {
 		this(DEFAULT_SIZE);
 	}
