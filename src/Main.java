@@ -141,7 +141,7 @@ public class Main {
 		String login = in.next().toUpperCase();
 		
 		try {
-			UserGetters user = covidContacts.getUser(login);
+			UserGetters user = covidContacts.getUserGetters(login);
 			System.out.printf("%s %s %d\n%s %s\n", login, user.getUsername(), user.getAge(), user.getLocation(), user.getProfession());
 		}
 		catch (UserDoesNotExistException e) {
