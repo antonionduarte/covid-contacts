@@ -104,14 +104,12 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 			addLast(element);
 		}
 		else {
-			DListNode<E> pointerNode = head;
-			boolean found = false;
+			DListNode<E> pointerNode = head.getNext();
 			
-			for (int i = 0; i < size - 1 && !found; i++) {
-				if (comparator.compare(pointerNode.getElement(), element) <= 0 &&
-						comparator.compare(pointerNode.getNext().getElement(), element) >= 0) {
-					addMiddle(i + 1, element);
-					found = true;
+			for (int i = 1; i < size; i++) {
+				if (comparator.compare(pointerNode.getElement(), element) >= 0) {
+					addMiddle(pointerNode, element);
+					break;
 				}
 				pointerNode = pointerNode.getNext();
 			}
@@ -152,13 +150,13 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	/**
 	 * Adds a new node to the middle of the linked list.
-	 * @param position Position of the new node.
+	 * @param pointerNode Node used as index reference.
 	 * @param element Element inside the new node.
 	 */
-	private void addMiddle(int position, E element) {
-		DListNode<E> nextNode = getNode(position), previousNode = nextNode.getPrevious(), newNode = new DListNode<>(element, previousNode, nextNode);
+	private void addMiddle(DListNode<E> pointerNode, E element) {
+		DListNode<E> previousNode = pointerNode.getPrevious(), newNode = new DListNode<>(element, previousNode, pointerNode);
 		previousNode.setNext(newNode);
-		nextNode.setPrevious(newNode);
+		pointerNode.setPrevious(newNode);
 		size++;
 	}
 	
