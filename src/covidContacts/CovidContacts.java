@@ -11,7 +11,6 @@ import users.UserGetters;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * Manage all the operations between users, their contacts and their groups.
  */
 

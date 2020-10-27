@@ -5,8 +5,7 @@ import exceptions.NoSuchElementException;
 import java.io.Serializable;
 
 /**
- * Iterator Abstract Data Type
- * Includes description of general methods for one way iterator.
+ * Iterator Abstract Data Type Includes description of general methods for one way iterator.
  * @param <E> Generic Element
  * @author AED  Team
  * @version 1.0

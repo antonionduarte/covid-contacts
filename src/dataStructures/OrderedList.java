@@ -7,7 +7,6 @@ import exceptions.NoElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * List Abstract Data Type.
  */
 
@@ -43,16 +42,14 @@ public interface OrderedList<E> {
 	E get(int position) throws InvalidPositionException;
 	
 	/**
-	 * Searches the Ordered Array, using Binary Search and
-	 * returns the position of the desired element.
+	 * Searches the Ordered Array, using Binary Search and returns the position of the desired element.
 	 * @param element Element to be searched in the list.
 	 * @return The position of the first occurrence of the element in the list.
 	 */
 	int find(E element);
 	
 	/**
-	 * Inserts an element in a sorted manner, depending
-	 * on the Comparator provided in the constructor.
+	 * Inserts an element in a sorted manner, depending on the Comparator provided in the constructor.
 	 * @param element Element to be inserted in the list.
 	 */
 	void insert(E element);

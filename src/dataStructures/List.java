@@ -6,8 +6,7 @@ import exceptions.NoElementException;
 import java.io.Serializable;
 
 /**
- * List (sequence) Abstract Data Type
- * Includes description of general methods to be implemented by lists.
+ * List (sequence) Abstract Data Type Includes description of general methods to be implemented by lists.
  * @param <E> Generic Element
  * @author AED  Team
  * @version 1.0
@@ -101,8 +100,8 @@ public interface List<E> extends Serializable {
 	E remove(E element);
 	
 	/**
-	 * Removes all of the elements from the specified list and
-	 * inserts them at the end of the list (in proper sequence).
+	 * Removes all of the elements from the specified list and inserts them at the end of the list (in proper
+	 * sequence).
 	 * @param list List to be appended to the end.
 	 */
 	void append(List<E> list);

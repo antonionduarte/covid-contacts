@@ -7,7 +7,6 @@ import exceptions.NoElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * List abstract data type, implemented with an array.
  */
 

@@ -5,9 +5,7 @@ import users.User;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
- * Post made by an user, has a title
- * a text, a url and the user that posted it.
+ * Post made by an user, has a title a text, a url and the user that posted it.
  */
 
 public class PostClass implements Post {

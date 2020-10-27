@@ -10,7 +10,6 @@ import posts.Post;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- *
  * User implementation, handles the information of a user.
  */
 
@@ -161,7 +160,7 @@ public class UserClass implements User {
 	}
 	
 	@Override
-	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException{
+	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException {
 		if (!login.equals(other.getLogin()) && contacts.find(other) == -1) {
 			throw new ContactDoesNotExistException();
 		}

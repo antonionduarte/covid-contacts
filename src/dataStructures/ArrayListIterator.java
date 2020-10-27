@@ -6,7 +6,6 @@ import exceptions.NoSuchElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * Iterator for the array list..
  */
 

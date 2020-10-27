@@ -15,5 +15,5 @@ public class ContactAlreadyExistsException extends RuntimeException {
 	public ContactAlreadyExistsException() {
 		super(MSG);
 	}
-
+	
 }
