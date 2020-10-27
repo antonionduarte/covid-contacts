@@ -7,7 +7,6 @@ import exceptions.FullStackException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * Stack made with an array.
  */
 

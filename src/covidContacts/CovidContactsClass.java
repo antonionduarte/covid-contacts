@@ -13,9 +13,7 @@ import users.UserGetters;
 
 /**
  * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773).
- * 
- * Manage all the operations between users, their contacts and their groups.
+ * @author Goncalo Virginia (56773). Manages all the operations between users, their contacts and their groups.
  */
 
 public class CovidContactsClass implements CovidContacts {
@@ -161,9 +159,9 @@ public class CovidContactsClass implements CovidContacts {
 	public TwoWayIterator<Post> newGroupPostsIterator(String groupName, String login) {
 		return getGroup(groupName).newPostsIterator(getUser(login));
 	}
-
+	
 	/* Private Methods */
-
+	
 	private User getUser(String login) throws UserDoesNotExistException {
 		int index = users.find(new UserClass(login, null, 0, null, null));
 		

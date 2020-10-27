@@ -5,8 +5,7 @@ import exceptions.NoElementException;
 import java.io.Serializable;
 
 /**
- * Queue Abstract Data Type
- * Includes description of general methods for Queue with FIFO discipline.
+ * Queue Abstract Data Type Includes description of general methods for Queue with FIFO discipline.
  * @param <E> Generic Element
  * @author AED  Team
  * @version 1.0

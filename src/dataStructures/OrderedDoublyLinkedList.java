@@ -9,7 +9,6 @@ import exceptions.NoElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * 
  * Ordered Doubly Linked List abstract data type.
  */
 
@@ -164,8 +163,7 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	}
 	
 	/**
-	 * Removes the first node in the list.
-	 * Pre-condition: the list is not empty.
+	 * Removes the first node in the list. Pre-condition: the list is not empty.
 	 */
 	private void removeFirstNode() {
 		head = head.getNext();
@@ -191,8 +189,7 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	}
 	
 	/**
-	 * Removes the last node in the list.
-	 * Pre-condition: the list is not empty.
+	 * Removes the last node in the list. Pre-condition: the list is not empty.
 	 */
 	private void removeLastNode() {
 		tail = tail.getPrevious();
@@ -218,8 +215,7 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	}
 	
 	/**
-	 * Removes the specified node from the list.
-	 * Pre-condition: the node is neither the head nor the tail of the list.
+	 * Removes the specified node from the list. Pre-condition: the node is neither the head nor the tail of the list.
 	 * @param node - middle node to be removed
 	 */
 	private void removeMiddleNode(DListNode<E> node) {
