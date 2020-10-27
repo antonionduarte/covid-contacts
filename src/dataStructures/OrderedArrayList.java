@@ -28,7 +28,6 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		this.comparator = comparator;
 	}
 	
-	@SuppressWarnings("unchecked")
 	public OrderedArrayList(Comparator<E> comparator) {
 		this(comparator, DEFAULT_SIZE);
 	}
