@@ -7,7 +7,7 @@ import exceptions.NoElementException;
 public class OrderedArrayList<E> implements OrderedList<E> {
 	
 	/* Constants */
-	private static final int DEFAULT_SIZE = 10, GROWTH_FACTOR = 2;
+	private static final int DEFAULT_SIZE = 100, GROWTH_FACTOR = 2;
 	
 	/* Variables */
 	private E[] array;
@@ -15,10 +15,15 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	private Comparator<E> comparator;
 	
 	@SuppressWarnings("unchecked")
-	public OrderedArrayList(Comparator<E> comparator) {
-		array = (E[]) new Object[DEFAULT_SIZE];
+	public OrderedArrayList(Comparator<E> comparator, int size) {
+		array = (E[]) new Object[size];
 		numElements = 0;
 		this.comparator = comparator;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public OrderedArrayList(Comparator<E> comparator) {
+		this(comparator, DEFAULT_SIZE);
 	}
 	
 	@Override

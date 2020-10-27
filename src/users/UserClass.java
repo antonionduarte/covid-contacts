@@ -1,5 +1,6 @@
 package users;
 
+import comparators.GroupComparator;
 import comparators.UserComparator;
 import dataStructures.*;
 import exceptions.*;
@@ -14,8 +15,8 @@ public class UserClass implements User {
 	/* Variables */
 	private String login, username, location, profession;
 	private int age;
-	private List<Group> groups;
 	private List<Post> posts;
+	private OrderedList<Group> groups;
 	private OrderedList<User> contacts;
 	
 	/**
@@ -32,8 +33,26 @@ public class UserClass implements User {
 		this.age = age;
 		this.location = location;
 		this.profession = profession;
+		/**
+		 * We chose a Doubly Linked List since an indefinite amount of sent/received posts are stored by their order
+		 * of insertion and is only really used for listing purposes (we could have used a Singly Linked List and just
+		 * added each element in the beginning to have a LIFO order, but a Doubly Linked List is more versatile in case
+		 * we want to also be able to list posts in a FIFO order).
+		 */
 		posts = new DoublyLinkedList<>();
-		groups = new ArrayList<>(10);
+		/**
+		 * Since groups have a pre-defined hard limit, having an Ordered Array List is the best option in terms of
+		 * searching time complexity [O(log2(n))]. The only downside is inserting or removing a group, since it has
+		 * to shift the whole list, but considering the max number of groups a user can have is generally quite small,
+		 * this aspect will have a minimal performance downside.
+		 */
+		groups = new OrderedArrayList<>(new GroupComparator(), MAX_GROUPS);
+		/**
+		 * As for the users' contacts, an Ordered Doubly Linked List is the most balanced option since there isn't a
+		 * limit on the number of contacts a user can have, and the list has to stay ordered lexicographically.
+		 * The contact lists' main purpose is to send posts to all of the users' contacts and list them, which means
+		 * they just have to be iterated through, therefore accessing a specific contact isn't a common occurrence.
+		 */
 		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
 	}
 	
@@ -103,12 +122,12 @@ public class UserClass implements User {
 		if (groups.find(group) != -1) {
 			throw new UserAlreadyInGroupException();
 		}
-		groups.addLast(group);
+		groups.insert(group);
 	}
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (groups.remove(group) == null) {
+		if (!groups.remove(group)) {
 			throw new UserNotInGroupException();
 		}
 	}
