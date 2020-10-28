@@ -5,10 +5,10 @@ import exceptions.NoSuchElementException;
 import java.io.Serializable;
 
 /**
- * Iterator Abstract Data Type Includes description of general methods for one way iterator.
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * @param <E> Generic Element.
+ * Iterator Interface.
  */
 
 public interface Iterator<E> extends Serializable {
@@ -20,7 +20,6 @@ public interface Iterator<E> extends Serializable {
 	
 	/**
 	 * @return The next element in the iteration.
-	 * @throws NoSuchElementException if it's called without verifying the pre-condition.
 	 */
 	E next() throws NoSuchElementException;
 	

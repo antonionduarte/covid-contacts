@@ -4,10 +4,10 @@ import dataStructures.DoublyLinkedList.DListNode;
 import exceptions.NoSuchElementException;
 
 /**
- * Implementation of Two Way Iterator for DLList
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * @param <E> Generic Element.
+ * Two Way Iterator for a Doubly Linked List.
  */
 
 class DoublyLLIterator<E> implements TwoWayIterator<E> {

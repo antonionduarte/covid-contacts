@@ -3,10 +3,10 @@ package dataStructures;
 import exceptions.NoSuchElementException;
 
 /**
- * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Iterator for the array list.
+ * @param <E> Generic Element.
+ * Iterator for an array list.
  */
 
 public class ArrayListIterator<E> implements Iterator<E> {
@@ -18,6 +18,11 @@ public class ArrayListIterator<E> implements Iterator<E> {
 	E[] array;
 	int numElements, nextElement;
 	
+	/**
+	 * Constructor.
+	 * @param array Array of elements to iterate.
+	 * @param numElements Number of elements.
+	 */
 	public ArrayListIterator(E[] array, int numElements) {
 		this.array = array;
 		this.numElements = numElements;
@@ -38,4 +43,5 @@ public class ArrayListIterator<E> implements Iterator<E> {
 	public void rewind() {
 		nextElement = 0;
 	}
+	
 }

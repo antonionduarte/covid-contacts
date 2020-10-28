@@ -4,10 +4,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * Doubly linked list Implementation
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * @param <E> Generic Element.
+ * Doubly Linked List implementation.
  */
 
 public class DoublyLinkedList<E> implements List<E> {
@@ -19,6 +19,7 @@ public class DoublyLinkedList<E> implements List<E> {
 	protected DListNode<E> head, tail;
 	protected int size;
 	
+	/* Constructor */
 	public DoublyLinkedList() {
 		head = null;
 		tail = null;
@@ -284,6 +285,10 @@ public class DoublyLinkedList<E> implements List<E> {
 		}
 	}
 	
+	/**
+	 * Doubly linked node.
+	 * @param <E> Generic element.
+	 */
 	protected static class DListNode<E> {
 		
 		/* Variables */

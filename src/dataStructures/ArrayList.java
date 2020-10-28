@@ -4,10 +4,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * List for generic elements, implemented with an array.
+ * @param <E> Generic Element.
+ * Array List implementation.
  */
 
 public class ArrayList<E> implements List<E> {
@@ -20,13 +20,17 @@ public class ArrayList<E> implements List<E> {
 	private E[] array;
 	private int numElements;
 	
-	/* Constructors */
+	/**
+	 * Constructor.
+	 * @param size Initial size.
+	 */
 	@SuppressWarnings("unchecked")
 	public ArrayList(int size) {
 		array = (E[]) new Object[size];
 		numElements = 0;
 	}
 	
+	/* Constructor */
 	public ArrayList() {
 		this(DEFAULT_SIZE);
 	}
@@ -162,7 +166,7 @@ public class ArrayList<E> implements List<E> {
 	/* Private methods */
 	
 	/**
-	 * Resizes the array by a specified growth factor
+	 * Resizes the array by a specified growth factor.
 	 */
 	@SuppressWarnings("unchecked")
 	private void resize() {

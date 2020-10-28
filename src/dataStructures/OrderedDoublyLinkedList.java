@@ -6,10 +6,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Ordered Doubly Linked List abstract data type.
+ * @param <E> Generic Element.
+ * Ordered Doubly Linked List implementation.
  */
 
 public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
@@ -267,6 +267,11 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 		return true;
 	}
 	
+	@Override
+	public Iterator<E> iterator() {
+		return new DoublyLLIterator<>(head, tail);
+	}
+	
 	/**
 	 * Searches for a node containing a specified element.
 	 * @param element Element to be found.
@@ -279,11 +284,6 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 			pointerNode = pointerNode.getNext();
 		}
 		return pointerNode;
-	}
-	
-	@Override
-	public Iterator<E> iterator() {
-		return new DoublyLLIterator<>(head, tail);
 	}
 	
 }

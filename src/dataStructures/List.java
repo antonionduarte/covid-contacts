@@ -6,10 +6,10 @@ import exceptions.NoElementException;
 import java.io.Serializable;
 
 /**
- * List (sequence) Abstract Data Type Includes description of general methods to be implemented by lists.
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * @param <E> Generic Element.
+ * List interface.
  */
 
 public interface List<E> extends Serializable {

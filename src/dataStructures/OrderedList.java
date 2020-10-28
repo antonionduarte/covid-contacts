@@ -7,7 +7,7 @@ import exceptions.NoElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * List Abstract Data Type.
+ * List interface.
  */
 
 public interface OrderedList<E> {

@@ -139,7 +139,6 @@ public class CovidContactsClass implements CovidContacts {
 		user.removeGroup(group);
 	}
 	
-	
 	@Override
 	public Iterator<User> newGroupParticipantsIterator(String groupName) {
 		return getGroup(groupName).newParticipantsIterator();
@@ -163,6 +162,10 @@ public class CovidContactsClass implements CovidContacts {
 	
 	/* Private Methods */
 	
+	/**
+	 * @param login Login of the desired user.
+	 * @return User with the specified login.
+	 */
 	private User getUser(String login) throws UserDoesNotExistException {
 		int index = users.find(new UserClass(login, null, 0, null, null));
 		

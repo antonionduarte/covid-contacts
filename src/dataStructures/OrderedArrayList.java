@@ -5,10 +5,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Ordered Array List abstract data type. Uses binary search for searched and insertions.
+ * @param <E> Generic Element.
+ * Ordered Array List implementation. Uses binary search for searches and insertions.
  */
 
 public class OrderedArrayList<E> implements OrderedList<E> {
@@ -21,6 +21,11 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	private int numElements;
 	private Comparator<E> comparator;
 	
+	/**
+	 * Constructor.
+	 * @param comparator Comparator used to insert sort the elements.
+	 * @param size Initial size.
+	 */
 	@SuppressWarnings("unchecked")
 	public OrderedArrayList(Comparator<E> comparator, int size) {
 		array = (E[]) new Object[size];
@@ -28,6 +33,9 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		this.comparator = comparator;
 	}
 	
+	/**
+	 * @param comparator Comparator used to insert sort the elements.
+	 */
 	public OrderedArrayList(Comparator<E> comparator) {
 		this(comparator, DEFAULT_SIZE);
 	}
@@ -153,7 +161,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	
 	/**
 	 * Inserts an element into the specified position.
-	 * @param index Position to insert the element on.
+	 * @param index Position to insert the element in.
 	 */
 	private void insert(int index, E element) {
 		if (numElements == array.length - 1) {
