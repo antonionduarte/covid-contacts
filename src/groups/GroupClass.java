@@ -27,7 +27,16 @@ public class GroupClass implements Group {
 	public GroupClass(String name, String description) {
 		this.name = name;
 		this.description = description;
+		/**
+		 * The Ordered Doubly Linked List is the best option for storing an indefinite amount of participants who's
+		 * main purpose is to be inserted/removed and listed in lexicographic order of their login.
+		 */
 		participants = new OrderedDoublyLinkedList<>(new UserComparator());
+		/**
+		 * We considered the standard Doubly Linked List adequate for storing the groups' posts since they only have to
+		 * be stored by insertion order, are an indefinite amount, and are only used for listing purposed.
+		 * This data structure allows them to be easily listed both ways in case that's a wanted feature in the future.
+		 */
 		posts = new DoublyLinkedList<>();
 	}
 	
