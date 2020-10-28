@@ -5,42 +5,38 @@ import exceptions.FullStackException;
 import java.util.EmptyStackException;
 
 /**
- * Stack Abstract Data Type Includes description of general methods for the Stack with the LIFO discipline.
- * @param <E> Generic Element
- * @author AED Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * Stack (LIFO) interface.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public interface Stack<E> {
+	
 	/**
-	 * Returns true iff the stack contains no elements.
-	 * @return true iff the stack contains no elements, false otherwise
+	 * @return True if the stack contains no elements.
 	 */
 	boolean isEmpty();
 	
 	/**
-	 * Returns the number of elements in the stack.
-	 * @return number of elements in the stack
+	 * @return Number of elements in the stack.
 	 */
 	int size();
 	
 	/**
-	 * Returns the element at the top of the stack. Requires
-	 * @return element at top of stack
-	 * @throws EmptyStackException when size = 0
+	 * @return Element on top of the stack.
 	 */
 	E top() throws EmptyStackException;
 	
 	/**
-	 * Inserts the specified <code>element</code> onto the top of the stack.
-	 * @param element element to be inserted onto the stack
+	 * Inserts the specified element onto the top of the stack.
+	 * @param element Element to be inserted on top of the stack.
 	 */
 	void push(E element) throws FullStackException;
 	
 	/**
 	 * Removes and returns the element at the top of the stack.
-	 * @return element removed from top of stack
-	 * @throws EmptyStackException when stack = 0
+	 * @return Element removed from top of stack.
 	 */
 	E pop() throws EmptyStackException;
 	

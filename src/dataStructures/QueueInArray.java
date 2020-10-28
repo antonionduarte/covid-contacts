@@ -4,10 +4,10 @@ import exceptions.NoElementException;
 import exceptions.OutOfCapacityException;
 
 /**
- * Queue Array Implementation
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * Queue implementation with an array.
  */
 
 public class QueueInArray<E> implements Queue<E> {
@@ -87,7 +87,6 @@ public class QueueInArray<E> implements Queue<E> {
 		}
 		
 		E element = array[front];
-		array[front] = null;    // For garbage collection.
 		front = this.nextIndex(front);
 		currentSize--;
 		return element;

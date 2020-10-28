@@ -4,10 +4,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * Singly linked list Implementation
- * @param <E> Generic Element
- * @author AED Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * Singly Linked List interface.
  */
 
 public class SinglyLinkedList<E> implements List<E> {
@@ -15,52 +15,11 @@ public class SinglyLinkedList<E> implements List<E> {
 	/* Constants */
 	private static final long serialVersionUID = 0L;
 	
-	protected static class SListNode<E> {
-		
-		/* Variables */
-		private E element;
-		private SListNode<E> next;
-		
-		/**
-		 * Constructor.
-		 * @param element Element stored in the node.
-		 * @param theNext Next node.
-		 */
-		public SListNode(E element, SListNode<E> theNext) {
-			this.element = element;
-			next = theNext;
-		}
-		
-		/**
-		 * Constructor.
-		 * @param element Element stored in the node.
-		 */
-		public SListNode(E element) {
-			this(element, null);
-		}
-		
-		public E getElement() {
-			return element;
-		}
-		
-		public SListNode<E> getNext() {
-			return next;
-		}
-		
-		public void setElement(E newElement) {
-			element = newElement;
-		}
-		
-		public void setNext(SListNode<E> newNext) {
-			next = newNext;
-		}
-		
-	}
-	
 	/* Variables */
 	private SListNode<E> head, tail;
 	private int size;
 	
+	/* Constructor */
 	public SinglyLinkedList() {
 		head = null;
 		tail = null;
@@ -253,7 +212,65 @@ public class SinglyLinkedList<E> implements List<E> {
 	
 	@Override
 	public void append(List<E> list) {
-		// TODO
+		SinglyLinkedList<E> other = (SinglyLinkedList<E>) list;
+		if (other != null && !other.isEmpty()) {
+			if (isEmpty()) {
+				head = other.head;
+				tail = other.tail;
+				size = other.size;
+			}
+			else {
+				tail.setNext(other.head);
+				tail = other.tail;
+				size += other.size;
+			}
+		}
+	}
+	
+	/**
+	 * Singly linked node.
+	 * @param <E> Generic element.
+	 */
+	protected static class SListNode<E> {
+		
+		/* Variables */
+		private E element;
+		private SListNode<E> next;
+		
+		/**
+		 * Constructor.
+		 * @param element Element stored in the node.
+		 * @param theNext Next node.
+		 */
+		public SListNode(E element, SListNode<E> theNext) {
+			this.element = element;
+			next = theNext;
+		}
+		
+		/**
+		 * Constructor.
+		 * @param element Element stored in the node.
+		 */
+		public SListNode(E element) {
+			this(element, null);
+		}
+		
+		public E getElement() {
+			return element;
+		}
+		
+		public void setElement(E newElement) {
+			element = newElement;
+		}
+		
+		public SListNode<E> getNext() {
+			return next;
+		}
+		
+		public void setNext(SListNode<E> newNext) {
+			next = newNext;
+		}
+		
 	}
 	
 }

@@ -3,10 +3,10 @@ package dataStructures;
 import exceptions.NoElementException;
 
 /**
- * Queue List Implementation
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * Queue implementation with Doubly Linked List.
  */
 public class QueueInList<E> implements Queue<E> {
 	

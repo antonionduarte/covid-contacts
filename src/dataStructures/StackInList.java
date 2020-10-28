@@ -6,7 +6,7 @@ import exceptions.NoElementException;
  * @param <E> Generic Element.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Stack Abstract Data Type made with a List.
+ * Stack implementation with a Doubly Linked List.
  */
 
 public class StackInList<E> implements Stack<E> {

@@ -5,17 +5,16 @@ import exceptions.NoElementException;
 import java.io.Serializable;
 
 /**
- * Queue Abstract Data Type Includes description of general methods for Queue with FIFO discipline.
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * Queue (FIFO) interface.
  */
 
 public interface Queue<E> extends Serializable {
 	
 	/**
-	 * Returns true iff the queue contains no elements.
-	 * @return true iff the queue contains no elements, false otherwise
+	 * @return True if the queue contains no elements.
 	 */
 	boolean isEmpty();
 	
@@ -27,14 +26,13 @@ public interface Queue<E> extends Serializable {
 	
 	/**
 	 * Inserts the specified element at the rear of the queue.
-	 * @param element - element to be added to the end of the queue
+	 * @param element Element to be added to the end of the queue.
 	 */
 	void enqueue(E element);
 	
 	/**
 	 * Removes and returns the element at the front of the queue.
-	 * @return element removed from the front of the queu
-	 * @throws EmptyQueueException - if size() = 0
+	 * @return Element removed from the end of the queue.
 	 */
 	E dequeue() throws NoElementException;
 	

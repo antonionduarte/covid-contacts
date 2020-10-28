@@ -6,10 +6,10 @@ import exceptions.NoElementException;
 import java.io.Serializable;
 
 /**
- * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773).
  * @param <E> Generic Element.
  * List interface.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public interface List<E> extends Serializable {

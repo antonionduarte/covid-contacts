@@ -6,10 +6,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773).
  * @param <E> Generic Element.
  * Ordered Doubly Linked List implementation.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public class OrderedDoublyLinkedList<E> implements OrderedList<E> {

@@ -4,10 +4,10 @@ import dataStructures.SinglyLinkedList.SListNode;
 import exceptions.NoSuchElementException;
 
 /**
- * Implementation of Iterator for SinglyLinkedList
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * Iterator implementation for a Singly Linked List.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public class SinglyLLIterator<E> implements Iterator<E> {

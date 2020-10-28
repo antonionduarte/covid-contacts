@@ -5,10 +5,10 @@ import exceptions.InvalidPositionException;
 import exceptions.NoElementException;
 
 /**
- * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773).
  * @param <E> Generic Element.
  * Ordered Array List implementation. Uses binary search for searches and insertions.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public class OrderedArrayList<E> implements OrderedList<E> {

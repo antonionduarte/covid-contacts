@@ -9,7 +9,7 @@ import users.User;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Contains all the information regarding a groups, which is a collection of users that contain their posts.
+ * Contains all the information regarding a groups, which is a collection of users and their posts.
  */
 
 public class GroupClass implements Group {

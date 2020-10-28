@@ -5,10 +5,10 @@ import exceptions.NoSuchElementException;
 import java.io.Serializable;
 
 /**
+ * @param <E> Generic Element.
+ * Iterator interface.
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * @param <E> Generic Element.
- * Iterator Interface.
  */
 
 public interface Iterator<E> extends Serializable {

@@ -3,10 +3,10 @@ package dataStructures;
 import exceptions.NoSuchElementException;
 
 /**
- * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773).
  * @param <E> Generic Element.
  * Iterator for an array list.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public class ArrayListIterator<E> implements Iterator<E> {

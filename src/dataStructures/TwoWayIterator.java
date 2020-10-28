@@ -3,24 +3,21 @@ package dataStructures;
 import exceptions.NoSuchElementException;
 
 /**
- * TwoWayIterator Abstract Data Type Includes description of general methods for two way iterator.
- * @param <E> Generic Element
- * @author AED  Team
- * @version 1.0
+ * @param <E> Generic Element.
+ * Two Way Iterator interface that extends the normal Iterator with backwards iteration capabilities.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public interface TwoWayIterator<E> extends Iterator<E> {
 	
 	/**
-	 * Returns true if previous would return an element rather than throwing an exception.
-	 * @return true iff the iteration has more elements in the reverse direction
+	 * @return True if a previous element to iterate exists.
 	 */
 	boolean hasPrevious();
 	
 	/**
-	 * Returns the previous element in the iteration.
-	 * @return previous element in the iteration
-	 * @throws NoSuchElementException - if call is made without verifying pre-condition
+	 * @return Previous element to be iterated.
 	 */
 	E previous() throws NoSuchElementException;
 	
