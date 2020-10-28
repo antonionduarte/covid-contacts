@@ -72,10 +72,9 @@ public class GroupClass implements Group {
 	
 	@Override
 	public void removeParticipant(User user) throws UserNotInGroupException {
-		if (participants.find(user) == -1) {
+		if (!participants.remove(user)) {
 			throw new UserNotInGroupException();
 		}
-		participants.remove(user);
 	}
 	
 	@Override

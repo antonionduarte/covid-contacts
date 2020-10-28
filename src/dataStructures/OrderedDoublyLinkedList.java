@@ -214,7 +214,7 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	/**
 	 * Removes the specified node from the list. Pre-condition: the node is neither the head nor the tail of the list.
-	 * @param node - middle node to be removed
+	 * @param node Middle node to be removed
 	 */
 	private void removeMiddleNode(DListNode<E> node) {
 		node.getPrevious().setNext(node.getNext());
@@ -222,7 +222,11 @@ public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 		size--;
 	}
 	
-	
+	/**
+	 * Removes a node in the specified position.
+	 * @param position Position of the node to remove.
+	 * @return The removed nodes' element.
+	 */
 	private E removeMiddle(int position) {
 		DListNode<E> nodeToRemove = getNode(position);
 		removeMiddleNode(nodeToRemove);

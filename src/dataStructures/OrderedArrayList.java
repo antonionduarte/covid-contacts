@@ -91,10 +91,6 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	public void insert(E element) {
 		int low = 0, high = numElements - 1;
 		
-		if (isEmpty()) {
-			insert(0, element);
-		}
-		
 		while (low < high) {
 			int mid = (low + high) / 2, result = comparator.compare(array[mid], element);
 			
@@ -110,12 +106,10 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 			}
 		}
 		
-		if (comparator.compare(array[low], element) >= 0) {
-			insert(low, element);
+		if (!isEmpty() && comparator.compare(array[low], element) < 0) {
+			low++;
 		}
-		else {
-			insert(low + 1, element);
-		}
+		insert(low, element);
 	}
 	
 	@Override
@@ -135,8 +129,8 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 		}
 		
 		E element = array[index];
-		for (int i = index; i < numElements; i++) {
-			array[i - 1] = array[i];
+		for (int i = index; i < numElements - 1; i++) {
+			array[i] = array[i + 1];
 		}
 		numElements--;
 		return element;
