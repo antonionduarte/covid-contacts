@@ -2,6 +2,14 @@ package dataStructures;
 
 import exceptions.NoSuchElementException;
 
+/**
+ * Generic iterator that casts an iterators' elements into another type.
+ * @param <E> Generic element.
+ * @param <T> Generic element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ */
+
 public class MainIterator<E, T> implements Iterator<T> {
 
 	/* Constants */
@@ -9,8 +17,11 @@ public class MainIterator<E, T> implements Iterator<T> {
 	
 	/* Variables */
 	private Iterator<E> iterator;
-
-	/* Constructor */
+	
+	/**
+	 * Constructor.
+	 * @param iterator Iterator to be cast during iteration.
+	 */
 	public MainIterator(Iterator<E> iterator) {
 		this.iterator = iterator;
 	}
