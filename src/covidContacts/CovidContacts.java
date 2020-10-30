@@ -3,7 +3,6 @@ package covidContacts;
 import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
 import exceptions.*;
-import groups.Group;
 import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;
