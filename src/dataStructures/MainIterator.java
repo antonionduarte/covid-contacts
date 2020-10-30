@@ -2,7 +2,7 @@ package dataStructures;
 
 import exceptions.NoSuchElementException;
 
-public class MainIterator<T, E> implements Iterator<T> {
+public class MainIterator<E, T> implements Iterator<T> {
 
 	/* Constants */
 	private static final long serialVersionUID = 1L;

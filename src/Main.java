@@ -7,7 +7,6 @@ import enums.Output;
 import exceptions.*;
 import groups.Group;
 import posts.Post;
-import users.User;
 import users.UserGetters;
 
 import java.util.Scanner;
@@ -191,7 +190,7 @@ public class Main {
 		String login = in.next().toUpperCase();
 		
 		try {
-			Iterator<User> contacts = covidContacts.newUserContactsIterator(login);
+			Iterator<UserGetters> contacts = covidContacts.newUserContactsIterator(login);
 			
 			while (contacts.hasNext()) {
 				UserGetters contact = contacts.next();
@@ -297,7 +296,7 @@ public class Main {
 		String groupName = in.next().toUpperCase();
 		
 		try {
-			Iterator<User> participants = covidContacts.newGroupParticipantsIterator(groupName);
+			Iterator<UserGetters> participants = covidContacts.newGroupParticipantsIterator(groupName);
 			
 			while (participants.hasNext()) {
 				UserGetters participant = participants.next();

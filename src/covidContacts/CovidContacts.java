@@ -5,7 +5,6 @@ import dataStructures.TwoWayIterator;
 import exceptions.*;
 import groups.Group;
 import posts.Post;
-import users.User;
 import users.UserGetters;
 
 /**
@@ -50,7 +49,7 @@ public interface CovidContacts {
 	 * @param login The specified users' login.
 	 * @return Iterator of the specified users' contacts.
 	 */
-	Iterator<User> newUserContactsIterator(String login);
+	Iterator<UserGetters> newUserContactsIterator(String login);
 	
 	/**
 	 * Inserts a new group into the system.
@@ -89,7 +88,7 @@ public interface CovidContacts {
 	 * @param groupName The specified groups' name.
 	 * @return New group participants iterator.
 	 */
-	Iterator<User> newGroupParticipantsIterator(String groupName);
+	Iterator<UserGetters> newGroupParticipantsIterator(String groupName);
 	
 	/**
 	 * Inserts a new post from a specified user.

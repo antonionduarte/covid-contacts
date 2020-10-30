@@ -83,8 +83,9 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public Iterator<User> newUserContactsIterator(String login) {
-		return getUser(login).newContactsIterator();
+	public Iterator<UserGetters> newUserContactsIterator(String login) {
+		Iterator<User> userIterator = getUser(login).newContactsIterator();
+		return new MainIterator<User, UserGetters>(userIterator);
 	}
 	
 	@Override
@@ -140,8 +141,9 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public Iterator<User> newGroupParticipantsIterator(String groupName) {
-		return getGroup(groupName).newParticipantsIterator();
+	public Iterator<UserGetters> newGroupParticipantsIterator(String groupName) {
+		Iterator<User> userIterator = getGroup(groupName).newParticipantsIterator();
+		return new MainIterator<User, UserGetters>(userIterator);
 	}
 	
 	@Override
