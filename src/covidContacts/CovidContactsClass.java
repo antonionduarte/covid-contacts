@@ -5,6 +5,7 @@ import dataStructures.*;
 import exceptions.*;
 import groups.Group;
 import groups.GroupClass;
+import groups.GroupGetters;
 import posts.Post;
 import posts.PostClass;
 import users.User;
@@ -96,18 +97,9 @@ public class CovidContactsClass implements CovidContacts {
 		}
 		groups.addLast(newGroup);
 	}
-	
-	@Override
-	public Group getGroup(String name) throws GroupDoesNotExistException {
-		Iterator<Group> iterator = groups.iterator();
-		
-		while (iterator.hasNext()) {
-			Group group = iterator.next();
-			if (group.getName().equals(name)) {
-				return group;
-			}
-		}
-		throw new GroupDoesNotExistException();
+
+	public GroupGetters getGroupGetters(String name) {
+		return (GroupGetters) getGroup(name);
 	}
 	
 	@Override
@@ -175,6 +167,22 @@ public class CovidContactsClass implements CovidContacts {
 			throw new UserDoesNotExistException();
 		}
 		return users.get(index);
+	}
+
+	/**
+	 * @param name The specified groups' name.
+	 * @return Group with the specified name.
+	 */
+	private Group getGroup(String name) throws GroupDoesNotExistException {
+		Iterator<Group> iterator = groups.iterator();
+		
+		while (iterator.hasNext()) {
+			Group group = iterator.next();
+			if (group.getName().equals(name)) {
+				return group;
+			}
+		}
+		throw new GroupDoesNotExistException();
 	}
 	
 }

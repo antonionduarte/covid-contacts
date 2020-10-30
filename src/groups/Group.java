@@ -14,17 +14,7 @@ import users.User;
  * Contains all the information regarding a groups, which is a collection of users and their posts.
  */
 
-public interface Group {
-	
-	/**
-	 * @return The groups' name.
-	 */
-	String getName();
-	
-	/**
-	 * @return The groups' description.
-	 */
-	String getDescription();
+public interface Group extends GroupGetters {
 	
 	/**
 	 * Inserts a new user into the group.

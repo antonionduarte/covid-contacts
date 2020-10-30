@@ -4,6 +4,7 @@ import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
 import exceptions.*;
 import groups.Group;
+import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;
 
@@ -59,11 +60,11 @@ public interface CovidContacts {
 	void insertGroup(String name, String description) throws GroupAlreadyExistsException;
 	
 	/**
-	 * @param name The specified groups' name.
-	 * @return Group with the specified name.
+	 * @param name Groups' name.
+	 * @return Specified group getters interface.
 	 */
-	Group getGroup(String name) throws GroupDoesNotExistException;
-	
+	GroupGetters getGroupGetters(String name);
+
 	/**
 	 * Removes the specified group.
 	 * @param name The groups' name.

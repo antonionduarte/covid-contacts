@@ -5,7 +5,7 @@ import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
 import exceptions.*;
-import groups.Group;
+import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;
 
@@ -228,7 +228,7 @@ public class Main {
 		String name = in.next().toUpperCase();
 		
 		try {
-			Group group = covidContacts.getGroup(name);
+			GroupGetters group = covidContacts.getGroupGetters(name);
 			System.out.printf("%s\n%s\n", group.getName(), group.getDescription());
 		}
 		catch (GroupDoesNotExistException e) {
