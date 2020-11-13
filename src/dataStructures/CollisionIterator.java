@@ -1,6 +1,6 @@
 package dataStructures;
 
-import dataStructures.CollisionList.CollisionNode;
+import dataStructures.DoublyLinkedList.DListNode;
 import exceptions.NoSuchElementException;
 
 public class CollisionIterator<E> implements Iterator<E> {
@@ -9,23 +9,22 @@ public class CollisionIterator<E> implements Iterator<E> {
 	private static final long serialVersionUID = 1L;
 	
 	/* Variables */ 
-	private CollisionNode<E> firstNode, next;
+	private DListNode<E> firstNode, nextToReturn;
 
 	/**
 	 * Constructor.
 	 * @param firstNode Node with the first element of the iteration.
 	 */
-	public CollisionIterator(CollisionNode<E> firstNode) {
+	public CollisionIterator(DListNode<E> firstNode) {
 		this.firstNode = firstNode;
-		this.next = firstNode;
 		this.rewind();
 	}
 
-	/* Variables */
+	/* Public methods */
 
 	@Override
 	public boolean hasNext() {
-		return next != null;
+		return nextToReturn != null;
 	}
 
 	@Override
@@ -34,14 +33,14 @@ public class CollisionIterator<E> implements Iterator<E> {
 			throw new NoSuchElementException();
 		}
 
-		CollisionNode<E> node = next;
-		next = next.getNext();
+		DListNode<E> node = nextToReturn;
+		nextToReturn = nextToReturn.getNext();
 		return node.getElement();
 	}
 
 	@Override
 	public void rewind() {
-		next = firstNode;
+		nextToReturn = firstNode;
 	}
 	
 }

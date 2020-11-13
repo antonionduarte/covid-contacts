@@ -9,36 +9,30 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 
 	/* Variables */
 	private Dictionary<K, V>[] table;
-	private Iterator<Entry<K, V>> currentColision;
-	private int tableCounter, counter, size, firstCorrect;
+	private Iterator<Entry<K, V>> currentCollision;
+	private int currentIndex, numElementsIterated, numElements, maxSize;
 
 	/**
 	 * Constructor.
-	 * I am doing the iteration to find the first available ColisionList
+	 * I am doing the iteration to find the first available CollisionList
 	 * in the constructor, so that I can store the first position
-	 * where we have a colision list. That will allow me to do the 
+	 * where we have a collision list. That will allow me to do the
 	 * rewind() method without reiterating to find the first
 	 * correct position.
 	 * @param table Table that we will iterate the elements of.
 	 */
-	public TableIterator(Dictionary<K, V>[] table, int size) {
+	public TableIterator(Dictionary<K, V>[] table, int numElements, int maxSize) {
 		this.table = table;
-		this.size = size;
-		counter = 0;
-
-		for (int i = 0; (i <= table.length) && table[i].isEmpty(); i++) {
-			tableCounter++;
-		}
-
-		firstCorrect = tableCounter;
-		currentColision = table[tableCounter].iterator();
+		this.numElements = numElements;
+		this.maxSize = maxSize;
+		rewind();
 	}
 
 	/* Methods */
 
 	@Override
 	public boolean hasNext() {
-		return counter < size;
+		return numElementsIterated < numElements;
 	}
 
 	@Override
@@ -46,27 +40,20 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 		if (!hasNext()) {
 			throw new NoSuchElementException();
 		}
-
-		if (!currentColision.hasNext()) {
-			tableCounter++;
-			
-			for (int i = tableCounter; (i < (table.length - 1)) && table[i].isEmpty(); i++) {
-				tableCounter++;
-			}
-
-			currentColision = table[tableCounter].iterator();
-			counter++;
-			return currentColision.next();
-		} else {
-			counter++;
-			return currentColision.next();
+		
+		while(!currentCollision.hasNext()) {
+			currentCollision = table[++currentIndex].iterator();
 		}
+		
+		numElementsIterated++;
+		return currentCollision.next();
 	}
 
 	@Override
 	public void rewind() {
-		tableCounter = firstCorrect;
-		counter = 0;
+		currentIndex = 0;
+		numElementsIterated = 0;
+		currentCollision = table[currentIndex].iterator();
 	}
 
 }

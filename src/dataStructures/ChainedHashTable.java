@@ -12,7 +12,7 @@ package dataStructures;
 public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V> {
 
 	/* Variables */
-	protected Dictionary<K, V>[] table;
+	private Dictionary<K, V>[] table;
 
 	/**
 	 * Constructor of an empty chained hash table, with the specified initial
@@ -22,13 +22,13 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	 */
 	@SuppressWarnings("unchecked")
 	public ChainedHashTable(int capacity) {
-		int arraySize = HashTable.nextPrime((int) (1.1 * capacity));
+		int arraySize = nextPrime((int) (1.1 * capacity));
 		// Compiler gives a warning.
 		table = (Dictionary<K, V>[]) new Dictionary[arraySize];
 		for (int i = 0; i < arraySize; i++)
 			table[i] = new CollisionList<K, V>();
 		maxSize = capacity;
-		currentSize = 0;
+		numElements = 0;
 	}
 
 	public ChainedHashTable() {
@@ -53,11 +53,11 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 
 	@Override
 	public V insert(K key, V value) {
-		if (this.isFull()) {
-			this.rehash();
+		if (isFull()) {
+			rehash();
 		}
-
-		currentSize++;
+		
+		numElements++;
 		return table[hash(key)].insert(key, value);
 	}
 
@@ -66,14 +66,14 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		V value = table[hash(key)].remove(key);
 		
 		if (value != null) {
-			currentSize--;
+			numElements--;
 		}
 		return value;
 	}
 
 	@Override
 	public Iterator<Entry<K, V>> iterator() {
-		return new TableIterator<K, V>(table, currentSize);
+		return new TableIterator<>(table, numElements, maxSize);
 	}
 
 	/**
@@ -93,4 +93,5 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		this.maxSize = auxTable.maxSize;
 		this.table = auxTable.table;
 	}
+	
 }
