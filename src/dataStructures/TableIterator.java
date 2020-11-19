@@ -10,7 +10,7 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 	/* Variables */
 	private Dictionary<K, V>[] table;
 	private Iterator<Entry<K, V>> currentCollision;
-	private int currentIndex, numElementsIterated, numElements, maxSize;
+	private int currentIndex, numElementsIterated, numElements;
 
 	/**
 	 * Constructor.
@@ -24,7 +24,6 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 	public TableIterator(Dictionary<K, V>[] table, int numElements, int maxSize) {
 		this.table = table;
 		this.numElements = numElements;
-		this.maxSize = maxSize;
 		rewind();
 	}
 
@@ -41,7 +40,7 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 			throw new NoSuchElementException();
 		}
 		
-		while(!currentCollision.hasNext()) {
+		while (!currentCollision.hasNext()) {
 			currentCollision = table[++currentIndex].iterator();
 		}
 		
