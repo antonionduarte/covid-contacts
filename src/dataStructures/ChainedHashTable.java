@@ -73,7 +73,7 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 
 	@Override
 	public Iterator<Entry<K, V>> iterator() {
-		return new TableIterator<>(table, numElements, maxSize);
+		return new TableIterator<>(table, numElements);
 	}
 
 	/**
