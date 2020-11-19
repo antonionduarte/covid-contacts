@@ -2,16 +2,19 @@ package dataStructures;
 
 import exceptions.NoSuchElementException;
 
-public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
-
+public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
+	
 	/* Constants */
 	private static final long serialVersionUID = 1L;
-
+	
 	/* Variables */
-	private Dictionary<K, V>[] table;
+	private final Dictionary<K, V>[] table;
 	private Iterator<Entry<K, V>> currentCollision;
-	private int currentIndex, numElementsIterated, numElements, firstIndex;
-
+	private int currentIndex;
+	private int numElementsIterated;
+	private final int numElements;
+	private int firstIndex;
+	
 	/**
 	 * Constructor.
 	 * I am doing the iteration to find the first available CollisionList
@@ -32,14 +35,14 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 		
 		rewind();
 	}
-
+	
 	/* Methods */
-
+	
 	@Override
 	public boolean hasNext() {
 		return numElementsIterated < numElements;
 	}
-
+	
 	@Override
 	public Entry<K, V> next() throws NoSuchElementException {
 		if (!hasNext()) {
@@ -53,12 +56,12 @@ public class TableIterator<K, V> implements Iterator<Entry<K,V>> {
 		numElementsIterated++;
 		return currentCollision.next();
 	}
-
+	
 	@Override
 	public void rewind() {
 		currentIndex = firstIndex;
 		numElementsIterated = 0;
 		currentCollision = table[firstIndex].iterator();
 	}
-
+	
 }

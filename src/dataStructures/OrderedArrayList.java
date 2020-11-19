@@ -19,7 +19,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	/* Variables */
 	private E[] array;
 	private int numElements;
-	private Comparator<E> comparator;
+	private final Comparator<E> comparator;
 	
 	/**
 	 * Constructor.

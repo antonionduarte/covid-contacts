@@ -3,41 +3,41 @@ package dataStructures;
 import dataStructures.DoublyLinkedList.DListNode;
 
 public class CollisionList<K, V> implements Dictionary<K, V> {
-
+	
 	/* Variables */
-
+	
 	private DListNode<Entry<K, V>> head, tail;
 	private int size;
-
+	
 	/* Constructor */
 	public CollisionList() {
 		head = null;
 		tail = null;
 		size = 0;
 	}
-
+	
 	/* Public methods */
-
+	
 	@Override
 	public boolean isEmpty() {
 		return size == 0;
 	}
-
+	
 	@Override
 	public int size() {
 		return size;
 	}
-
+	
 	@Override
 	public V find(K key) {
 		DListNode<Entry<K, V>> pointerNode = findNode(key);
 		return pointerNode == null ? null : pointerNode.getElement().getValue();
 	}
-
+	
 	@Override
 	public V insert(K key, V value) {
 		DListNode<Entry<K, V>> pointerNode = findNode(key);
-
+		
 		if (pointerNode != null) {
 			V oldValue = pointerNode.getElement().getValue();
 			pointerNode.setElement(new EntryClass<>(key, value));
@@ -55,11 +55,11 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		size++;
 		return null;
 	}
-
+	
 	@Override
 	public V remove(K key) {
 		DListNode<Entry<K, V>> pointerNode = findNode(key);
-
+		
 		if (pointerNode == null) {
 			return null;
 		}
@@ -72,7 +72,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		else {
 			removeMiddleNode(pointerNode);
 		}
-
+		
 		return pointerNode.getElement().getValue();
 	}
 	
@@ -97,7 +97,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		}
 		size--;
 	}
-
+	
 	/**
 	 * Removes the last node in the list. Pre-condition: the list is not empty.
 	 */
@@ -112,7 +112,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		}
 		size--;
 	}
-
+	
 	/**
 	 * Removes the specified node from the list. Pre-condition: the node is neither the head nor the tail of the list.
 	 * @param node - middle node to be removed
@@ -122,7 +122,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		node.getNext().setPrevious(node.getPrevious());
 		size--;
 	}
-
+	
 	/**
 	 * Searches for a node containing a specified element.
 	 * @param key Key to be found.
@@ -134,7 +134,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		while (pointerNode != null && !pointerNode.getElement().getKey().equals(key)) {
 			pointerNode = pointerNode.getNext();
 		}
-
+		
 		return pointerNode;
 	}
 	

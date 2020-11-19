@@ -7,7 +7,7 @@ package groups;
  */
 
 public interface GroupGetters {
-
+	
 	/**
 	 * @return The groups' name.
 	 */
@@ -17,5 +17,5 @@ public interface GroupGetters {
 	 * @return The groups' description.
 	 */
 	String getDescription();
-
+	
 }

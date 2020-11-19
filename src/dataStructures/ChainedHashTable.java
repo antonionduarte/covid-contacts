@@ -2,18 +2,17 @@ package dataStructures;
 
 /**
  * Chained Hash table implementation
- * 
- * @author AED Team
- * @version 1.0
  * @param <K> Generic Key, must extend comparable
  * @param <V> Generic Value
+ * @author AED Team
+ * @version 1.0
  */
 
 public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V> {
-
+	
 	/* Variables */
 	private Dictionary<K, V>[] table;
-
+	
 	/**
 	 * Constructor of an empty chained hash table, with the specified initial
 	 * capacity. Each position of the array is initialized to a new ordered list
@@ -30,13 +29,13 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		maxSize = capacity;
 		numElements = 0;
 	}
-
+	
 	public ChainedHashTable() {
 		this(DEFAULT_CAPACITY);
 	}
-
+	
 	/* Methods */
-
+	
 	/**
 	 * Returns the hash value of the specified key.
 	 * @param key to be encoded
@@ -45,12 +44,12 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	protected int hash(K key) {
 		return Math.abs(key.hashCode()) % table.length;
 	}
-
+	
 	@Override
 	public V find(K key) {
 		return table[hash(key)].find(key);
 	}
-
+	
 	@Override
 	public V insert(K key, V value) {
 		if (isFull()) {
@@ -60,7 +59,7 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		numElements++;
 		return table[hash(key)].insert(key, value);
 	}
-
+	
 	@Override
 	public V remove(K key) {
 		V value = table[hash(key)].remove(key);
@@ -70,12 +69,12 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		}
 		return value;
 	}
-
+	
 	@Override
 	public Iterator<Entry<K, V>> iterator() {
 		return new TableIterator<>(table, numElements);
 	}
-
+	
 	/**
 	 * Rehashes the dictionary if it gets full.
 	 * TODO: Perguntar ao Campones se isto funciona
@@ -85,11 +84,11 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		ChainedHashTable<K, V> auxTable = new ChainedHashTable<>(maxSize);
 		
 		Iterator<Entry<K, V>> iterator = iterator();
-
+		
 		while (iterator.hasNext()) {
 			auxTable.insert(iterator.next().getKey(), iterator.next().getValue());
 		}
-
+		
 		this.maxSize = auxTable.maxSize;
 		this.table = auxTable.table;
 	}

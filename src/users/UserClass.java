@@ -19,11 +19,14 @@ public class UserClass implements User {
 	private static final int MAX_GROUPS = 10;
 	
 	/* Variables */
-	private String login, username, location, profession;
-	private int age;
-	private List<Post> posts;
-	private OrderedList<Group> groups;
-	private OrderedList<User> contacts;
+	private final String login;
+	private final String username;
+	private final String location;
+	private final String profession;
+	private final int age;
+	private final List<Post> posts;
+	private final OrderedList<Group> groups;
+	private final OrderedList<User> contacts;
 	
 	/**
 	 * Constructor.

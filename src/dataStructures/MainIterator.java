@@ -11,12 +11,12 @@ import exceptions.NoSuchElementException;
  */
 
 public class MainIterator<E, T> implements Iterator<T> {
-
+	
 	/* Constants */
 	private static final long serialVersionUID = 1L;
 	
 	/* Variables */
-	private Iterator<E> iterator;
+	private final Iterator<E> iterator;
 	
 	/**
 	 * Constructor.
@@ -25,21 +25,21 @@ public class MainIterator<E, T> implements Iterator<T> {
 	public MainIterator(Iterator<E> iterator) {
 		this.iterator = iterator;
 	}
-
+	
 	@Override
 	public boolean hasNext() {
 		return iterator.hasNext();
 	}
-
+	
 	@SuppressWarnings("unchecked")
 	@Override
 	public T next() throws NoSuchElementException {
 		return (T) iterator.next();
 	}
-
+	
 	@Override
 	public void rewind() {
 		iterator.rewind();
 	}
-
+	
 }

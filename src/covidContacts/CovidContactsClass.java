@@ -21,8 +21,8 @@ import users.UserGetters;
 public class CovidContactsClass implements CovidContacts {
 	
 	/* Variables */
-	private OrderedList<User> users;
-	private List<Group> groups;
+	private final OrderedList<User> users;
+	private final List<Group> groups;
 	
 	/* Constructor */
 	public CovidContactsClass() {
@@ -54,7 +54,7 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public UserGetters getUserGetters(String login) throws UserDoesNotExistException {
-		return (UserGetters) getUser(login);
+		return getUser(login);
 	}
 	
 	@Override
@@ -97,9 +97,9 @@ public class CovidContactsClass implements CovidContacts {
 		}
 		groups.addLast(newGroup);
 	}
-
+	
 	public GroupGetters getGroupGetters(String name) {
-		return (GroupGetters) getGroup(name);
+		return getGroup(name);
 	}
 	
 	@Override
@@ -168,7 +168,7 @@ public class CovidContactsClass implements CovidContacts {
 		}
 		return users.get(index);
 	}
-
+	
 	/**
 	 * @param name The specified groups' name.
 	 * @return Group with the specified name.

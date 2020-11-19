@@ -15,9 +15,10 @@ import users.User;
 public class GroupClass implements Group {
 	
 	/* Variables */
-	private String name, description;
-	private OrderedList<User> participants;
-	private List<Post> posts;
+	private final String name;
+	private final String description;
+	private final OrderedList<User> participants;
+	private final List<Post> posts;
 	
 	/**
 	 * Constructor.

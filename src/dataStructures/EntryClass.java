@@ -1,12 +1,12 @@
 package dataStructures;
 
-public class EntryClass<K,V> implements Entry<K,V> {
-
+public class EntryClass<K, V> implements Entry<K, V> {
+	
 	/* Variables */
-
-	private K key;
-	private V value;
-
+	
+	private final K key;
+	private final V value;
+	
 	/**
 	 * Constructor.
 	 * @param key The key of the entry to create.
@@ -16,14 +16,14 @@ public class EntryClass<K,V> implements Entry<K,V> {
 		this.key = key;
 		this.value = value;
 	}
-
+	
 	/* Methods */
-
+	
 	@Override
 	public K getKey() {
 		return key;
 	}
-
+	
 	@Override
 	public V getValue() {
 		return value;

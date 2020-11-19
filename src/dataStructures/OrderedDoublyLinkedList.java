@@ -15,7 +15,7 @@ import exceptions.NoElementException;
 public class OrderedDoublyLinkedList<E> implements OrderedList<E> {
 	
 	/* Variables */
-	private Comparator<E> comparator;
+	private final Comparator<E> comparator;
 	private DListNode<E> head, tail;
 	private int size;
 	

@@ -63,7 +63,7 @@ public interface CovidContacts {
 	 * @return Specified group getters interface.
 	 */
 	GroupGetters getGroupGetters(String name);
-
+	
 	/**
 	 * Removes the specified group.
 	 * @param name The groups' name.
