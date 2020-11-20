@@ -3,142 +3,6 @@ package dataStructures;
 import exceptions.NoElementException;
 
 /**
- * Ret
- * /**
- * BST node implementation
- * @param <K> Generic type Key
- * @param <V> Generic type Value
- * @author AED team
- * @version 1.0
- */
-static class BSTNode<K, V> {
-	
-	/* Variables */
-	private EntryClass<K, V> entry;
-	private BSTNode<K, V> parent, leftChild, rightChild;
-	
-	/**
-	 * Constructor.
-	 * @param key Nodes' key.
-	 * @param value Nodes' value.
-	 * @param left Left child node.
-	 * @param right Right child node.
-	 */
-	public BSTNode(K key, V value, BSTNode<K, V> parent, BSTNode<K, V> left, BSTNode<K, V> right) {
-		entry = new EntryClass<>(key, value);
-		this.parent = parent;
-		leftChild = left;
-		rightChild = right;
-	}
-	
-	/**
-	 * Constructor.
-	 * @param key Nodes' key.
-	 * @param value Nodes' value.
-	 */
-	public BSTNode(K key, V value) {
-		this(key, value, null, null, null);
-	}
-	
-	/**
-	 * @return Parent node.
-	 */
-	public BSTNode<K, V> getParent() {
-		return parent;
-	}
-	
-	/**
-	 * Sets a new parent node.
-	 * @param newParent New parent node.
-	 */
-	public void setParent(BSTNode<K, V> newParent) {
-		parent = newParent;
-	}
-	
-	/**
-	 * @return Left child node.
-	 */
-	public BSTNode<K, V> getLeft() {
-		return leftChild;
-	}
-	
-	/**
-	 * Sets a new left child node.
-	 * @param newLeft New left child node.
-	 */
-	public void setLeft(BSTNode<K, V> newLeft) {
-		leftChild = newLeft;
-	}
-	
-	/**
-	 * @return Right child node.
-	 */
-	public BSTNode<K, V> getRight() {
-		return rightChild;
-	}
-	
-	/**
-	 * Sets a new right child node.
-	 * @param newRight New right child node.
-	 */
-	public void setRight(BSTNode<K, V> newRight) {
-		rightChild = newRight;
-	}
-	
-	/**
-	 * @return Entry (key and value).
-	 */
-	public EntryClass<K, V> getEntry() {
-		return entry;
-	}
-	
-	/**
-	 * Assigns a new entry (key and value) to the node.
-	 * @param newEntry New entry.
-	 */
-	public void setEntry(EntryClass<K, V> newEntry) {
-		entry = newEntry;
-	}
-	
-	/**
-	 * @return Nodes' key.
-	 */
-	public K getKey() {
-		return entry.getKey();
-	}
-	
-	/**
-	 * @return Nodes' value.
-	 */
-	public V getValue() {
-		return entry.getValue();
-	}
-	
-	/**
-	 * Replaces the nodes' value.
-	 * @param newValue New value.
-	 */
-	public void setValue(V newValue) {
-		entry.setValue(newValue);
-	}
-	
-	/**
-	 * @return True if the node has at least one child node.
-	 */
-	public boolean isInternal() {
-		return leftChild != null || rightChild != null;
-	}
-	
-	/**
-	 * @return True if the node has no child nodes.
-	 */
-	public boolean isLeaf() {
-		return leftChild == null && rightChild == null;
-	}
-	
-}
-
-/**
  * BinarySearchTree implementation
  * @param <K> Generic type Key, must extend comparable
  * @param <V> Generic type Value
@@ -302,6 +166,142 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		//TODO: Original comentado para nao dar erro de compilacao.
 		// return new BSTKeyOrderIterator<K,V>(root);
 		return null;
+	}
+	
+	/**
+	 * Ret
+	 * /**
+	 * BST node implementation
+	 * @param <K> Generic type Key
+	 * @param <V> Generic type Value
+	 * @author AED team
+	 * @version 1.0
+	 */
+	static class BSTNode<K, V> {
+		
+		/* Variables */
+		private EntryClass<K, V> entry;
+		private BSTNode<K, V> parent, leftChild, rightChild;
+		
+		/**
+		 * Constructor.
+		 * @param key Nodes' key.
+		 * @param value Nodes' value.
+		 * @param left Left child node.
+		 * @param right Right child node.
+		 */
+		public BSTNode(K key, V value, BSTNode<K, V> parent, BSTNode<K, V> left, BSTNode<K, V> right) {
+			entry = new EntryClass<>(key, value);
+			this.parent = parent;
+			leftChild = left;
+			rightChild = right;
+		}
+		
+		/**
+		 * Constructor.
+		 * @param key Nodes' key.
+		 * @param value Nodes' value.
+		 */
+		public BSTNode(K key, V value) {
+			this(key, value, null, null, null);
+		}
+		
+		/**
+		 * @return Parent node.
+		 */
+		public BSTNode<K, V> getParent() {
+			return parent;
+		}
+		
+		/**
+		 * Sets a new parent node.
+		 * @param newParent New parent node.
+		 */
+		public void setParent(BSTNode<K, V> newParent) {
+			parent = newParent;
+		}
+		
+		/**
+		 * @return Left child node.
+		 */
+		public BSTNode<K, V> getLeft() {
+			return leftChild;
+		}
+		
+		/**
+		 * Sets a new left child node.
+		 * @param newLeft New left child node.
+		 */
+		public void setLeft(BSTNode<K, V> newLeft) {
+			leftChild = newLeft;
+		}
+		
+		/**
+		 * @return Right child node.
+		 */
+		public BSTNode<K, V> getRight() {
+			return rightChild;
+		}
+		
+		/**
+		 * Sets a new right child node.
+		 * @param newRight New right child node.
+		 */
+		public void setRight(BSTNode<K, V> newRight) {
+			rightChild = newRight;
+		}
+		
+		/**
+		 * @return Entry (key and value).
+		 */
+		public EntryClass<K, V> getEntry() {
+			return entry;
+		}
+		
+		/**
+		 * Assigns a new entry (key and value) to the node.
+		 * @param newEntry New entry.
+		 */
+		public void setEntry(EntryClass<K, V> newEntry) {
+			entry = newEntry;
+		}
+		
+		/**
+		 * @return Nodes' key.
+		 */
+		public K getKey() {
+			return entry.getKey();
+		}
+		
+		/**
+		 * @return Nodes' value.
+		 */
+		public V getValue() {
+			return entry.getValue();
+		}
+		
+		/**
+		 * Replaces the nodes' value.
+		 * @param newValue New value.
+		 */
+		public void setValue(V newValue) {
+			entry.setValue(newValue);
+		}
+		
+		/**
+		 * @return True if the node has at least one child node.
+		 */
+		public boolean isInternal() {
+			return leftChild != null || rightChild != null;
+		}
+		
+		/**
+		 * @return True if the node has no child nodes.
+		 */
+		public boolean isLeaf() {
+			return leftChild == null && rightChild == null;
+		}
+		
 	}
 	
 }
