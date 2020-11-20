@@ -3,9 +3,8 @@ package dataStructures;
 public class EntryClass<K, V> implements Entry<K, V> {
 	
 	/* Variables */
-	
 	private final K key;
-	private final V value;
+	private V value;
 	
 	/**
 	 * Constructor.
@@ -27,6 +26,13 @@ public class EntryClass<K, V> implements Entry<K, V> {
 	@Override
 	public V getValue() {
 		return value;
+	}
+	
+	@Override
+	public V setValue(V newValue) {
+		V oldValue = value;
+		value = newValue;
+		return oldValue;
 	}
 	
 }

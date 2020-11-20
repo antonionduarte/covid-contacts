@@ -1,5 +1,7 @@
 package dataStructures;
 
+import exceptions.NoElementException;
+
 /**
  * Ordered Dictionary interface
  * @param <K> Generic type Key, must extend comparable
@@ -7,28 +9,22 @@ package dataStructures;
  * @author AED team
  * @version 1.0
  */
-public interface OrderedDictionary<K extends Comparable<K>, V>
-		extends Dictionary<K, V> {
+public interface OrderedDictionary<K extends Comparable<K>, V> extends Dictionary<K, V> {
 	
 	/**
-	 * Returns the entry with the smallest key in the dictionary.
-	 * @return
+	 * @return Entry with the smallest key.
 	 */
 	Entry<K, V> minEntry() throws NoElementException;
 	
 	/**
-	 * Returns the entry with the largest key in the dictionary.
-	 * @return
+	 * @return Entry with the largest key.
 	 */
 	Entry<K, V> maxEntry() throws NoElementException;
 	
-	/* (non-Javadoc)
-	 * Returns an iterator of the entries in the dictionary
-	 * which preserves the key order relation.
-	 *
-	 * @see dataStructures.Dictionary#iterator()
+	/**
+	 * @return New ordered dictionary iterator.
 	 */
-	// Iterator<Entry<K,V>> iterator( );
+	Iterator<Entry<K, V>> iterator();
 	
 } 
 

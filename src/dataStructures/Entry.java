@@ -11,4 +11,12 @@ public interface Entry<K, V> {
 	 * @return The value in the entry.
 	 */
 	V getValue();
+	
+	/**
+	 * Sets a new value.
+	 * @param newValue New value.
+	 * @return Previous value.
+	 */
+	V setValue(V newValue);
+	
 }

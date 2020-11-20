@@ -39,9 +39,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		DListNode<Entry<K, V>> pointerNode = findNode(key);
 		
 		if (pointerNode != null) {
-			V oldValue = pointerNode.getElement().getValue();
-			pointerNode.setElement(new EntryClass<>(key, value));
-			return oldValue;
+			return pointerNode.getElement().setValue(value);
 		}
 		
 		tail = new DListNode<>(new EntryClass<>(key, value), tail, null);
