@@ -103,7 +103,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @return The largest node.
 	 */
 	private BSTNode<K, V> maxNode(BSTNode<K, V> node) {
-		return node.getRight() == null ? node : minNode(node.getRight());
+		return node.getRight() == null ? node : maxNode(node.getRight());
 	}
 	
 	@Override
@@ -125,7 +125,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 				parent.setLeft(newNode);
 			}
 			else {
-				parent.setRight(newNode));
+				parent.setRight(newNode);
 			}
 		}
 		numElements++;
@@ -156,21 +156,33 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		BSTNode<K, V> nodeToRemove = findNode(root, key);
 		
 		if (nodeToRemove != null) {
-			/*se nodeToRemove so tem um filho ou e folha
-			 *   o pai fica a apontar para esse filho (ou para null)
-			 *senao  //tem 2 filhos
-			 *  procurar no substituto (na subarvore esq. ou na dir.)
-			 *  remover no substituto
-			 *  trocar entry do nodeToRemove pela entry do no substituto
-			 *  (reparem que, caso ainda nao o tenham feito, e preciso
-			 *  implementar a classe EntryClass, e precisam do metodo setEntry)
-			 *
-			 *return ...  (nao esquecer o currentSize)
-			 */
-			
+			if (numChildren(nodeToRemove) < 2) {
+				replaceNodeWithChild(nodeToRemove);
+			}
+			else {
+				BSTNode<K, V> leftMax = maxNode(nodeToRemove.getLeft());
+				replaceNodeWithChild(leftMax);
+				nodeToRemove.setEntry(leftMax.getEntry());
+			}
 		}
-		else  //n�o encontra n� para remover
-		//return ...
+		numElements--;
+		return nodeToRemove == null ? null : nodeToRemove.getValue();
+	}
+	
+	/**
+	 * Auxiliary method that replaces the specified node by its child.
+	 * @param nodeToRemove Node to remove.
+	 */
+	private void replaceNodeWithChild(BSTNode<K, V> nodeToRemove) {
+		if (nodeToRemove.getLeft() != null) {
+			nodeToRemove = nodeToRemove.getLeft();
+		}
+		else if (nodeToRemove.getRight() != null) {
+			nodeToRemove = nodeToRemove.getRight();
+		}
+		else {
+			nodeToRemove = null;
+		}
 	}
 	
 	/**
