@@ -150,8 +150,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		return node;
 	}
 	
-	//sugestao: implementar metodo auxiliary replaceParentWithChild(nodeToRemove, child) que poe
-	//pai de noteToRemove a apontar para child (filho de nodeToRemove)
+	@Override
 	public V remove(K key) {
 		BSTNode<K, V> nodeToRemove = findNode(root, key);
 		

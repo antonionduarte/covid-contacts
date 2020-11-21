@@ -21,10 +21,5 @@ public interface OrderedDictionary<K extends Comparable<K>, V> extends Dictionar
 	 */
 	Entry<K, V> maxEntry() throws NoElementException;
 	
-	/**
-	 * @return New ordered dictionary iterator.
-	 */
-	Iterator<Entry<K, V>> iterator();
-	
 } 
 
