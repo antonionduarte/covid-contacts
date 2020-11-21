@@ -127,10 +127,9 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 			else {
 				parent.setRight(newNode));
 			}
-			
-			numElements++;
-			return null;
 		}
+		numElements++;
+		return null;
 	}
 	
 	/**
