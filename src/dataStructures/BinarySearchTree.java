@@ -47,12 +47,19 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		return numElements;
 	}
 	
+	@Override
+	public V find(K key) {
+		BSTNode<K, V> node = findNode(root, key);
+		return node == null ? null : node.getValue();
+	}
+	
 	/**
-	 * @param node Starting node.
+	 * Searches for a node with the specified key recursively.
+	 * @param node Current node.
 	 * @param key Specified key.
 	 * @return Node with the specified key || Null.
 	 */
-	protected BSTNode<K, V> findNode(BSTNode<K, V> node, K key) {
+	private BSTNode<K, V> findNode(BSTNode<K, V> node, K key) {
 		if (node == null) {
 			return null;
 		}
@@ -69,20 +76,20 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	}
 	
 	@Override
-	public V find(K key) {
-		BSTNode<K, V> node = findNode(root, key);
-		if (node == null) {
-			return null;
-		}
-		return node.getValue();
-	}
-	
-	@Override
 	public Entry<K, V> minEntry() throws NoElementException {
 		if (isEmpty()) {
 			throw new NoElementException();
 		}
-		//TODO
+		return minNode(root).getEntry();
+	}
+	
+	/**
+	 * Auxiliary method to search for the smallest node recursively.
+	 * @param node Current node.
+	 * @return The smallest node.
+	 */
+	private BSTNode<K, V> minNode(BSTNode<K, V> node) {
+		return node.getLeft() == null ? node : minNode(node.getLeft());
 	}
 	
 	@Override
@@ -93,19 +100,13 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		return maxNode(root).getEntry();
 	}
 	
-	
 	/**
-	 * Returns the node with the largest key
-	 * in the tree rooted at the specified node.
-	 * Requires: node != null.
-	 * @param node that roots the tree
-	 * @return node with the largest key in the tree
+	 * Auxiliary method to search for the largest node recursively.
+	 * @param node Current node.
+	 * @return The largest node.
 	 */
-	protected BSTNode<K, V> maxNode(BSTNode<K, V> node) {
-		if (node.getRight() == null)
-			return node;
-		else
-			return this.maxNode(node.getRight());
+	private BSTNode<K, V> maxNode(BSTNode<K, V> node) {
+		return node.getRight() == null ? node : minNode(node.getRight());
 	}
 	
 	public V insert(K key, V value) {
@@ -169,11 +170,9 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	}
 	
 	/**
-	 * Ret
-	 * /**
-	 * BST node implementation
-	 * @param <K> Generic type Key
-	 * @param <V> Generic type Value
+	 * BST node implementation.
+	 * @param <K> Generic type Key.
+	 * @param <V> Generic type Value.
 	 * @author AED team
 	 * @version 1.0
 	 */
