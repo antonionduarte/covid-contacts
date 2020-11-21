@@ -15,9 +15,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	protected BSTNode<K, V> root;
 	protected int numElements;
 	
-	/**
-	 * Tree Constructor - creates an empty tree.
-	 */
+	/* Constructor */
 	public BinarySearchTree() {
 		root = null;
 		numElements = 0;
@@ -40,7 +38,6 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	public boolean isEmpty() {
 		return root == null;
 	}
-	
 	
 	@Override
 	public int size() {
@@ -109,33 +106,50 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		return node.getRight() == null ? node : minNode(node.getRight());
 	}
 	
+	@Override
 	public V insert(K key, V value) {
-		if (root == null) //arvore estava vazia
-		//caso especial � inserir raiz
+		if (root == null) {
+			root = new BSTNode<>(key, value);
+		}
         else{
-			BSTNode<K, V> parent = findPlaceToInsert(root, key);  //metodo auxiliar para implementarem
-			//findPlaceToInsert - parecido com o findNode mas devolve pai do novo no
+			BSTNode<K, V> parent = findPlaceToInsert(root, key);
+			int result = key.compareTo(parent.getKey());
 			
-			//TODO
-			/*Se chave de parent == key
-			 *   Alterar valor de parent para value
-			 *   devolver value antigo
-			 *Senao
-			 *  inserir novo no como filho esquerdo ou direito de parent
-			 *  devolver null (nao esquecer o currentSize)
-			 */
+			if (result == 0) {
+				return parent.getEntry().setValue(value);
+			}
+			
+			BSTNode<K, V> newNode = new BSTNode<>(key, value, parent, null, null);
+			
+			if (result < 0) {
+				parent.setLeft(newNode);
+			}
+			else {
+				parent.setRight(newNode));
+			}
+			
+			numElements++;
+			return null;
 		}
 	}
 	
 	/**
-	 * @param root
-	 * @param key
-	 * @return
+	 * Auxiliary method to find a parent node to put a new node.
+	 * @param node Current node.
+	 * @param key Specified key.
+	 * @return Parent of the new node.
 	 */
-	private BSTNode<K, V> findPlaceToInsert(BSTNode<K, V> root, K key) {
-	
+	private BSTNode<K, V> findPlaceToInsert(BSTNode<K, V> node, K key) {
+		int result = key.compareTo(node.getKey());
+		
+		if (result < 0 && node.getLeft() != null) {
+			return findPlaceToInsert(node.getLeft(), key);
+		}
+		if (result > 0 && node.getRight() != null) {
+			return findPlaceToInsert(node.getRight(), key);
+		}
+		return node;
 	}
-	
 	
 	//sugestao: implementar metodo auxiliary replaceParentWithChild(nodeToRemove, child) que poe
 	//pai de noteToRemove a apontar para child (filho de nodeToRemove)
