@@ -6,8 +6,8 @@ import exceptions.NoSuchElementException;
 public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	
 	/* Variables */
-	BSTNode<K, V> root;
-	Stack<BSTNode<K, V>> stack;
+	private final BSTNode<K, V> root;
+	private Stack<BSTNode<K, V>> stack;
 	
 	/**
 	 * Constructor.

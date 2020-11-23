@@ -12,8 +12,8 @@ import exceptions.NoElementException;
 public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDictionary<K, V> {
 	
 	/* Variables */
-	protected BSTNode<K, V> root;
-	protected int numElements;
+	private BSTNode<K, V> root;
+	private int numElements;
 	
 	/* Constructor */
 	public BinarySearchTree() {
@@ -111,7 +111,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		if (root == null) {
 			root = new BSTNode<>(key, value);
 		}
-        else{
+		else {
 			BSTNode<K, V> parent = findPlaceToInsert(root, key);
 			int result = key.compareTo(parent.getKey());
 			
