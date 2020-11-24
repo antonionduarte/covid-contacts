@@ -5,7 +5,6 @@ import dataStructures.DoublyLinkedList.DListNode;
 public class CollisionList<K, V> implements Dictionary<K, V> {
 	
 	/* Variables */
-	
 	private DListNode<Entry<K, V>> head, tail;
 	private int size;
 	

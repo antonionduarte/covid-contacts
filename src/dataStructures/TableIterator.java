@@ -9,11 +9,9 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 	
 	/* Variables */
 	private final Dictionary<K, V>[] table;
-	private Iterator<Entry<K, V>> currentCollision;
-	private int currentIndex;
-	private int numElementsIterated;
 	private final int numElements;
-	private int firstIndex;
+	private Iterator<Entry<K, V>> currentCollision;
+	private int currentIndex, numElementsIterated, firstIndex;
 	
 	/**
 	 * Constructor.

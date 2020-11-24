@@ -27,8 +27,10 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 */
 	private int numChildren(BSTNode<K, V> node) {
 		int numChildren = 0;
-		boolean[] hasChildren = {node.getLeft() != null, node.getRight() != null};
-		for (boolean b : hasChildren) {
+		if (node.getLeft() != null) {
+			numChildren++;
+		}
+		if (node.getRight() != null) {
 			numChildren++;
 		}
 		return numChildren;
@@ -160,11 +162,11 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 			}
 			else {
 				BSTNode<K, V> leftMax = maxNode(nodeToRemove.getLeft());
-				replaceNodeWithChild(leftMax);
 				nodeToRemove.setEntry(leftMax.getEntry());
+				replaceNodeWithChild(leftMax);
 			}
+			numElements--;
 		}
-		numElements--;
 		return nodeToRemove == null ? null : nodeToRemove.getValue();
 	}
 	
@@ -173,14 +175,44 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param nodeToRemove Node to remove.
 	 */
 	private void replaceNodeWithChild(BSTNode<K, V> nodeToRemove) {
-		if (nodeToRemove.getLeft() != null) {
-			nodeToRemove = nodeToRemove.getLeft();
-		}
-		else if (nodeToRemove.getRight() != null) {
-			nodeToRemove = nodeToRemove.getRight();
+		if (nodeToRemove == root) {
+			if (nodeToRemove.getLeft() != null) {
+				root = nodeToRemove.getLeft();
+			}
+			else {
+				root = nodeToRemove.getRight();
+			}
+			
+			if (root != null) {
+				root.setParent(null);
+			}
 		}
 		else {
-			nodeToRemove = null;
+			BSTNode<K, V> parent = nodeToRemove.getParent();
+			if (parent.getLeft() == nodeToRemove) {
+				if (nodeToRemove.getLeft() != null) {
+					parent.setLeft(nodeToRemove.getLeft());
+				}
+				else {
+					parent.setLeft(nodeToRemove.getRight());
+				}
+				
+				if (parent.getLeft() != null) {
+					parent.getLeft().setParent(parent);
+				}
+			}
+			else {
+				if (nodeToRemove.getLeft() != null) {
+					parent.setRight(nodeToRemove.getLeft());
+				}
+				else {
+					parent.setRight(nodeToRemove.getRight());
+				}
+				
+				if (parent.getRight() != null) {
+					parent.getRight().setParent(parent);
+				}
+			}
 		}
 	}
 	
