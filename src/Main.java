@@ -24,7 +24,7 @@ public class Main {
 	 * @param args Arguments used for the execution of the program (not used).
 	 */
 	public static void main(String[] args) {
-		/*CovidContacts covidContacts = new CovidContactsClass();
+		CovidContacts covidContacts = new CovidContactsClass();
 		Scanner in = new Scanner(System.in);
 		Command command;
 		
@@ -34,22 +34,7 @@ public class Main {
 			executeCommand(command, in, covidContacts);
 		} while (command != Command.FIM);
 		
-		in.close();*/
-		
-		OrderedDictionary<Integer, String> bst = new BinarySearchTree<>();
-		
-		for (int i = 0; i <= 10; i++) {
-			bst.insert(i, ""+i);
-		}
-		
-		bst.remove(1);
-		bst.remove(3);
-		
-		Iterator<Entry<Integer, String>> iterator = bst.iterator();
-		
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next().getValue());
-		}
+		in.close();
 	}
 	
 	/**
