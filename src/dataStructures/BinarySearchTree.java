@@ -157,6 +157,8 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 		BSTNode<K, V> nodeToRemove = findNode(root, key);
 		
 		if (nodeToRemove != null) {
+			V oldValue = nodeToRemove.getValue();
+			
 			if (numChildren(nodeToRemove) < 2) {
 				replaceNodeWithChild(nodeToRemove);
 			}
@@ -166,8 +168,9 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 				replaceNodeWithChild(leftMax);
 			}
 			numElements--;
+			return oldValue;
 		}
-		return nodeToRemove == null ? null : nodeToRemove.getValue();
+		return null;
 	}
 	
 	/**
