@@ -13,7 +13,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	
 	/* Variables */
 	protected BSTNode<K, V> root;
-	private int numElements;
+	protected int numElements;
 	
 	/* Constructor */
 	public BinarySearchTree() {
@@ -140,7 +140,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param key Specified key.
 	 * @return Parent of the new node.
 	 */
-	private BSTNode<K, V> findPlaceToInsert(BSTNode<K, V> node, K key) {
+	protected BSTNode<K, V> findPlaceToInsert(BSTNode<K, V> node, K key) {
 		int result = key.compareTo(node.getKey());
 		
 		if (result < 0 && node.getLeft() != null) {
