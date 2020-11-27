@@ -25,7 +25,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param node Specified node.
 	 * @return Nodes' number of children nodes.
 	 */
-	private int numChildren(BSTNode<K, V> node) {
+	protected int numChildren(BSTNode<K, V> node) {
 		int numChildren = 0;
 		if (node.getLeft() != null) {
 			numChildren++;
@@ -58,7 +58,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param key Specified key.
 	 * @return Node with the specified key || Null.
 	 */
-	private BSTNode<K, V> findNode(BSTNode<K, V> node, K key) {
+	protected BSTNode<K, V> findNode(BSTNode<K, V> node, K key) {
 		if (node == null) {
 			return null;
 		}
@@ -87,7 +87,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param node Current node.
 	 * @return The smallest node.
 	 */
-	private BSTNode<K, V> minNode(BSTNode<K, V> node) {
+	protected BSTNode<K, V> minNode(BSTNode<K, V> node) {
 		return node.getLeft() == null ? node : minNode(node.getLeft());
 	}
 	
@@ -104,7 +104,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * @param node Current node.
 	 * @return The largest node.
 	 */
-	private BSTNode<K, V> maxNode(BSTNode<K, V> node) {
+	protected BSTNode<K, V> maxNode(BSTNode<K, V> node) {
 		return node.getRight() == null ? node : maxNode(node.getRight());
 	}
 	
@@ -177,7 +177,7 @@ public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDict
 	 * Auxiliary method that replaces the specified node by its child.
 	 * @param nodeToRemove Node to remove.
 	 */
-	private void replaceNodeWithChild(BSTNode<K, V> nodeToRemove) {
+	protected void replaceNodeWithChild(BSTNode<K, V> nodeToRemove) {
 		if (nodeToRemove == root) {
 			if (nodeToRemove.getLeft() != null) {
 				root = nodeToRemove.getLeft();

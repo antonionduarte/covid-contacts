@@ -15,7 +15,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 				return parent.getEntry().setValue(value);
 			}
 			
-			AVLNode<K, V> newNode = new AVLNode<>(key, value, parent, null, null);
+			AVLNode<K, V> newNode = new AVLNode<>(key, value, (AVLNode<K, V>) parent, null, null);
 			
 			if (result < 0) {
 				parent.setLeft(newNode);
@@ -32,6 +32,30 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	
 	@Override
 	public V remove(K key) {
+		BSTNode<K, V> nodeToRemove = findNode(root, key);
+		
+		if (nodeToRemove != null) {
+			V oldValue = nodeToRemove.getValue();
+			
+			if (numChildren(nodeToRemove) < 2) {
+				replaceNodeWithChild(nodeToRemove);
+			}
+			else {
+				BSTNode<K, V> leftMax = maxNode(nodeToRemove.getLeft());
+				nodeToRemove.setEntry(leftMax.getEntry());
+				replaceNodeWithChild(leftMax);
+			}
+			
+			if (nodeToRemove.getParent() != null) {
+				rebalance((AVLNode<K, V>) nodeToRemove.getParent());
+			}
+			
+			numElements--;
+			return oldValue;
+		}
+		return null;
+		
+		
 		// TODO
 		V valueToReturn = null;
 		AVLNode<K, V> node = null; // father of node where the key was deleted
@@ -42,30 +66,30 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	}
 	
 	/**
-	 * Rebalance method called by insert and remove. Traverses the path from
-	 * zPos to the root. For each node encountered, we recompute its height
+	 * Auxiliary method called by insert and remove.
+	 * Traverses the path from X to the root. For each node encountered, we recompute its height
 	 * and perform a trinode restructuring if it's unbalanced.
 	 * the rebalance is completed with O(log n)running time
 	 */
-	private void rebalance(AVLNode<K, V> zPos) {
-		if (zPos.isInternal())
-			zPos.setHeight();
+	private void rebalance(AVLNode<K, V> x) {
+		if (x.isInternal())
+			x.setHeight();
 		// Melhorar se possivel
-		while (zPos != null) {  // traverse up the tree towards the root
-			zPos = (AVLNode<K, V>) zPos.getParent();
-			zPos.setHeight();
-			if (!zPos.isBalanced()) {
+		while (x != null) {  // traverse up the tree towards the root
+			x = (AVLNode<K, V>) x.getParent();
+			x.setHeight();
+			if (!x.isBalanced()) {
 				//perform a trinode restructuring at zPos's tallest grandchild
 				//If yPos (tallerChild(zPos)) denote the child of zPos with greater height.
 				//Finally, let xPos be the child of yPos with greater height
-				AVLNode<K, V> xPos = zPos.tallestChild().tallestChild();
-				zPos = (AVLNode<K, V>) restructure(xPos); // tri-node restructure (from parent class)
+				AVLNode<K, V> xPos = x.tallestChild().tallestChild();
+				x = (AVLNode<K, V>) restructure(xPos); // tri-node restructure (from parent class)
 				//note that zPos now may be a different node (the new root of the tri-node)
 				
 				// recompute heights for these 3 nodes
-				((AVLNode<K, V>) zPos.getLeft()).setHeight();
-				((AVLNode<K, V>) zPos.getRight()).setHeight();
-				zPos.setHeight();
+				((AVLNode<K, V>) x.getLeft()).setHeight();
+				((AVLNode<K, V>) x.getRight()).setHeight();
+				x.setHeight();
 			}
 		}
 	}

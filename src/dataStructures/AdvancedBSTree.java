@@ -5,44 +5,44 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 	/**
 	 * Performs a single right rotation rooted at Y node.
 	 * Node X is a  left  child  of Y before the  rotation, then Y becomes the right child of X after the rotation.
-	 * @param Y - root of the rotation
+	 * @param y - root of the rotation
 	 * @pre: Y has a left child
 	 *   Y				X
 	 *  /	turns into:	 \
 	 * X 				  Y
 	 */
-	protected void rotateRight(BSTNode<K, V> Y) {
-		BSTNode<K, V> X = Y.getLeft();
+	protected void rotateRight(BSTNode<K, V> y) {
+		BSTNode<K, V> x = y.getLeft();
 		
-		Y.setLeft(X.getRight());
-		X.setRight(Y);
-		X.setParent(Y.getParent());
-		Y.setParent(X);
+		y.setLeft(x.getRight());
+		x.setRight(y);
+		x.setParent(y.getParent());
+		y.setParent(x);
 		
-		if (Y == root) {
-			root = X;
+		if (y == root) {
+			root = x;
 		}
 	}
 	
 	/**
 	 * Performs a single left rotation rooted at Y node.
 	 * Node X is a right child of Y before the rotation, then Y becomes the left child of X after the rotation.
-	 * @param Y - root of the rotation
+	 * @param y - root of the rotation
 	 * @pre: Y has a right child
 	 * Y				  X
 	 *  \  turns into:	 /
 	 *   X 				Y
 	 */
-	protected void rotateLeft(BSTNode<K, V> Y) {
-		BSTNode<K, V> X = Y.getRight();
+	protected void rotateLeft(BSTNode<K, V> y) {
+		BSTNode<K, V> x = y.getRight();
 		
-		Y.setRight(X.getLeft());
-		X.setLeft(Y);
-		X.setParent(Y.getParent());
-		Y.setParent(X);
+		y.setRight(x.getLeft());
+		x.setLeft(y);
+		x.setParent(y.getParent());
+		y.setParent(x);
 		
-		if (Y == root) {
-			root = X;
+		if (y == root) {
+			root = x;
 		}
 	}
 	
