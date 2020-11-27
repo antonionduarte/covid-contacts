@@ -12,7 +12,7 @@ import exceptions.NoElementException;
 public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDictionary<K, V> {
 	
 	/* Variables */
-	private BSTNode<K, V> root;
+	protected BSTNode<K, V> root;
 	private int numElements;
 	
 	/* Constructor */

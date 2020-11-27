@@ -8,7 +8,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	 * and perform a trinode restructuring if it's unbalanced.
 	 * the rebalance is completed with O(log n)running time
 	 */
-	protected void rebalance(AVLNode<K, V> zPos) {
+	private void rebalance(AVLNode<K, V> zPos) {
 		if (zPos.isInternal())
 			zPos.setHeight();
 		// Melhorar se possivel
@@ -56,6 +56,11 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 		return valueToReturn;
 	}
 	
+	/**
+	 *
+	 * @param <K>
+	 * @param <V>
+	 */
 	static class AVLNode<K, V> extends BSTNode<K, V> {
 		
 		// Height of the node
@@ -72,10 +77,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 		}
 		
 		protected int getHeight(AVLNode<K, V> node) {
-			//precisamos deste metodo porque node pode ser null
-			if (node == null)
-				return 0;
-			return node.getHeight();
+			return node == null ? null : node.getHeight();
 		}
 		
 		public int getHeight() {
@@ -89,8 +91,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 		}
 		
 		public int setHeight() {
-			height = 1 + Math.max(getHeight((AVLNode<K, V>) this.getLeft()),
-					getHeight((AVLNode<K, V>) this.getRight()));
+			height = 1 + Math.max(getHeight((AVLNode<K, V>) getLeft()), getHeight((AVLNode<K, V>) getRight()));
 			return height;
 		}
 		
