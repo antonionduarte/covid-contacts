@@ -25,8 +25,8 @@ public class UserClass implements User {
 	private final String profession;
 	private final int age;
 	private final List<Post> posts;
-	private final OrderedList<Group> groups;
-	private final OrderedList<User> contacts;
+	private final Dictionary<String, Group> groups;
+	private final Dictionary<String, User> contacts;
 	
 	/**
 	 * Constructor.
@@ -54,15 +54,19 @@ public class UserClass implements User {
 		 * searching time complexity [O(log2(n))]. The only downside is inserting or removing a group, since it has
 		 * to shift the whole list, but considering the max number of groups a user can have is generally quite small,
 		 * this aspect will have a minimal performance downside.
+		 *
+		 * TODO: Remake the comment and make groups comparable.
 		 */
-		groups = new OrderedArrayList<>(new GroupComparator(), MAX_GROUPS);
+		groups = new ChainedHashTable<>();
 		/**
 		 * As for the users' contacts, an Ordered Doubly Linked List is the most balanced option since there isn't a
 		 * limit on the number of contacts a user can have, and the list has to stay ordered lexicographically.
 		 * The contact lists' main purpose is to send posts to all of the users' contacts and list them, which means
 		 * they just have to be iterated through, therefore accessing a specific contact isn't a common occurrence.
+		 * 
+		 * TODO: Remake the comment and make users comparable.
 		 */
-		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
+		contacts = new AVLTree<>();
 	}
 	
 	@Override
@@ -113,30 +117,30 @@ public class UserClass implements User {
 	
 	@Override
 	public void addContact(User contact) throws ContactAlreadyExistsException {
-		if (contacts.find(contact) != -1) {
+		if (contacts.find(contact.getLogin()) != null) {
 			throw new ContactAlreadyExistsException();
 		}
-		contacts.insert(contact);
+		contacts.insert(contact.getLogin(), contact);
 	}
 	
 	@Override
 	public void removeContact(User contact) throws ContactDoesNotExistException {
-		if (!contacts.remove(contact)) {
+		if (contacts.remove(contact.getLogin()) == null) {
 			throw new ContactDoesNotExistException();
 		}
 	}
 	
 	@Override
 	public void addGroup(Group group) throws UserAlreadyInGroupException {
-		if (groups.find(group) != -1) {
+		if (groups.find(group.getName()) != null) {
 			throw new UserAlreadyInGroupException();
 		}
-		groups.insert(group);
+		groups.insert(group.getName(), group);
 	}
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (!groups.remove(group)) {
+		if (groups.remove(group.getName()) == null) {
 			throw new UserNotInGroupException();
 		}
 	}
@@ -164,7 +168,7 @@ public class UserClass implements User {
 	
 	@Override
 	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException {
-		if (!login.equals(other.getLogin()) && contacts.find(other) == -1) {
+		if (!login.equals(other.getLogin()) && contacts.find(other.getLocation()) == null) {
 			throw new ContactDoesNotExistException();
 		}
 		if (posts.isEmpty()) {

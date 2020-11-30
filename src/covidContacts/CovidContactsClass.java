@@ -21,8 +21,8 @@ import users.UserGetters;
 public class CovidContactsClass implements CovidContacts {
 	
 	/* Variables */
-	private final OrderedList<User> users;
-	private final List<Group> groups;
+	private final Dictionary<String, User> users;
+	private final Dictionary<String, Group> groups;
 	
 	/* Constructor */
 	public CovidContactsClass() {
@@ -32,24 +32,28 @@ public class CovidContactsClass implements CovidContacts {
 		 * in the case it's full (even when adding or removing a user, its existence has to be checked first),
 		 * thus, by keeping the array ordered after every insertion, we can take advantage of the binary search
 		 * and binary insertion we implemented, which have O(log2(n)) time complexity.
+		 *
+		 * TODO: Redo the description of why we used this Data Structure, and make users comparable.
 		 */
-		users = new OrderedArrayList<>(new UserComparator());
+		users = new ChainedHashTable<>();
 		/*
 		 * We chose a Doubly Linked List because there are far less groups than users in the system and
 		 * it will only be used to add and remove groups, since other operations like adding a post
 		 * will be done via the users (which have much smaller collections of groups).
+		 * 
+		 * TODO: Redo the description of why we used this Data Structure and make groups comparable.
 		 */
-		groups = new DoublyLinkedList<>();
+		groups = new ChainedHashTable<>();
 	}
 	
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
 		User newUser = new UserClass(login, username, age, location, profession);
 		
-		if (users.find(newUser) != -1) {
+		if (users.find(login) != null) {
 			throw new UserAlreadyExistsException();
 		}
-		users.insert(newUser);
+		users.insert(login, newUser);
 	}
 	
 	@Override
@@ -92,10 +96,10 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public void insertGroup(String name, String description) throws GroupAlreadyExistsException {
 		Group newGroup = new GroupClass(name, description);
-		if (groups.find(newGroup) != -1) {
+		if (groups.find(name) != null) {
 			throw new GroupAlreadyExistsException();
 		}
-		groups.addLast(newGroup);
+		groups.insert(name, newGroup);
 	}
 	
 	public GroupGetters getGroupGetters(String name) {
@@ -104,7 +108,7 @@ public class CovidContactsClass implements CovidContacts {
 	
 	@Override
 	public void removeGroup(String name) throws GroupDoesNotExistException {
-		Group group = groups.remove(new GroupClass(name, null));
+		Group group = groups.remove(name);
 		
 		if (group == null) {
 			throw new GroupDoesNotExistException();
@@ -161,12 +165,12 @@ public class CovidContactsClass implements CovidContacts {
 	 * @return User with the specified login.
 	 */
 	private User getUser(String login) throws UserDoesNotExistException {
-		int index = users.find(new UserClass(login, null, 0, null, null));
+		User user = users.find(login);
 		
-		if (index == -1) {
+		if (user == null) {
 			throw new UserDoesNotExistException();
 		}
-		return users.get(index);
+		return user;
 	}
 	
 	/**

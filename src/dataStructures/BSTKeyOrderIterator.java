@@ -5,6 +5,9 @@ import exceptions.NoSuchElementException;
 
 public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	
+	/* Constants */
+	private static final long serialVersionUID = 1L;
+	
 	/* Variables */
 	private final BSTNode<K, V> root;
 	private Stack<BSTNode<K, V>> stack;
