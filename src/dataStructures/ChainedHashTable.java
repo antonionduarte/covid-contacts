@@ -75,13 +75,8 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 		return new TableIterator<>(table, numElements);
 	}
 	
-	/**
-	 * Rehashes the dictionary if it gets full.
-	 * TODO: Perguntar ao Campones se isto funciona
-	 * TODO: Lembrar-me da questão do maxSize e assim (porque acho que não tou a usar a var correcta mas logo resolvo).
-	 */
 	private void rehash() {
-		ChainedHashTable<K, V> auxTable = new ChainedHashTable<>(maxSize);
+		ChainedHashTable<K, V> auxTable = new ChainedHashTable<>(nextPrime(this.maxSize));
 		
 		Iterator<Entry<K, V>> iterator = iterator();
 		
