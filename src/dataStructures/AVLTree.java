@@ -46,9 +46,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 				replaceNodeWithChild(leftMax);
 			}
 			
-			if (nodeToRemove.getParent() != null) {
-				rebalance((AVLNode<K, V>) nodeToRemove.getParent());
-			}
+			rebalance((AVLNode<K, V>) nodeToRemove);
 			
 			numElements--;
 			return oldValue;
