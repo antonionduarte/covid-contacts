@@ -1,6 +1,5 @@
 package covidContacts;
 
-import comparators.UserComparator;
 import dataStructures.*;
 import exceptions.*;
 import groups.Group;
@@ -27,21 +26,19 @@ public class CovidContactsClass implements CovidContacts {
 	/* Constructor */
 	public CovidContactsClass() {
 		/*
-		 * We chose an Ordered Array List since finding/checking if a user exists and accessing the user is
-		 * a much more common occurrence than adding or removing a user from the system or resizing the array
-		 * in the case it's full (even when adding or removing a user, its existence has to be checked first),
-		 * thus, by keeping the array ordered after every insertion, we can take advantage of the binary search
-		 * and binary insertion we implemented, which have O(log2(n)) time complexity.
-		 *
-		 * TODO: Redo the description of why we used this Data Structure, and make users comparable.
+		 * TODO: Revê por favor virgínia 👉👈
+		 * 		
+		 * We chose a Chained Hash Table since finding/checking if a user exists, and accessing the user
+		 * is a common occurrence, the insertion, removal and find operations on an HashTable
+		 * have a Time Complexity of O(1 + delta).
 		 */
 		users = new ChainedHashTable<>();
 		/*
-		 * We chose a Doubly Linked List because there are far less groups than users in the system and
-		 * it will only be used to add and remove groups, since other operations like adding a post
-		 * will be done via the users (which have much smaller collections of groups).
-		 * 
-		 * TODO: Redo the description of why we used this Data Structure and make groups comparable.
+		 * TODO: Revê por favor virgínia 👉👈
+		 *
+		 * We chose a Chained Hash Table since finding/checking if a Group exists, and accessing the group
+		 * is a common occurrence, the insertion, removal and find operations on an HashTable
+		 * have a Time Complexity of O(1 + delta).
 		 */
 		groups = new ChainedHashTable<>();
 	}
@@ -178,7 +175,7 @@ public class CovidContactsClass implements CovidContacts {
 	 * @return Group with the specified name.
 	 */
 	private Group getGroup(String name) throws GroupDoesNotExistException {
-		Iterator<Group> iterator = groups.iterator();
+		Iterator<Group> iterator = new ValueIterator<>(groups.iterator());
 		
 		while (iterator.hasNext()) {
 			Group group = iterator.next();

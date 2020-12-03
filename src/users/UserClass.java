@@ -1,7 +1,5 @@
 package users;
 
-import comparators.GroupComparator;
-import comparators.UserComparator;
 import dataStructures.*;
 import exceptions.*;
 import groups.Group;
@@ -13,7 +11,7 @@ import posts.Post;
  * User implementation, handles the users' information and conexions.
  */
 
-public class UserClass implements User {
+public class UserClass implements User, Comparable<User> {
 	
 	/* Constants */
 	private static final int MAX_GROUPS = 10;
@@ -50,6 +48,8 @@ public class UserClass implements User {
 		 */
 		posts = new DoublyLinkedList<>();
 		/**
+		 * // TODO: I'm not going to be making this comment just yet because i'm not 100% settled on the HashTable.
+		 * 
 		 * Since groups have a pre-defined hard limit, having an Ordered Array List is the best option in terms of
 		 * searching time complexity [O(log2(n))]. The only downside is inserting or removing a group, since it has
 		 * to shift the whole list, but considering the max number of groups a user can have is generally quite small,
@@ -59,12 +59,13 @@ public class UserClass implements User {
 		 */
 		groups = new ChainedHashTable<>();
 		/**
-		 * As for the users' contacts, an Ordered Doubly Linked List is the most balanced option since there isn't a
-		 * limit on the number of contacts a user can have, and the list has to stay ordered lexicographically.
-		 * The contact lists' main purpose is to send posts to all of the users' contacts and list them, which means
-		 * they just have to be iterated through, therefore accessing a specific contact isn't a common occurrence.
+		 * TODO: Revê por favor Virgínia 👉👈
 		 * 
-		 * TODO: Remake the comment and make users comparable.
+		 * As for the users' contacts, an AVL Tre is the best option, since the contacts need to be ordered
+		 * according to the lexicographic order of their login, and need to be individually accessed and removed.
+		 * The main purpose of the contact list is to send posts to all the users' contacts and list them,
+		 * which means they just have to be iterated through, which has a complexity of O(n) using the AVLTree.
+		 * As for insertions or removals, using an AVLTree has a complexity of O(log(n)).
 		 */
 		contacts = new AVLTree<>();
 	}
@@ -75,6 +76,11 @@ public class UserClass implements User {
 		if (o == null || getClass() != o.getClass()) return false;
 		UserClass userClass = (UserClass) o;
 		return getLogin().equals(userClass.getLogin());
+	}
+
+	@Override
+	public int compareTo(User o) {
+		return this.getLogin().compareTo(o.getLogin());
 	}
 	
 	@Override
@@ -112,7 +118,7 @@ public class UserClass implements User {
 		if (contacts.isEmpty()) {
 			throw new NoContactsException();
 		}
-		return contacts.iterator();
+		return new ValueIterator<>(contacts.iterator());
 	}
 	
 	@Override
@@ -154,8 +160,8 @@ public class UserClass implements User {
 	public void insertPost(Post post) {
 		posts.addLast(post);
 		
-		Iterator<User> userIterator = contacts.iterator();
-		Iterator<Group> groupIterator = groups.iterator();
+		Iterator<User> userIterator = new ValueIterator<>(contacts.iterator());
+		Iterator<Group> groupIterator = new ValueIterator<>(groups.iterator());
 		
 		while (userIterator.hasNext()) {
 			userIterator.next().receivePost(post);
