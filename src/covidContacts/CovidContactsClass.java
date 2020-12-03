@@ -26,7 +26,7 @@ public class CovidContactsClass implements CovidContacts {
 	/* Constructor */
 	public CovidContactsClass() {
 		/*
-		 * TODO: Revê por favor virgínia 👉👈
+		 * TODO: Revê por favor virgínia 👉 👈
 		 * 		
 		 * We chose a Chained Hash Table since finding/checking if a user exists, and accessing the user
 		 * is a common occurrence, the insertion, removal and find operations on an HashTable
@@ -34,7 +34,7 @@ public class CovidContactsClass implements CovidContacts {
 		 */
 		users = new ChainedHashTable<>();
 		/*
-		 * TODO: Revê por favor virgínia 👉👈
+		 * TODO: Revê por favor virgínia 👉 👈
 		 *
 		 * We chose a Chained Hash Table since finding/checking if a Group exists, and accessing the group
 		 * is a common occurrence, the insertion, removal and find operations on an HashTable
@@ -175,7 +175,7 @@ public class CovidContactsClass implements CovidContacts {
 	 * @return Group with the specified name.
 	 */
 	private Group getGroup(String name) throws GroupDoesNotExistException {
-		Iterator<Group> iterator = new ValueIterator<>(groups.iterator());
+		Iterator<Group> iterator = new EntryValueIterator<>(groups.iterator());
 		
 		while (iterator.hasNext()) {
 			Group group = iterator.next();

@@ -11,7 +11,7 @@ import exceptions.NoSuchElementException;
  * @author Goncalo Virginia (56773).
  */
 
-public class ValueIterator<K, V> implements Iterator<V> {
+public class EntryValueIterator<K, V> implements Iterator<V> {
 
 	/* Constants */
 	private static final long serialVersionUID = 1L;
@@ -23,7 +23,7 @@ public class ValueIterator<K, V> implements Iterator<V> {
 	 * Constructor.
 	 * @param iterator The Iterator that returns an Entry.
 	 */
-	public ValueIterator(Iterator<Entry<K, V>> iterator) {
+	public EntryValueIterator(Iterator<Entry<K, V>> iterator) {
 		this.iterator = iterator;
 	}
 

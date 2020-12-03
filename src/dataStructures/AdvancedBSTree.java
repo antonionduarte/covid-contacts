@@ -19,9 +19,7 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 		x.setParent(y.getParent());
 		y.setParent(x);
 		
-		if (y == root) {
-			root = x;
-		}
+		parentYXChildSwap(x, y);
 	}
 	
 	/**
@@ -41,7 +39,26 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 		x.setParent(y.getParent());
 		y.setParent(x);
 		
-		if (y == root) {
+		parentYXChildSwap(x, y);
+	}
+	
+	/**
+	 * Auxiliary method for rotateLeft and rotateRight.
+	 * Swaps the parents' y child node with the new x node after their rotation.
+	 * @param x Top node after rotation.
+	 */
+	private void parentYXChildSwap(BSTNode<K, V> x, BSTNode<K, V> y) {
+		BSTNode<K, V> xParent = x.getParent();
+		
+		if (xParent != null) {
+			if (xParent.getLeft() == y) {
+				xParent.setLeft(x);
+			}
+			else {
+				xParent.setRight(x);
+			}
+		}
+		else {
 			root = x;
 		}
 	}
