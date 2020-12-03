@@ -118,7 +118,7 @@ public class UserClass implements User, Comparable<User> {
 		if (contacts.isEmpty()) {
 			throw new NoContactsException();
 		}
-		return new ValueIterator<>(contacts.iterator());
+		return new EntryValueIterator<>(contacts.iterator());
 	}
 	
 	@Override
@@ -160,8 +160,8 @@ public class UserClass implements User, Comparable<User> {
 	public void insertPost(Post post) {
 		posts.addLast(post);
 		
-		Iterator<User> userIterator = new ValueIterator<>(contacts.iterator());
-		Iterator<Group> groupIterator = new ValueIterator<>(groups.iterator());
+		Iterator<User> userIterator = new EntryValueIterator<>(contacts.iterator());
+		Iterator<Group> groupIterator = new EntryValueIterator<>(groups.iterator());
 		
 		while (userIterator.hasNext()) {
 			userIterator.next().receivePost(post);
