@@ -78,7 +78,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 				((AVLNode<K, V>) z.getRight()).setHeight();
 				z.setHeight();
 				
-				break;
+				return;
 			}
 		}
 	}
