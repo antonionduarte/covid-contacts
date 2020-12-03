@@ -17,7 +17,7 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	 * Constructor of an empty chained hash table, with the specified initial
 	 * capacity. Each position of the array is initialized to a new ordered list
 	 * maxSize is initialized to the capacity.
-	 * @param capacity defines the table capacity.
+	 * @param capacity Defines the table capacity.
 	 */
 	@SuppressWarnings("unchecked")
 	public ChainedHashTable(int capacity) {
@@ -38,8 +38,8 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	
 	/**
 	 * Returns the hash value of the specified key.
-	 * @param key to be encoded
-	 * @return hash value of the specified key
+	 * @param key The key to be encoded.
+	 * @return Hash value of the specified key.
 	 */
 	protected int hash(K key) {
 		return Math.abs(key.hashCode()) % table.length;
