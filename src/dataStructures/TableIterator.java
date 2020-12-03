@@ -26,11 +26,12 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 		this.table = table;
 		this.numElements = numElements;
 		firstIndex = 0;
-		
-		while (!table[firstIndex++].iterator().hasNext()) {
+
+		for (int i = 0; !table[i++].iterator().hasNext() && i < table.length; i++) {
 			currentCollision = table[++currentIndex].iterator();
+			firstIndex = i;
 		}
-		
+
 		rewind();
 	}
 	

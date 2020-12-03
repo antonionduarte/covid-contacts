@@ -11,16 +11,18 @@ public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	/* Variables */
 	private final BSTNode<K, V> root;
 	private Stack<BSTNode<K, V>> stack;
+	private int numElements;
 	
 	/**
 	 * Constructor.
 	 * @param root BST root node.
 	 */
-	public BSTKeyOrderIterator(BSTNode<K, V> root) {
+	public BSTKeyOrderIterator(BSTNode<K, V> root, int numElements) {
 		this.root = root;
+		this.numElements = numElements;
 		rewind();
 	}
-	
+
 	@Override
 	public boolean hasNext() {
 		return !stack.isEmpty();
@@ -45,8 +47,11 @@ public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	@Override
 	public void rewind() {
 		stack = new StackInList<>();
-		stack.push(root);
-		stackLeftNodes();
+
+		if (numElements != 0) {
+			stack.push(root);
+			stackLeftNodes();
+		}
 	}
 	
 	/**
