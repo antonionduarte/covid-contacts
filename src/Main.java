@@ -1,6 +1,7 @@
 import covidContacts.CovidContacts;
 import covidContacts.CovidContactsClass;
-import dataStructures.*;
+import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
 import exceptions.*;
@@ -12,7 +13,7 @@ import java.util.Scanner;
 
 /**
  * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773). 
+ * @author Goncalo Virginia (56773).
  * This program simulates a simple social network themed around the current COVID-19
  * pandemic (let's hope Trump isn't lying about the cure). Users can add others as contacts, create/join groups, post
  * messages (which are sent to all contacts and groups with the main purpose of notifying others if they're infected)

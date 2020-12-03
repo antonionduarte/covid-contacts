@@ -54,27 +54,19 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 			return oldValue;
 		}
 		return null;
-		
-		
-		// TODO
-		V valueToReturn = null;
-		AVLNode<K, V> node = null; // father of node where the key was deleted
-		
-		if (node != null) //(if find(key)==null)
-			rebalance(node); // rebalance up from the node
-		return valueToReturn;
 	}
 	
 	/**
 	 * Auxiliary method called by insert and remove.
 	 * Traverses the path from X to the root. For each node encountered, we recompute its height
 	 * and perform a trinode restructuring if it's unbalanced.
-	 * the rebalance is completed with O(log n)running time
+	 * The rebalancing is completed with O(log n) time complexity.
 	 */
 	private void rebalance(AVLNode<K, V> x) {
-		if (x.isInternal())
+		if (x.isInternal()) {
 			x.setHeight();
-		// Melhorar se possivel
+		}
+		
 		while (x != null) {  // traverse up the tree towards the root
 			x = (AVLNode<K, V>) x.getParent();
 			x.setHeight();
