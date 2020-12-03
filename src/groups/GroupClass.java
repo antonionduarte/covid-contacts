@@ -96,7 +96,7 @@ public class GroupClass implements Group, Comparable<Group> {
 	
 	@Override
 	public void clearParticipants() {
-		Iterator<User> participantsIterator = new ValueIterator<>(participants.iterator());
+		Iterator<User> participantsIterator = new EntryValueIterator<>(participants.iterator());
 		
 		while (participantsIterator.hasNext()) {
 			participantsIterator.next().removeGroup(this);
@@ -108,7 +108,7 @@ public class GroupClass implements Group, Comparable<Group> {
 		if (participants.isEmpty()) {
 			throw new NoParticipantsException();
 		}
-		return new ValueIterator<>(participants.iterator());
+		return new EntryValueIterator<>(participants.iterator());
 	}
 	
 	@Override
