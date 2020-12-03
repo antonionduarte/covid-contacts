@@ -1,7 +1,6 @@
 import covidContacts.CovidContacts;
 import covidContacts.CovidContactsClass;
-import dataStructures.Iterator;
-import dataStructures.TwoWayIterator;
+import dataStructures.*;
 import enums.Command;
 import enums.Output;
 import exceptions.*;
@@ -26,7 +25,7 @@ public class Main {
 	 * @param args Arguments used for the execution of the program (not used).
 	 */
 	public static void main(String[] args) {
-		CovidContacts covidContacts = new CovidContactsClass();
+		/*CovidContacts covidContacts = new CovidContactsClass();
 		Scanner in = new Scanner(System.in);
 		Command command;
 		
@@ -36,7 +35,27 @@ public class Main {
 			executeCommand(command, in, covidContacts);
 		} while (command != Command.FIM);
 		
-		in.close();
+		in.close();*/
+		
+		OrderedDictionary<Integer, Integer> avl = new AVLTree<>();
+		
+		avl.insert(10, 10);
+		avl.insert(7, 7);
+		avl.insert(2, 2);
+		avl.insert(3, 3);
+		avl.insert(4, 4);
+		avl.insert(5, 5);
+		avl.insert(6, 6);
+		avl.insert(9, 9);
+		avl.insert(8, 8);
+		avl.insert(1, 1);
+		
+		Iterator<Entry<Integer, Integer>> it = avl.iterator();
+		
+		while (it.hasNext()) {
+			System.out.println(it.next().getValue());
+		}
+		
 	}
 	
 	/**

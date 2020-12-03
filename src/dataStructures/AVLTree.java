@@ -5,17 +5,17 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	@Override
 	public V insert(K key, V value) {
 		if (root == null) {
-			root = new BSTNode<>(key, value);
+			root = new AVLNode<>(key, value);
 		}
 		else {
-			BSTNode<K, V> parent = findPlaceToInsert(root, key);
+			AVLNode<K, V> parent = (AVLNode<K, V>) findPlaceToInsert(root, key);
 			int result = key.compareTo(parent.getKey());
 			
 			if (result == 0) {
 				return parent.getEntry().setValue(value);
 			}
 			
-			AVLNode<K, V> newNode = new AVLNode<>(key, value, (AVLNode<K, V>) parent, null, null);
+			AVLNode<K, V> newNode = new AVLNode<>(key, value, parent, null, null);
 			
 			if (result < 0) {
 				parent.setLeft(newNode);
@@ -58,36 +58,32 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	
 	/**
 	 * Auxiliary method called by insert and remove.
-	 * Traverses the path from X to the root. For each node encountered, we recompute its height
+	 * Traverses the path from Z to the root. For each node encountered, we recompute its height
 	 * and perform a trinode restructuring if it's unbalanced.
-	 * The rebalancing is completed with O(log n) time complexity.
+	 * The rebalancing is completed with O(log2(n)) time complexity.
 	 */
-	private void rebalance(AVLNode<K, V> x) {
-		if (x.isInternal()) {
-			x.setHeight();
+	private void rebalance(AVLNode<K, V> z) {
+		if (z.isInternal()) {
+			z.setHeight();
 		}
 		
-		while (x != null) {  // traverse up the tree towards the root
-			x = (AVLNode<K, V>) x.getParent();
-			x.setHeight();
-			if (!x.isBalanced()) {
-				//perform a trinode restructuring at zPos's tallest grandchild
-				//If yPos (tallerChild(zPos)) denote the child of zPos with greater height.
-				//Finally, let xPos be the child of yPos with greater height
-				AVLNode<K, V> xPos = x.tallestChild().tallestChild();
-				x = (AVLNode<K, V>) restructure(xPos); // tri-node restructure (from parent class)
-				//note that zPos now may be a different node (the new root of the tri-node)
+		while (z.getParent() != null) {
+			z = (AVLNode<K, V>) z.getParent();
+			z.setHeight();
+			
+			if (!z.isBalanced()) {
+				z = (AVLNode<K, V>) restructure(z.tallestChild().tallestChild());
 				
-				// recompute heights for these 3 nodes
-				((AVLNode<K, V>) x.getLeft()).setHeight();
-				((AVLNode<K, V>) x.getRight()).setHeight();
-				x.setHeight();
+				((AVLNode<K, V>) z.getLeft()).setHeight();
+				((AVLNode<K, V>) z.getRight()).setHeight();
+				z.setHeight();
+				
+				break;
 			}
 		}
 	}
 	
 	/**
-	 *
 	 * @param <K>
 	 * @param <V>
 	 */
@@ -133,8 +129,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 		}
 		
 		public int setHeight() {
-			height = 1 + tallestChild().getHeight();
-			return height;
+			return height = 1 + getHeight(tallestChild());
 		}
 		
 		/**
@@ -142,7 +137,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 		 */
 		protected AVLNode<K, V> tallestChild() {
 			AVLNode<K, V> leftChild = (AVLNode<K, V>) getLeft(), rightChild = (AVLNode<K, V>) getRight();
-			int leftChildHeight = getHeight((AVLNode<K, V>) getLeft()), rightChildHeight = getHeight((AVLNode<K, V>) getRight();
+			int leftChildHeight = getHeight((AVLNode<K, V>) getLeft()), rightChildHeight = getHeight((AVLNode<K, V>) getRight());
 			
 			if (leftChildHeight > rightChildHeight) {
 				return leftChild;

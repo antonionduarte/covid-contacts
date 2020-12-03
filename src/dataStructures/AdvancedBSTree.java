@@ -19,7 +19,17 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 		x.setParent(y.getParent());
 		y.setParent(x);
 		
-		if (y == root) {
+		BSTNode<K, V> xParent = x.getParent();
+		
+		if (xParent != null) {
+			if (xParent.getLeft() == y) {
+				xParent.setLeft(x);
+			}
+			else {
+				xParent.setRight(x);
+			}
+		}
+		else {
 			root = x;
 		}
 	}
@@ -41,7 +51,17 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 		x.setParent(y.getParent());
 		y.setParent(x);
 		
-		if (y == root) {
+		BSTNode<K, V> xParent = x.getParent();
+		
+		if (xParent != null) {
+			if (xParent.getLeft() == y) {
+				xParent.setLeft(x);
+			}
+			else {
+				xParent.setRight(x);
+			}
+		}
+		else {
 			root = x;
 		}
 	}
