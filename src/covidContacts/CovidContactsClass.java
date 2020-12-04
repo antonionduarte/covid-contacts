@@ -50,7 +50,7 @@ public class CovidContactsClass implements CovidContacts {
 	}
 	
 	@Override
-	public UserGetters getUserGetters(String login) throws UserDoesNotExistException {
+	public UserGetters getUserGetters(String login) {
 		return getUser(login);
 	}
 	

@@ -23,9 +23,10 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	public ChainedHashTable(int capacity) {
 		int arraySize = nextPrime((int) (1.1 * capacity));
 		// Compiler gives a warning.
-		table = (Dictionary<K, V>[]) new Dictionary[arraySize];
-		for (int i = 0; i < arraySize; i++)
+		table = new Dictionary[arraySize];
+		for (int i = 0; i < arraySize; i++) {
 			table[i] = new CollisionList<K, V>();
+		}
 		maxSize = capacity;
 		numElements = 0;
 	}
@@ -76,7 +77,7 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 	}
 	
 	private void rehash() {
-		ChainedHashTable<K, V> auxTable = new ChainedHashTable<>(nextPrime(this.maxSize));
+		ChainedHashTable<K, V> auxTable = new ChainedHashTable<>(2 * maxSize);
 		
 		Iterator<Entry<K, V>> iterator = iterator();
 		
@@ -84,8 +85,8 @@ public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V
 			auxTable.insert(iterator.next().getKey(), iterator.next().getValue());
 		}
 		
-		this.maxSize = auxTable.maxSize;
-		this.table = auxTable.table;
+		maxSize = auxTable.maxSize;
+		table = auxTable.table;
 	}
 	
 }

@@ -29,7 +29,7 @@ public interface CovidContacts {
 	 * @param login Users' login.
 	 * @return Specified user.
 	 */
-	UserGetters getUserGetters(String login) throws UserDoesNotExistException;
+	UserGetters getUserGetters(String login);
 	
 	/**
 	 * Creates a new 2-way contact between 2 users.

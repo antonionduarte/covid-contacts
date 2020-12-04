@@ -15,21 +15,17 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 	
 	/**
 	 * Constructor.
-	 * I am doing the iteration to find the first available CollisionList
-	 * in the constructor, so that I can store the first position
-	 * where we have a collision list. That will allow me to do the
-	 * rewind() method without reiterating to find the first
-	 * correct position.
 	 * @param table Table that we will iterate the elements of.
 	 */
 	public TableIterator(Dictionary<K, V>[] table, int numElements) {
 		this.table = table;
 		this.numElements = numElements;
 		firstIndex = 0;
-
-		for (int i = 0; !table[i++].iterator().hasNext() && i < table.length; i++) {
-			currentCollision = table[++currentIndex].iterator();
-			firstIndex = i;
+		
+		if (numElements > 0) {
+			while (table[firstIndex].isEmpty()) {
+				firstIndex++;
+			}
 		}
 
 		rewind();
@@ -49,11 +45,7 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 		}
 
 		if (!currentCollision.hasNext()) {
-
-			for (int i = currentIndex; (i < table.length - 1) && table[currentIndex].isEmpty(); i++) {
-				currentIndex++;
-			}
-
+			while (table[++currentIndex].isEmpty());
 			currentCollision = table[currentIndex].iterator();
 		}
 
