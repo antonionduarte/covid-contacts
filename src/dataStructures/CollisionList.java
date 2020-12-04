@@ -69,7 +69,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		else {
 			removeMiddleNode(pointerNode);
 		}
-		
+
 		return pointerNode.getElement().getValue();
 	}
 	
