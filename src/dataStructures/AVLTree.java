@@ -151,7 +151,7 @@ public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 			if (leftChildHeight < rightChildHeight) {
 				return rightChild;
 			}
-			return null;
+			return getParent() != null && getParent().getLeft() == this ? leftChild : rightChild;
 		}
 		
 	}
