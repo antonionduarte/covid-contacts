@@ -8,7 +8,7 @@ import users.User;
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
- * Contains all the information regarding a groups, which is a collection of users and their posts.
+ * Contains all the information regarding a group, which is a collection of users and their posts.
  */
 
 public class GroupClass implements Group, Comparable<Group> {
@@ -27,15 +27,16 @@ public class GroupClass implements Group, Comparable<Group> {
 	public GroupClass(String name, String description) {
 		this.name = name;
 		this.description = description;
-		/**
-		 * The AVL Tree is the best option for storing an indefinite amount of participants, who's main purpose
-		 * is to be inserted/removed and listed in lexicographic order of their login.
-		 * Insertion and removal operations have a complexity of O(log(n)).
+		/*
+		 * The AVL Tree is the best option for storing an indefinite amount of participants, whose main purposes
+		 * are to be inserted/removed and listed in lexicographic order of their login.
+		 * Insertion and removal operations have a time complexity of O(log2(n)), while the listing operation has
+		 * O(n) time complexity.
 		 */
 		participants = new AVLTree<String, User>();
-		/**
+		/*
 		 * We considered the standard Doubly Linked List adequate for storing the groups' posts since they only have to
-		 * be stored by insertion order, are an indefinite amount, and are only used for listing purposed.
+		 * be stored by insertion order, are an indefinite amount, and are only used for listing purposes.
 		 * This data structure allows them to be easily listed both ways in case that's a wanted feature in the future.
 		 */
 		posts = new DoublyLinkedList<>();
