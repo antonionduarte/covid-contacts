@@ -28,8 +28,6 @@ public class GroupClass implements Group, Comparable<Group> {
 		this.name = name;
 		this.description = description;
 		/**
-		 * TODO: Revê por favor virgínia 👉👈
-		 * 
 		 * The AVL Tree is the best option for storing an indefinite amount of participants, who's main purpose
 		 * is to be inserted/removed and listed in lexicographic order of their login.
 		 * Insertion and removal operations have a complexity of O(log(n)).
@@ -71,7 +69,7 @@ public class GroupClass implements Group, Comparable<Group> {
 	
 	@Override
 	public void insertParticipant(User user) throws UserAlreadyInGroupException {
-		if (participants.find(user.getLogin()) == null) {
+		if (participants.find(user.getLogin()) != null) {
 			throw new UserAlreadyInGroupException();
 		}
 		participants.insert(user.getLogin(), user);

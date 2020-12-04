@@ -34,6 +34,10 @@ public class EntryValueIterator<K, V> implements Iterator<V> {
 
 	@Override
 	public V next() throws NoSuchElementException {
+		if (!iterator.hasNext()) {
+			throw new NoSuchElementException();
+		}
+
 		return iterator.next().getValue();
 	}
 

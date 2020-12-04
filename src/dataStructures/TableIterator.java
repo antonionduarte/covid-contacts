@@ -47,11 +47,13 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 		if (!hasNext()) {
 			throw new NoSuchElementException();
 		}
-		
-		while (!currentCollision.hasNext()) {
-			currentCollision = table[++currentIndex].iterator();
+
+		while (table[currentIndex] == null) {
+			currentIndex++;
 		}
-		
+
+		currentCollision = table[currentIndex].iterator();
+
 		numElementsIterated++;
 		return currentCollision.next();
 	}
