@@ -2,6 +2,14 @@ package dataStructures;
 
 import exceptions.NoSuchElementException;
 
+/**
+ * @param <K> Key.
+ * @param <V> Value.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * Table Iterator implementattion.
+ */
+
 public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 	
 	/* Constants */
@@ -27,7 +35,7 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 				firstIndex++;
 			}
 		}
-
+		
 		rewind();
 	}
 	
@@ -43,12 +51,12 @@ public class TableIterator<K, V> implements Iterator<Entry<K, V>> {
 		if (!hasNext()) {
 			throw new NoSuchElementException();
 		}
-
+		
 		if (!currentCollision.hasNext()) {
-			while (table[++currentIndex].isEmpty());
+			while (table[++currentIndex].isEmpty()) ;
 			currentCollision = table[currentIndex].iterator();
 		}
-
+		
 		numElementsIterated++;
 		return currentCollision.next();
 	}

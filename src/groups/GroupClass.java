@@ -52,7 +52,7 @@ public class GroupClass implements Group, Comparable<Group> {
 		}
 		return name.equals(((GroupClass) other).getName());
 	}
-
+	
 	@Override
 	public int compareTo(Group o) {
 		return this.getName().compareTo(o.getName());

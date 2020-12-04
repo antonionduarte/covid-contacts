@@ -3,6 +3,13 @@ package dataStructures;
 import dataStructures.DoublyLinkedList.DListNode;
 import exceptions.NoSuchElementException;
 
+/**
+ * Collision Iterator implementation.
+ * @param <E> Generic element.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ */
+
 public class CollisionIterator<E> implements Iterator<E> {
 	
 	/* Constants */

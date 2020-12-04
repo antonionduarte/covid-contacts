@@ -1,5 +1,13 @@
 package dataStructures;
 
+/**
+ * @param <K> Key.
+ * @param <V> Value.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * AVL Tree implementation.
+ */
+
 public class AVLTree<K extends Comparable<K>, V> extends AdvancedBSTree<K, V> {
 	
 	@Override

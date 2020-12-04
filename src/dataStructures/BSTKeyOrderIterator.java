@@ -3,6 +3,14 @@ package dataStructures;
 import dataStructures.BinarySearchTree.BSTNode;
 import exceptions.NoSuchElementException;
 
+/**
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * BST Key Order Iterator implementation.
+ * @param <K> Key.
+ * @param <V> Value.
+ */
+
 public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	
 	/* Constants */
@@ -11,7 +19,7 @@ public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	/* Variables */
 	private final BSTNode<K, V> root;
 	private Stack<BSTNode<K, V>> stack;
-	private int numElements;
+	private final int numElements;
 	
 	/**
 	 * Constructor.
@@ -22,7 +30,7 @@ public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 		this.numElements = numElements;
 		rewind();
 	}
-
+	
 	@Override
 	public boolean hasNext() {
 		return !stack.isEmpty();
@@ -47,7 +55,7 @@ public class BSTKeyOrderIterator<K, V> implements Iterator<Entry<K, V>> {
 	@Override
 	public void rewind() {
 		stack = new StackInList<>();
-
+		
 		if (numElements != 0) {
 			stack.push(root);
 			stackLeftNodes();

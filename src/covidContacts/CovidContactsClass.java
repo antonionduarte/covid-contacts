@@ -166,11 +166,11 @@ public class CovidContactsClass implements CovidContacts {
 	 */
 	private Group getGroup(String name) throws GroupDoesNotExistException {
 		Group group = groups.find(name);
-
+		
 		if (group == null) {
 			throw new GroupDoesNotExistException();
 		}
-
+		
 		return group;
 	}
 	

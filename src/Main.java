@@ -1,6 +1,7 @@
 import covidContacts.CovidContacts;
 import covidContacts.CovidContactsClass;
-import dataStructures.*;
+import dataStructures.Iterator;
+import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
 import exceptions.*;

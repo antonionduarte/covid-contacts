@@ -1,5 +1,13 @@
 package dataStructures;
 
+/**
+ * @param <K> Key.
+ * @param <V> Value.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ * AdvancedBSTree implementation.
+ */
+
 public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree<K, V> {
 	
 	/**
@@ -7,8 +15,8 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 	 * Node X is a  left  child  of Y before the  rotation, then Y becomes the right child of X after the rotation.
 	 * @param y - root of the rotation
 	 * @pre: Y has a left child
-	 *   Y				X
-	 *  /	turns into:	 \
+	 * Y				X
+	 * /	turns into:	 \
 	 * X 				  Y
 	 */
 	protected void rotateRight(BSTNode<K, V> y) {
@@ -28,8 +36,8 @@ public class AdvancedBSTree<K extends Comparable<K>, V> extends BinarySearchTree
 	 * @param y - root of the rotation
 	 * @pre: Y has a right child
 	 * Y				  X
-	 *  \  turns into:	 /
-	 *   X 				Y
+	 * \  turns into:	 /
+	 * X 				Y
 	 */
 	protected void rotateLeft(BSTNode<K, V> y) {
 		BSTNode<K, V> x = y.getRight();

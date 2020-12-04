@@ -3,12 +3,14 @@ package dataStructures;
 import exceptions.NoElementException;
 
 /**
- * BinarySearchTree implementation
+ * Binary Search Tree implementation.
  * @param <K> Generic type Key, must extend comparable
  * @param <V> Generic type Value
  * @author AED team
- * @version 1.0
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
+
 public class BinarySearchTree<K extends Comparable<K>, V> implements OrderedDictionary<K, V> {
 	
 	/* Variables */

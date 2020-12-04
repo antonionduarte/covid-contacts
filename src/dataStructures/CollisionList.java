@@ -2,6 +2,14 @@ package dataStructures;
 
 import dataStructures.DoublyLinkedList.DListNode;
 
+/**
+ * Collision List implementation.
+ * @param <K> Generic Key, must extend comparable.
+ * @param <V> Generic Value.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
+ */
+
 public class CollisionList<K, V> implements Dictionary<K, V> {
 	
 	/* Variables */
@@ -69,7 +77,7 @@ public class CollisionList<K, V> implements Dictionary<K, V> {
 		else {
 			removeMiddleNode(pointerNode);
 		}
-
+		
 		return pointerNode.getElement().getValue();
 	}
 	

@@ -1,11 +1,12 @@
 package dataStructures;
 
 /**
- * Chained Hash table implementation
- * @param <K> Generic Key, must extend comparable
- * @param <V> Generic Value
- * @author AED Team
- * @version 1.0
+ * Chained Hash Table implementation.
+ * @param <K> Generic Key, must extend comparable.
+ * @param <V> Generic Value.
+ * @author AED Team.
+ * @author Antonio Duarte (58278).
+ * @author Goncalo Virginia (56773).
  */
 
 public class ChainedHashTable<K extends Comparable<K>, V> extends HashTable<K, V> {

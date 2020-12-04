@@ -64,7 +64,7 @@ public class UserClass implements User, Comparable<User> {
 		UserClass userClass = (UserClass) o;
 		return getLogin().equals(userClass.getLogin());
 	}
-
+	
 	@Override
 	public int compareTo(User o) {
 		return this.getLogin().compareTo(o.getLogin());
