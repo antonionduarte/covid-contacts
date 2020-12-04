@@ -171,15 +171,13 @@ public class CovidContactsClass implements CovidContacts {
 	 * @return Group with the specified name.
 	 */
 	private Group getGroup(String name) throws GroupDoesNotExistException {
-		Iterator<Group> iterator = new EntryValueIterator<>(groups.iterator());
-		
-		while (iterator.hasNext()) {
-			Group group = iterator.next();
-			if (group.getName().equals(name)) {
-				return group;
-			}
+		Group group = groups.find(name);
+
+		if (group == null) {
+			throw new GroupDoesNotExistException();
 		}
-		throw new GroupDoesNotExistException();
+
+		return group;
 	}
 	
 }
