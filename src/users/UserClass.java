@@ -17,10 +17,7 @@ public class UserClass implements User, Comparable<User> {
 	private static final int MAX_GROUPS = 10;
 	
 	/* Variables */
-	private final String login;
-	private final String username;
-	private final String location;
-	private final String profession;
+	private final String login, username, location, profession;
 	private final int age;
 	private final List<Post> posts;
 	private final Dictionary<String, Group> groups;
@@ -174,7 +171,7 @@ public class UserClass implements User, Comparable<User> {
 	
 	@Override
 	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException {
-		if (!login.equals(other.getLogin()) && contacts.find(other.getLocation()) == null) {
+		if (!login.equals(other.getLogin()) && contacts.find(other.getLogin()) == null) {
 			throw new ContactDoesNotExistException();
 		}
 		if (posts.isEmpty()) {
