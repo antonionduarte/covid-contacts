@@ -37,32 +37,22 @@ public class UserClass implements User, Comparable<User> {
 		this.age = age;
 		this.location = location;
 		this.profession = profession;
-		/**
+		/*
 		 * We chose a Doubly Linked List since an indefinite amount of sent/received posts are stored by their order
-		 * of insertion and is only really used for listing purposes (we could have used a Singly Linked List and just
+		 * of insertion and are only really used for listing purposes (we could have used a Singly Linked List and just
 		 * added each element in the beginning to have a LIFO order, but a Doubly Linked List is more versatile in case
 		 * we want to also be able to list posts in a FIFO order).
 		 */
 		posts = new DoublyLinkedList<>();
-		/**
-		 * // TODO: I'm not going to be making this comment just yet because i'm not 100% settled on the HashTable.
-		 * 
-		 * Since groups have a pre-defined hard limit, having an Ordered Array List is the best option in terms of
-		 * searching time complexity [O(log2(n))]. The only downside is inserting or removing a group, since it has
-		 * to shift the whole list, but considering the max number of groups a user can have is generally quite small,
-		 * this aspect will have a minimal performance downside.
-		 *
-		 * TODO: Remake the comment and make groups comparable.
+		/*
+		 * Since groups have a pre-defined hard limit, having a Chained Hash Table is the best option in terms of
+		 * searching, insertion and removal time complexity [O(log2(1+lambda))].
 		 */
 		groups = new ChainedHashTable<>();
-		/**
-		 * TODO: Revê por favor Virgínia 👉👈
-		 * 
-		 * As for the users' contacts, an AVL Tre is the best option, since the contacts need to be ordered
-		 * according to the lexicographic order of their login, and need to be individually accessed and removed.
-		 * The main purpose of the contact list is to send posts to all the users' contacts and list them,
-		 * which means they just have to be iterated through, which has a complexity of O(n) using the AVLTree.
-		 * As for insertions or removals, using an AVLTree has a complexity of O(log(n)).
+		/*
+		 * As for the users' contacts, an AVL Tree is the perfect balance (no pun intended), since the contacts need to
+		 * be ordered lexicographically for listing purposes [O(log2(n))]. They also have to be searched, inserted,
+		 * removed [all with O(log2(n)) time complexity] and iterated through to send messages quite often [O(log2(n))].
 		 */
 		contacts = new AVLTree<>();
 	}

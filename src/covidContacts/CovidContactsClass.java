@@ -26,16 +26,10 @@ public class CovidContactsClass implements CovidContacts {
 	/* Constructor */
 	public CovidContactsClass() {
 		/*
-		 * We chose a Chained Hash Table since finding/checking if a user exists, and accessing the user
-		 * is a common occurrence, the insertion, removal and find operations on an HashTable
-		 * have a Time Complexity of O(1 + delta).
+		 * We chose Chained Hash Tables since finding/checking if a user/group exists and accessing them
+		 * is a very common occurrence. Searching, insertion and removal operations all have O(1+lambda) time complexity.
 		 */
 		users = new ChainedHashTable<>();
-		/*
-		 * We chose a Chained Hash Table since finding/checking if a Group exists, and accessing the group
-		 * is a common occurrence, the insertion, removal and find operations on an HashTable
-		 * have a Time Complexity of O(1 + delta).
-		 */
 		groups = new ChainedHashTable<>();
 	}
 	
