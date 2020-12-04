@@ -20,7 +20,7 @@ public class UserClass implements User, Comparable<User> {
 	private final String login, username, location, profession;
 	private final int age;
 	private final List<Post> posts;
-	private final Dictionary<String, Group> groups;
+	private final List<Group> groups;
 	private final Dictionary<String, User> contacts;
 	
 	/**
@@ -45,10 +45,13 @@ public class UserClass implements User, Comparable<User> {
 		 */
 		posts = new DoublyLinkedList<>();
 		/*
-		 * Since groups have a pre-defined hard limit, having a Chained Hash Table is the best option in terms of
-		 * searching, insertion and removal time complexity [O(log2(1+lambda))].
+		 * Since groups have a pre-defined hard limit, having an ArrayList is the best option, since adding
+		 * posts is less frequent leaving and entering new groups.
+		 * We know that it would have been a more simple implementation if we simply used an Array, but since we
+		 * already had the ArrayList implemented we decided to use it for the groups.
+		 *
 		 */
-		groups = new ChainedHashTable<>();
+		groups = new ArrayList<>(10);
 		/*
 		 * As for the users' contacts, an AVL Tree is the perfect balance (no pun intended), since the contacts need to
 		 * be ordered lexicographically for listing purposes [O(log2(n))]. They also have to be searched, inserted,
@@ -125,15 +128,15 @@ public class UserClass implements User, Comparable<User> {
 	
 	@Override
 	public void addGroup(Group group) throws UserAlreadyInGroupException {
-		if (groups.find(group.getName()) != null) {
+		if (groups.find(group) != -1) {
 			throw new UserAlreadyInGroupException();
 		}
-		groups.insert(group.getName(), group);
+		groups.addLast(group);
 	}
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (groups.remove(group.getName()) == null) {
+		if (groups.remove(group) == null) {
 			throw new UserNotInGroupException();
 		}
 	}
@@ -148,7 +151,7 @@ public class UserClass implements User, Comparable<User> {
 		posts.addLast(post);
 		
 		Iterator<User> userIterator = new EntryValueIterator<>(contacts.iterator());
-		Iterator<Group> groupIterator = new EntryValueIterator<>(groups.iterator());
+		Iterator<Group> groupIterator = groups.iterator();
 		
 		while (userIterator.hasNext()) {
 			userIterator.next().receivePost(post);
