@@ -1,7 +1,7 @@
 package dataStructures;
 
 import dataStructures.DoublyLinkedList.DListNode;
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * Collision Iterator implementation.

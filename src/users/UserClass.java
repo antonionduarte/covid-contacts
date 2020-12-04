@@ -1,7 +1,7 @@
 package users;
 
 import dataStructures.*;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.Group;
 import posts.Post;
 

@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * Generic iterator that casts an iterators' elements into another type.

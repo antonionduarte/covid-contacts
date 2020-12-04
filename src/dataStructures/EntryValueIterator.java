@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * Generic iterator that iterates using an Entry iterator, and returns the value

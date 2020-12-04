@@ -2,7 +2,7 @@ package users;
 
 import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
-import exceptions.NoContactsException;
+import covidContacts.exceptions.NoContactsException;
 import posts.Post;
 
 /**

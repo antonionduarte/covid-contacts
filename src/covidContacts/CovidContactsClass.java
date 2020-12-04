@@ -1,7 +1,7 @@
 package covidContacts;
 
 import dataStructures.*;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.Group;
 import groups.GroupClass;
 import groups.GroupGetters;

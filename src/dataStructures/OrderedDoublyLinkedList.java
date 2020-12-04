@@ -2,8 +2,8 @@ package dataStructures;
 
 import comparators.Comparator;
 import dataStructures.DoublyLinkedList.DListNode;
-import exceptions.InvalidPositionException;
-import exceptions.NoElementException;
+import covidContacts.exceptions.InvalidPositionException;
+import covidContacts.exceptions.NoElementException;
 
 /**
  * @param <E> Generic Element.

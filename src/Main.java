@@ -4,7 +4,7 @@ import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;

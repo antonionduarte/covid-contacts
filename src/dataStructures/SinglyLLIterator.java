@@ -1,7 +1,7 @@
 package dataStructures;
 
 import dataStructures.SinglyLinkedList.SListNode;
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * @param <E> Generic Element.

@@ -1,4 +1,4 @@
-package exceptions;
+package covidContacts.exceptions;
 
 /**
  * @author Antonio Duarte (58278).

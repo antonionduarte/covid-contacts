@@ -1,7 +1,7 @@
 package users;
 
-import exceptions.ContactAlreadyExistsException;
-import exceptions.ContactDoesNotExistException;
+import covidContacts.exceptions.ContactAlreadyExistsException;
+import covidContacts.exceptions.ContactDoesNotExistException;
 import groups.Group;
 import posts.Post;
 

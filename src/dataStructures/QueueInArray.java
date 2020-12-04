@@ -1,7 +1,7 @@
 package dataStructures;
 
-import exceptions.NoElementException;
-import exceptions.OutOfCapacityException;
+import covidContacts.exceptions.NoElementException;
+import covidContacts.exceptions.OutOfCapacityException;
 
 /**
  * @param <E> Generic Element.

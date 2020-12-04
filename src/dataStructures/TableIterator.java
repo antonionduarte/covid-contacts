@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * @param <K> Key.

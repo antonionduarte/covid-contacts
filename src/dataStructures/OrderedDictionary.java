@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoElementException;
+import covidContacts.exceptions.NoElementException;
 
 /**
  * Ordered Dictionary interface

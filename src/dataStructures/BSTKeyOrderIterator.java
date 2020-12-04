@@ -1,7 +1,7 @@
 package dataStructures;
 
 import dataStructures.BinarySearchTree.BSTNode;
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * @author Antonio Duarte (58278).
