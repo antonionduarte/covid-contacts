@@ -1,6 +1,7 @@
 # Covid Contacts
 
 This program simulates a simple social network themed around the current COVID-19 pandemic.
+
 In the `src/dataStructures` directory is the implementation of all the Data Structures used in the project.
 
 ## Data Structures
