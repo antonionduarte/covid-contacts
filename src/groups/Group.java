@@ -2,9 +2,9 @@ package groups;
 
 import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
-import exceptions.NoParticipantsException;
-import exceptions.UserAlreadyInGroupException;
-import exceptions.UserNotInGroupException;
+import covidContacts.exceptions.NoParticipantsException;
+import covidContacts.exceptions.UserAlreadyInGroupException;
+import covidContacts.exceptions.UserNotInGroupException;
 import posts.Post;
 import users.User;
 

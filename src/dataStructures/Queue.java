@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoElementException;
+import covidContacts.exceptions.NoElementException;
 
 import java.io.Serializable;
 

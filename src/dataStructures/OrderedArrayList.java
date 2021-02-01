@@ -1,8 +1,8 @@
 package dataStructures;
 
 import comparators.Comparator;
-import exceptions.InvalidPositionException;
-import exceptions.NoElementException;
+import covidContacts.exceptions.InvalidPositionException;
+import covidContacts.exceptions.NoElementException;
 
 /**
  * @param <E> Generic Element.
@@ -19,7 +19,7 @@ public class OrderedArrayList<E> implements OrderedList<E> {
 	/* Variables */
 	private E[] array;
 	private int numElements;
-	private Comparator<E> comparator;
+	private final Comparator<E> comparator;
 	
 	/**
 	 * Constructor.

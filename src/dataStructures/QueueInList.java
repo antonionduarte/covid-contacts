@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoElementException;
+import covidContacts.exceptions.NoElementException;
 
 /**
  * @param <E> Generic Element.
@@ -14,7 +14,7 @@ public class QueueInList<E> implements Queue<E> {
 	private static final long serialVersionUID = 0L;
 	
 	/* Variables */
-	private List<E> list;
+	private final List<E> list;
 	
 	/* Constructor */
 	public QueueInList() {

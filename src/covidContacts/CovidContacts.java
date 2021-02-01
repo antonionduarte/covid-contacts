@@ -2,7 +2,7 @@ package covidContacts;
 
 import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;
@@ -29,7 +29,7 @@ public interface CovidContacts {
 	 * @param login Users' login.
 	 * @return Specified user.
 	 */
-	UserGetters getUserGetters(String login) throws UserDoesNotExistException;
+	UserGetters getUserGetters(String login);
 	
 	/**
 	 * Creates a new 2-way contact between 2 users.
@@ -63,7 +63,7 @@ public interface CovidContacts {
 	 * @return Specified group getters interface.
 	 */
 	GroupGetters getGroupGetters(String name);
-
+	
 	/**
 	 * Removes the specified group.
 	 * @param name The groups' name.

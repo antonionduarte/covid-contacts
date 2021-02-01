@@ -7,6 +7,7 @@
 /src/src.iml
 **/.DS_STORE
 **/covid-contacts.iml
+**/.DS_Store
 # Datasource local storage ignored files
 **/dataSources/
 **/dataSources.local.xml

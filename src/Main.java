@@ -4,7 +4,7 @@ import dataStructures.Iterator;
 import dataStructures.TwoWayIterator;
 import enums.Command;
 import enums.Output;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.GroupGetters;
 import posts.Post;
 import users.UserGetters;
@@ -13,10 +13,11 @@ import java.util.Scanner;
 
 /**
  * @author Antonio Duarte (58278).
- * @author Goncalo Virginia (56773). This program simulates a simple social network themed around the current COVID-19
- * pandemic (let's hope Trump isn't lying about the cure). Users can add others as contacts, create/join groups, post
- * messages (which are sent to all contacts and groups with the main purpose of notifying others if they're infected)
- * and of course, receive messages.
+ * @author Goncalo Virginia (56773).
+ * This program simulates a simple social network themed around the current COVID-19 pandemic (let's hope Trump
+ * isn't lying about the cure).
+ * Users can add others as contacts, create/join groups, post messages (which are sent to all contacts and groups
+ * with the main purpose of notifying others if they're infected), and of course, receive messages.
  */
 public class Main {
 	
@@ -59,7 +60,6 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void executeCommand(Command command, Scanner in, CovidContacts covidContacts) {
-		//System.out.println();
 		switch (command) {
 			case IU:
 				registerUser(in, covidContacts);
@@ -208,7 +208,7 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void insertGroup(Scanner in, CovidContacts covidContacts) {
-		String name = in.next().toUpperCase(), description = in.next().toUpperCase() + in.nextLine().toUpperCase();
+		String name = in.nextLine().trim().toUpperCase(), description = in.nextLine().trim().toUpperCase();
 		
 		try {
 			covidContacts.insertGroup(name, description);
@@ -314,7 +314,10 @@ public class Main {
 	 * @param covidContacts Covid Contacts Manager.
 	 */
 	private static void insertPost(Scanner in, CovidContacts covidContacts) {
-		String login = in.next().toUpperCase(), title = (in.next() + in.nextLine()).toUpperCase(), text = in.nextLine().toUpperCase(), url = in.nextLine().toUpperCase();
+		String login = in.next().trim().toUpperCase();
+		String title = (in.next() + in.nextLine()).toUpperCase();
+		String text = in.nextLine().toUpperCase();
+		String url = in.nextLine().toUpperCase();
 		
 		try {
 			covidContacts.insertPost(login, title, text, url);

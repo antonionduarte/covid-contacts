@@ -1,9 +1,7 @@
 package users;
 
-import comparators.GroupComparator;
-import comparators.UserComparator;
 import dataStructures.*;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.Group;
 import posts.Post;
 
@@ -13,17 +11,17 @@ import posts.Post;
  * User implementation, handles the users' information and conexions.
  */
 
-public class UserClass implements User {
+public class UserClass implements User, Comparable<User> {
 	
 	/* Constants */
 	private static final int MAX_GROUPS = 10;
 	
 	/* Variables */
-	private String login, username, location, profession;
-	private int age;
-	private List<Post> posts;
-	private OrderedList<Group> groups;
-	private OrderedList<User> contacts;
+	private final String login, username, location, profession;
+	private final int age;
+	private final List<Post> posts;
+	private final List<Group> groups;
+	private final Dictionary<String, User> contacts;
 	
 	/**
 	 * Constructor.
@@ -39,27 +37,27 @@ public class UserClass implements User {
 		this.age = age;
 		this.location = location;
 		this.profession = profession;
-		/**
+		/*
 		 * We chose a Doubly Linked List since an indefinite amount of sent/received posts are stored by their order
-		 * of insertion and is only really used for listing purposes (we could have used a Singly Linked List and just
+		 * of insertion and are only really used for listing purposes (we could have used a Singly Linked List and just
 		 * added each element in the beginning to have a LIFO order, but a Doubly Linked List is more versatile in case
 		 * we want to also be able to list posts in a FIFO order).
 		 */
 		posts = new DoublyLinkedList<>();
-		/**
-		 * Since groups have a pre-defined hard limit, having an Ordered Array List is the best option in terms of
-		 * searching time complexity [O(log2(n))]. The only downside is inserting or removing a group, since it has
-		 * to shift the whole list, but considering the max number of groups a user can have is generally quite small,
-		 * this aspect will have a minimal performance downside.
+		/*
+		 * Since groups have a pre-defined hard limit, having an ArrayList is the best option, since adding
+		 * posts is less frequent leaving and entering new groups.
+		 * We know that it would have been a more simple implementation if we simply used an Array, but since we
+		 * already had the ArrayList implemented we decided to use it for the groups.
+		 *
 		 */
-		groups = new OrderedArrayList<>(new GroupComparator(), MAX_GROUPS);
-		/**
-		 * As for the users' contacts, an Ordered Doubly Linked List is the most balanced option since there isn't a
-		 * limit on the number of contacts a user can have, and the list has to stay ordered lexicographically.
-		 * The contact lists' main purpose is to send posts to all of the users' contacts and list them, which means
-		 * they just have to be iterated through, therefore accessing a specific contact isn't a common occurrence.
+		groups = new ArrayList<>(10);
+		/*
+		 * As for the users' contacts, an AVL Tree is the perfect balance (no pun intended), since the contacts need to
+		 * be ordered lexicographically for listing purposes [O(log2(n))]. They also have to be searched, inserted,
+		 * removed [all with O(log2(n)) time complexity] and iterated through to send messages quite often [O(log2(n))].
 		 */
-		contacts = new OrderedDoublyLinkedList<>(new UserComparator());
+		contacts = new AVLTree<>();
 	}
 	
 	@Override
@@ -68,6 +66,11 @@ public class UserClass implements User {
 		if (o == null || getClass() != o.getClass()) return false;
 		UserClass userClass = (UserClass) o;
 		return getLogin().equals(userClass.getLogin());
+	}
+	
+	@Override
+	public int compareTo(User o) {
+		return this.getLogin().compareTo(o.getLogin());
 	}
 	
 	@Override
@@ -105,20 +108,20 @@ public class UserClass implements User {
 		if (contacts.isEmpty()) {
 			throw new NoContactsException();
 		}
-		return contacts.iterator();
+		return new EntryValueIterator<>(contacts.iterator());
 	}
 	
 	@Override
 	public void addContact(User contact) throws ContactAlreadyExistsException {
-		if (contacts.find(contact) != -1) {
+		if (contacts.find(contact.getLogin()) != null) {
 			throw new ContactAlreadyExistsException();
 		}
-		contacts.insert(contact);
+		contacts.insert(contact.getLogin(), contact);
 	}
 	
 	@Override
 	public void removeContact(User contact) throws ContactDoesNotExistException {
-		if (!contacts.remove(contact)) {
+		if (contacts.remove(contact.getLogin()) == null) {
 			throw new ContactDoesNotExistException();
 		}
 	}
@@ -128,12 +131,12 @@ public class UserClass implements User {
 		if (groups.find(group) != -1) {
 			throw new UserAlreadyInGroupException();
 		}
-		groups.insert(group);
+		groups.addLast(group);
 	}
 	
 	@Override
 	public void removeGroup(Group group) throws UserNotInGroupException {
-		if (!groups.remove(group)) {
+		if (groups.remove(group) == null) {
 			throw new UserNotInGroupException();
 		}
 	}
@@ -147,7 +150,7 @@ public class UserClass implements User {
 	public void insertPost(Post post) {
 		posts.addLast(post);
 		
-		Iterator<User> userIterator = contacts.iterator();
+		Iterator<User> userIterator = new EntryValueIterator<>(contacts.iterator());
 		Iterator<Group> groupIterator = groups.iterator();
 		
 		while (userIterator.hasNext()) {
@@ -161,7 +164,7 @@ public class UserClass implements User {
 	
 	@Override
 	public TwoWayIterator<Post> newPostsIterator(User other) throws ContactDoesNotExistException, ContactHasNoPostsException {
-		if (!login.equals(other.getLogin()) && contacts.find(other) == -1) {
+		if (!login.equals(other.getLogin()) && contacts.find(other.getLogin()) == null) {
 			throw new ContactDoesNotExistException();
 		}
 		if (posts.isEmpty()) {

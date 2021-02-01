@@ -1,16 +1,16 @@
-package exceptions;
+package covidContacts.exceptions;
 
 /**
  * @author Antonio Duarte (58278).
  * @author Goncalo Virginia (56773).
  */
 
-public class FullStackException extends RuntimeException {
+public class EmptyStackException extends RuntimeException {
 	
 	/* Constants */
 	private static final long serialVersionUID = 1L;
 	
-	public FullStackException(String s) {
+	public EmptyStackException(String s) {
 		super(s);
 	}
 }

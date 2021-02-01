@@ -1,7 +1,7 @@
 package dataStructures;
 
-import exceptions.InvalidPositionException;
-import exceptions.NoElementException;
+import covidContacts.exceptions.InvalidPositionException;
+import covidContacts.exceptions.NoElementException;
 
 import java.io.Serializable;
 

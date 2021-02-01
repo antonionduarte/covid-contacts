@@ -1,8 +1,7 @@
 package covidContacts;
 
-import comparators.UserComparator;
 import dataStructures.*;
-import exceptions.*;
+import covidContacts.exceptions.*;
 import groups.Group;
 import groups.GroupClass;
 import groups.GroupGetters;
@@ -21,40 +20,32 @@ import users.UserGetters;
 public class CovidContactsClass implements CovidContacts {
 	
 	/* Variables */
-	private OrderedList<User> users;
-	private List<Group> groups;
+	private final Dictionary<String, User> users;
+	private final Dictionary<String, Group> groups;
 	
 	/* Constructor */
 	public CovidContactsClass() {
 		/*
-		 * We chose an Ordered Array List since finding/checking if a user exists and accessing the user is
-		 * a much more common occurrence than adding or removing a user from the system or resizing the array
-		 * in the case it's full (even when adding or removing a user, its existence has to be checked first),
-		 * thus, by keeping the array ordered after every insertion, we can take advantage of the binary search
-		 * and binary insertion we implemented, which have O(log2(n)) time complexity.
+		 * We chose Chained Hash Tables since finding/checking if a user/group exists and accessing them
+		 * is a very common occurrence. Searching, insertion and removal operations all have O(1+lambda) time complexity.
 		 */
-		users = new OrderedArrayList<>(new UserComparator());
-		/*
-		 * We chose a Doubly Linked List because there are far less groups than users in the system and
-		 * it will only be used to add and remove groups, since other operations like adding a post
-		 * will be done via the users (which have much smaller collections of groups).
-		 */
-		groups = new DoublyLinkedList<>();
+		users = new ChainedHashTable<>();
+		groups = new ChainedHashTable<>();
 	}
 	
 	@Override
 	public void registerUser(String login, String username, int age, String location, String profession) throws UserAlreadyExistsException {
 		User newUser = new UserClass(login, username, age, location, profession);
 		
-		if (users.find(newUser) != -1) {
+		if (users.find(login) != null) {
 			throw new UserAlreadyExistsException();
 		}
-		users.insert(newUser);
+		users.insert(login, newUser);
 	}
 	
 	@Override
-	public UserGetters getUserGetters(String login) throws UserDoesNotExistException {
-		return (UserGetters) getUser(login);
+	public UserGetters getUserGetters(String login) {
+		return getUser(login);
 	}
 	
 	@Override
@@ -92,19 +83,19 @@ public class CovidContactsClass implements CovidContacts {
 	@Override
 	public void insertGroup(String name, String description) throws GroupAlreadyExistsException {
 		Group newGroup = new GroupClass(name, description);
-		if (groups.find(newGroup) != -1) {
+		if (groups.find(name) != null) {
 			throw new GroupAlreadyExistsException();
 		}
-		groups.addLast(newGroup);
+		groups.insert(name, newGroup);
 	}
-
+	
 	public GroupGetters getGroupGetters(String name) {
-		return (GroupGetters) getGroup(name);
+		return getGroup(name);
 	}
 	
 	@Override
 	public void removeGroup(String name) throws GroupDoesNotExistException {
-		Group group = groups.remove(new GroupClass(name, null));
+		Group group = groups.remove(name);
 		
 		if (group == null) {
 			throw new GroupDoesNotExistException();
@@ -161,28 +152,26 @@ public class CovidContactsClass implements CovidContacts {
 	 * @return User with the specified login.
 	 */
 	private User getUser(String login) throws UserDoesNotExistException {
-		int index = users.find(new UserClass(login, null, 0, null, null));
+		User user = users.find(login);
 		
-		if (index == -1) {
+		if (user == null) {
 			throw new UserDoesNotExistException();
 		}
-		return users.get(index);
+		return user;
 	}
-
+	
 	/**
 	 * @param name The specified groups' name.
 	 * @return Group with the specified name.
 	 */
 	private Group getGroup(String name) throws GroupDoesNotExistException {
-		Iterator<Group> iterator = groups.iterator();
+		Group group = groups.find(name);
 		
-		while (iterator.hasNext()) {
-			Group group = iterator.next();
-			if (group.getName().equals(name)) {
-				return group;
-			}
+		if (group == null) {
+			throw new GroupDoesNotExistException();
 		}
-		throw new GroupDoesNotExistException();
+		
+		return group;
 	}
 	
 }

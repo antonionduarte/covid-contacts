@@ -1,7 +1,7 @@
 package dataStructures;
 
-import exceptions.EmptyStackException;
-import exceptions.FullStackException;
+import covidContacts.exceptions.EmptyStackException;
+import covidContacts.exceptions.FullStackException;
 
 /**
  * @param <E> Generic Element.

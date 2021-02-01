@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.FullStackException;
+import covidContacts.exceptions.FullStackException;
 
 import java.util.EmptyStackException;
 

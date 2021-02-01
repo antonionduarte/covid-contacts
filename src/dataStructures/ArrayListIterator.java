@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoSuchElementException;
+import covidContacts.exceptions.NoSuchElementException;
 
 /**
  * @param <E> Generic Element.
@@ -15,8 +15,9 @@ public class ArrayListIterator<E> implements Iterator<E> {
 	private static final long serialVersionUID = 1L;
 	
 	/* Variables */
-	E[] array;
-	int numElements, nextElement;
+	private final E[] array;
+	private final int numElements;
+	private int nextElement;
 	
 	/**
 	 * Constructor.

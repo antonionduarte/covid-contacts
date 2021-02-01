@@ -1,7 +1,7 @@
 package dataStructures;
 
-import exceptions.NoElementException;
-import exceptions.OutOfCapacityException;
+import covidContacts.exceptions.NoElementException;
+import covidContacts.exceptions.OutOfCapacityException;
 
 /**
  * @param <E> Generic Element.
@@ -17,7 +17,7 @@ public class QueueInArray<E> implements Queue<E> {
 	private static final int DEFAULT_CAPACITY = 1000;
 	
 	/* Variables */
-	private E[] array;
+	private final E[] array;
 	private int front, rear, currentSize;
 	
 	/**

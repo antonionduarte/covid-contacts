@@ -1,6 +1,6 @@
 package dataStructures;
 
-import exceptions.NoElementException;
+import covidContacts.exceptions.NoElementException;
 
 /**
  * @param <E> Generic Element.
@@ -12,7 +12,7 @@ import exceptions.NoElementException;
 public class StackInList<E> implements Stack<E> {
 	
 	/* Variables */
-	private List<E> list;
+	private final List<E> list;
 	
 	/* Constructor */
 	public StackInList() {
